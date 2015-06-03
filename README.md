@@ -15,6 +15,6 @@ Additionnaly it uses [Rouge](https://github.com/jneen/rouge) which is a code sni
 How to run
 ----------
 
-By default the server is running on port 9000, you can change its configuration in the `_config.yml` file and then run it !
+By default the server is running on port 4000, you can change its configuration in the `_config.yml` file and then run it !
 
 	jekyll serve
