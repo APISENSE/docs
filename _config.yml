@@ -14,4 +14,4 @@ github_username:  APISENSE
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
+highlighter: pygments #rouge

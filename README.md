@@ -1,5 +1,5 @@
-APISENSE Documentation®
-=======================
+APISENSE® Documentation
+======================
 
 Requirements
 ------------
@@ -11,6 +11,8 @@ This documentation is running on top of [Jekyll](http://jekyllrb.com/). Install 
 Additionnaly it uses [Rouge](https://github.com/jneen/rouge) which is a code snippets highlighter. Install it.
 
 	gem install rouge
+
+Note: Github only supports pygments, rouge is no longer used.
 
 How to run
 ----------
