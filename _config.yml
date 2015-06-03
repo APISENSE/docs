@@ -6,8 +6,8 @@ description: >
   APISENSE® makes it easy to collect data with crowds of mobile phone sensors.
   Make sense and innovate on top of real world data feedback, in real time!.
 
-baseurl: "/doc.apisense.io"
-url: "http://apisense.github.io"
+baseurl: ""
+url: "http://apisense.github.io/doc.apisense.io/"
 
 twitter_username: APISENSE
 github_username:  APISENSE
