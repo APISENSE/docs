@@ -1,0 +1,122 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: "Courier New", Arial, Helvetica;
+$base-font-size:   15px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+$orange: 			#FE7D00;
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
+
+
+// Global
+
+p, blockquote, a {
+	font-size: $base-font-size;
+	font-family: $base-font-family;
+}
+
+article h1, .post-title {
+	font-size: 30px;
+	color: $orange;
+}
+
+.post-content h2 {
+	font-size: 12px;
+}
+
+pre, code{
+	font-size: $base-font-size - 3;
+	background-color: #F2F2F2;
+}
+
+// Table
+
+table {
+	width: 100%;
+	margin: 20px 0;
+}
+
+th, tr, td {
+	border: 1px solid black;
+	padding: 5px;
+}
+
+th {
+	background: #E0E0E0;
+}
+
+// Navigation
+
+#leftNav {
+	float: left;
+	margin: 20px;
+}
+
+#leftNav li a {
+	padding: 2px 12px;
+}
+
+#leftNav ul > a {
+	color: $orange;
+}
+
+#leftNav  .os-target {
+	display:inline-block;
+}
+
+#leftNav .not-active {
+	pointer-events: none;
+	cursor: default;
+	color: #E0E0E0;
+}
+
+.mobile-logo {
+	width: 25px;
+	height: 25px;
+	margin: 0 10px;
+}
