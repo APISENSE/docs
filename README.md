@@ -1,4 +1,4 @@
-APISENSE Documentation®
+APISENSE® Documentation
 =======================
 
 Requirements
