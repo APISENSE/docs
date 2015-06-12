@@ -7,7 +7,7 @@
 
 // Our variables
 $base-font-family: "Courier New", Arial, Helvetica;
-$base-font-size:   15px;
+$base-font-size:   13px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
@@ -23,7 +23,7 @@ $grey-color-dark:  darken($grey-color, 25%);
 $orange: 			#FE7D00;
 
 // Width of the content area
-$content-width:    800px;
+$content-width:    920px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -58,6 +58,7 @@ $on-laptop:        800px;
 p, blockquote, a {
 	font-size: $base-font-size;
 	font-family: $base-font-family;
+	text-align:justify;
 }
 
 article h1, .post-title {
@@ -66,12 +67,21 @@ article h1, .post-title {
 }
 
 .post-content h2 {
-	font-size: 12px;
+	font-style: italic;
+	font-size: 14px;
+	color: $orange;
 }
 
 pre, code{
 	font-size: $base-font-size - 3;
 	background-color: #F2F2F2;
+}
+
+.img-small-size {
+	width: 30%;
+	height: 30%;
+	margin: 10px;
+	display:inline-block;
 }
 
 // Table
