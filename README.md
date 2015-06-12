@@ -12,6 +12,8 @@ Additionnaly it uses [Rouge](https://github.com/jneen/rouge) which is a code sni
 
 	gem install rouge
 
+Note: Github only supports pygments, rouge is no longer used.
+
 How to run
 ----------
 
