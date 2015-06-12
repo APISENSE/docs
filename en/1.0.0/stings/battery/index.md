@@ -14,20 +14,24 @@ Usage
 
 	var battery = require('battery');
 
-Methods
--------
+Data
+----
 
 - [connector](#connector)
 - [data](#data)
 - [isConnector](#isconnector)
 - [isState](#isstate)
 - [level](#level)
-- [onStateChanged](#onstatechanged)
-- [onLevelChanged](#onlevelchanged)
 - [state](#state)
 - [technology](#technology)
 - [temperature](#temperature)
 - [voltage](#voltage)
+
+Events
+------
+
+- [onLevelChanged](#onlevelchanged)
+- [onStateChanged](#onstatechanged)
 
 connector
 =========
@@ -154,66 +158,6 @@ Full Example
     var battery = require('battery');
     var result = battery.level();
 
-
-onLevelChanged
-==============
-
-> Start a listener on the battery level and execute some actions when it changes.
-
-    var battery = require('battery');
-    battery.onLevelChanged(function(data) {
-    	// Some awesome stuff
-    });
-
-Parameters
-----------
-
-- __event__ : function(data), callback function giving access to methods from an event object. 
-- __data__ : [BatteryData](batteryData.html), object containing all information about the new battery status.
-
-Return
-------
-
-- __token__ : StingToken used to cancel event listener.
-
-
-Full Example
-------------
-
-    var battery = require('battery');
-    battery.onLevelChanged(function(data) {
-    	var newLevel = data.level;
-    });
-
- onStateChanged
-==============
-
-> Start a listener on the battery state and execute some actions when it changes.
-
-    var battery = require('battery');
-    battery.onStateChanged(function(data) {
-    	// Some awesome stuff
-    });
-
-Parameters
-----------
-
-- __event__ : function(data), callback function giving access to methods from an event object. 
-- __data__ : [BatteryData](batteryData.html), object containing all information about the new battery status.
-
-Return
-------
-
-- __token__ : StingToken used to cancel event listener.
-
-Full Example
-------------
-
-    var battery = require('battery');
-    battery.onLevelChanged(function(data) {
-    	var newState = data.state;
-    });
-
 state
 =====
 
@@ -309,3 +253,62 @@ Full Example
 
     var battery = require('battery');
     var result = battery.voltage();
+
+onLevelChanged
+==============
+
+> Start a listener on the battery level and execute some actions when it changes.
+
+    var battery = require('battery');
+    battery.onLevelChanged(function(data) {
+        // Some awesome stuff
+    });
+
+Parameters
+----------
+
+- __event__ : function(data), callback function giving access to methods from an event object. 
+- __data__ : [BatteryData](batteryData.html), object containing all information about the new battery status.
+
+Return
+------
+
+- __token__ : [Token](../../extra/stingToken.html) used to cancel event listener.
+
+
+Full Example
+------------
+
+    var battery = require('battery');
+    battery.onLevelChanged(function(data) {
+        var newLevel = data.level;
+    });
+
+onStateChanged
+==============
+
+> Start a listener on the battery state and execute some actions when it changes.
+
+    var battery = require('battery');
+    battery.onStateChanged(function(data) {
+        // Some awesome stuff
+    });
+
+Parameters
+----------
+
+- __event__ : function(data), callback function giving access to methods from an event object. 
+- __data__ : [BatteryData](batteryData.html), object containing all information about the new battery status.
+
+Return
+------
+
+- __token__ : [Token](../../extra/stingToken.html) used to cancel event listener.
+
+Full Example
+------------
+
+    var battery = require('battery');
+    battery.onLevelChanged(function(data) {
+        var newState = data.state;
+    });

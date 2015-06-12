@@ -14,8 +14,8 @@ Usage
 
 	var timer = require('timer');
 
-Methods
--------
+Events
+------
 
 - [at](#at)
 - [every](#every)

@@ -14,8 +14,8 @@ Usage
 
 	var location = require('location');
 
-Methods
--------
+Data
+----
 
 - [accuracy](#accuracy)
 - [altitude](#altitude)
@@ -25,6 +25,10 @@ Methods
 - [mode](#mode)
 - [source](#source)
 - [speed](#speed)
+
+Events
+------
+
 - [onLocationChanged](#onlocationchanged)
 
 accuracy
@@ -195,36 +199,6 @@ Full Example
     var location = require('location');
     var result = location.mode();
 
-onLocationChanged
-=================
-
-> Start a listener on the location state and execute some actions when it changes.
-
-    var location = require('location');
-    location.onLocationChanged(params, function(data) {
-    	// Some awesome stuff
-    });
-
-Parameters
-----------
-
-- __params__ : JSON, defines the mode and the minimal distance between each new location. Can be empty.
-- __event__ : function(data), callback function giving access to methods from an event object. 
-- __data__ : locationData, object containing all information about the new location status.
-
-Return
-------
-
-- __token__ : StingToken used to cancel event listener.
-
-Full Example
-------------
-
-    var location = require('location');
-    location.onLevelChanged({mode: location.ACTIVE, distance: 10}, function(data) {
-    	var newLatitude = data.latitude;
-    });
-
 source
 ======
 
@@ -273,3 +247,33 @@ Full Example
 
     var location = require('location');
     var result = location.altitude();
+
+onLocationChanged
+=================
+
+> Start a listener on the location state and execute some actions when it changes.
+
+    var location = require('location');
+    location.onLocationChanged(params, function(data) {
+        // Some awesome stuff
+    });
+
+Parameters
+----------
+
+- __params__ : JSON, defines the mode and the minimal distance between each new location. Can be empty.
+- __event__ : function(data), callback function giving access to methods from an event object. 
+- __data__ : locationData, object containing all information about the new location status.
+
+Return
+------
+
+- __token__ : [Token](../../extra/stingToken.html) used to cancel event listener.
+
+Full Example
+------------
+
+    var location = require('location');
+    location.onLevelChanged({mode: location.ACTIVE, distance: 10}, function(data) {
+        var newLatitude = data.latitude;
+    });
