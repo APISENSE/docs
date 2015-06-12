@@ -14,8 +14,8 @@ Usage
 
 	var wifi = require('wifi');
 
-Methods
--------
+Data
+----
 
 - [authentication](#authentication)
 - [bssid](#bssid)
@@ -26,6 +26,10 @@ Methods
 - [rssi](#rssi)
 - [ssid](#ssid)
 - [state](#state)
+
+Events
+------
+
 - [onScanChanged](#onscanchanged)
 - [onSsidChanged](#onssidchanged)
 - [onStateChanged](#onstatechanged)
@@ -177,97 +181,6 @@ Full Example
     var wifi = require('wifi');
     var result = wifi.isState(wifi.CONNECTED)
 
-
-onScanChanged
-=============
-
-> Start a listener on the wifi scan and execute some actions when it changes.
-
-    var wifi = require('wifi');
-    wifi.onScanChanged(function(data) {
-    	// Some awesome stuff
-    });
-
-Parameters
-----------
-
-- __event__ : function(data), callback function giving access to methods from an event object. 
-- __data__ : [WifiData](wifiData.html), object containing all information about the new wifi status.
-
-Return
-------
-
-- __token__ : StingToken used to cancel event listener.
-
-Full Example
-------------
-
-    var wifi = require('wifi');
-    var token = wifi.onScanChanged(function(data) {
-    	var newRssi = data.rssi;  // Will be executed for every network around
-    });
-    token.cancel();
-
-onSsidChanged
-=============
-
-> Start a listener on the wifi ssid and execute some actions when it changes.
-
-    var wifi = require('wifi');
-    wifi.onSsidChanged(function(data) {
-    	// Some awesome stuff
-    });
-
-Parameters
-----------
-
-- __event__ : function(data), callback function giving access to methods from an event object. 
-- __data__ : [WifiData](wifiData.html), object containing all information about the new wifi status.
-
-Return
-------
-
-- __token__ : StingToken used to cancel event listener.
-
-Full Example
-------------
-
-    var wifi = require('wifi');
-    var token = wifi.onSsidChanged(function(data) {
-    	var newSsid = data.ssid;
-    });
-    token.cancel();
-
-onStateChanged
-=============
-
-> Start a listener on the wifi scan and execute some actions when it changes.
-
-    var wifi = require('wifi');
-    wifi.onStateChanged(function(data) {
-    	// Some awesome stuff
-    });
-
-Parameters
-----------
-
-- __event__ : function(data), callback function giving access to methods from an event object. 
-- __data__ : [WifiData](wifiData.html), object containing all information about the new wifi status.
-
-Return
-------
-
-- __token__ : StingToken used to cancel event listener.
-
-Full Example
-------------
-
-    var wifi = require('wifi');
-    var token = wifi.onStateChanged(function(data) {
-    	var newState = data.state;
-    });
-    token.cancel();
-
 rssi
 ====
 
@@ -339,3 +252,93 @@ Full Example
 
     var wifi = require('wifi');
     var result = wifi.state();
+
+onScanChanged
+=============
+
+> Start a listener on the wifi scan and execute some actions when it changes.
+
+    var wifi = require('wifi');
+    wifi.onScanChanged(function(data) {
+        // Some awesome stuff
+    });
+
+Parameters
+----------
+
+- __event__ : function(data), callback function giving access to methods from an event object. 
+- __data__ : [WifiData](wifiData.html), object containing all information about the new wifi status.
+
+Return
+------
+
+- __token__ : [Token](../../extra/stingToken.html) used to cancel event listener.
+
+Full Example
+------------
+
+    var wifi = require('wifi');
+    var token = wifi.onScanChanged(function(data) {
+        var newRssi = data.rssi;  // Will be executed for every network around
+    });
+    token.cancel();
+
+onSsidChanged
+=============
+
+> Start a listener on the wifi ssid and execute some actions when it changes.
+
+    var wifi = require('wifi');
+    wifi.onSsidChanged(function(data) {
+        // Some awesome stuff
+    });
+
+Parameters
+----------
+
+- __event__ : function(data), callback function giving access to methods from an event object. 
+- __data__ : [WifiData](wifiData.html), object containing all information about the new wifi status.
+
+Return
+------
+
+- __token__ : [Token](../../extra/stingToken.html) used to cancel event listener.
+
+Full Example
+------------
+
+    var wifi = require('wifi');
+    var token = wifi.onSsidChanged(function(data) {
+        var newSsid = data.ssid;
+    });
+    token.cancel();
+
+onStateChanged
+=============
+
+> Start a listener on the wifi scan and execute some actions when it changes.
+
+    var wifi = require('wifi');
+    wifi.onStateChanged(function(data) {
+        // Some awesome stuff
+    });
+
+Parameters
+----------
+
+- __event__ : function(data), callback function giving access to methods from an event object. 
+- __data__ : [WifiData](wifiData.html), object containing all information about the new wifi status.
+
+Return
+------
+
+- __token__ : [Token](../../extra/stingToken.html) used to cancel event listener.
+
+Full Example
+------------
+
+    var wifi = require('wifi');
+    var token = wifi.onStateChanged(function(data) {
+        var newState = data.state;
+    });
+    token.cancel();
