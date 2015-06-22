@@ -72,6 +72,19 @@ article h1, .post-title {
 	color: $orange;
 }
 
+.post-content h3 {
+	font-style: italic;
+	font-size: 12px;
+	color: $orange;
+}
+
+h3:before {
+  content: '■ ';
+    position: relative;
+    bottom: .1em;
+    color: $grey-color-dark;
+}
+
 pre, code{
 	font-size: $base-font-size - 3;
 	background-color: #F2F2F2;
