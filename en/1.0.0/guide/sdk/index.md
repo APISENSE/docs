@@ -1,22 +1,29 @@
 ---
-layout: post
+layout: page
 ---
 
-# SDK
+<script type="text/javascript" src="../../../../scripts/get.js"></script>
 
+# SDK
 
 ## What is it ?
 
 SDK stands for `Software Development Kit`. Basically it's some code we wrote for you so you can use our technology easily !
 
-## Android
+<hr/>
 
+<div style="float:right">
+<button onClick="displayAndroid()" type="button" class="btn btn-primary navbar-btn" id="android-btn">Android</button>
+<button onClick="displayIOS()" type="button" class="btn btn-default navbar-btn" id="ios-btn">iOS</button>
+</div>
 
-### Download: 
+<div id="show-android" markdown="1">
 
-Our SDK is not available on a public repository so at this point, you have to download it manually. Get our [Android SDK here]({{ "get/apisense-android-sdk-1.0.0.tgz" | prepend: site.url }}).
+## Download: 
 
-### Installation:
+Get our [Android SDK here]({{ "get/apisense-android-sdk-1.0.0.tgz" | prepend: site.url }}).
+
+## Installation:
 
 To install it with __Gradle__ all you have to do is:
 
@@ -37,7 +44,7 @@ To install it with __Gradle__ all you have to do is:
             compile 'com.apisense.sdk:apisense-android-sdk:1.0.0'
         }
 
-### permissions
+## permissions
 
 We intend to let you a total control on your application permissions so the SDK does not add permissions by default.
 
@@ -53,7 +60,7 @@ That being said, you may want to add those permisions in your _manifest.xml_:
     - `<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />`
 
 
-### Usage
+## Usage
 
 In your Application class, you can initialise the APISENSE Sdk like this:
     import com.apisense.sdk.APISENSE;
@@ -68,14 +75,15 @@ In your Application class, you can initialise the APISENSE Sdk like this:
     APISENSE.Sdk sdk = apisense.getSdk(); // Initialisation
     APISENSE.Sdk sdk2 = apisense.getSdk(); // Same instance
     
-## iOS
+</div>
 
+<div id="show-ios" markdown="1"> 
 
-### Download: 
+## Download: 
 
 Get our [iOS SDK here]({{ "get/apisense-ios-sdk-release.zip" | prepend: site.url }}).
 
-### Installation:
+## Installation:
 
 It should take less than 5 minutes to configure your project be able to use our SDK.
 
@@ -99,9 +107,13 @@ Next, open a terminal and go to your project folder.
 
 - Run `pod install`, close your project and open it again with the `*.sxworkspace` file.
 
-	At this point, you should be able to create an instance of Apisense SDK using:
+## Usage
 
-		#import "apisense/APISENSE.h"
-		APISENSE* sdk = [[APISENSE alloc] init];
+At this point, you should be able to create an instance of Apisense SDK using:
 
-- Run your application, if everything is ok you should see `[INFO]	APISENSE - Initiliazed` in the log section.
+	#import "apisense/APISENSE.h"
+	APISENSE* sdk = [[APISENSE alloc] init];
+
+- Run your application, if everything is ok you should see `[INFO]	APISENSE - SDK Initiliazed` in the log section.
+
+</div>

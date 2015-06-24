@@ -23,7 +23,7 @@ $grey-color-dark:  darken($grey-color, 25%);
 $orange: 			#FE7D00;
 
 // Width of the content area
-$content-width:    920px;
+$content-width:    55%;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -54,6 +54,10 @@ $on-laptop:        800px;
 
 
 // Global
+
+hr {
+	margin: 15px;
+}
 
 p, blockquote, a {
 	font-size: $base-font-size;
