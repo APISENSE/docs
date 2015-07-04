@@ -54,6 +54,7 @@ That being said, you may want to add those permisions in your _manifest.xml_:
     - `<uses-permission android:name="android.permission.INTERNET"/>`
 -  If you intend to use the [WifiSting]({{ "../../stings/wifi" }}):
     - `<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />`
+    - `<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>`
 - If you intend to use the [LocationSting]({{ "../../stings/location" }}):
     - `<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />`
     - `<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />`
