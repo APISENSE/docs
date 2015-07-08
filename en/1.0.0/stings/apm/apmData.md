@@ -11,7 +11,7 @@ Attributes
 ----------
 
 - url
-- ping
+- ping (ms)
 - ttl
 - traceroute
 - success

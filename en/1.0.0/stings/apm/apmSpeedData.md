@@ -12,4 +12,6 @@ Attributes
 
 - url
 - speed (mbps)
+- time (seconds)
+- size (bytes)
 - success
