@@ -14,4 +14,3 @@ Attributes
 - speed (mbps)
 - time (seconds)
 - size (bytes)
-- success

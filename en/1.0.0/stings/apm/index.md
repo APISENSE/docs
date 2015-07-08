@@ -47,14 +47,10 @@ Full Example
 ------------
 
     network.onScanCompleted('www.website-to-analyse.fr', function(data) {
-        if (data.success) {
-            log.info('Target : ' + data.url);
-            log.info('Ping (ms) : ' + data.ping);
-            log.info('Number of routers : ' + data.ttl);
-            log.info('Traceroute : ' + data.traceroute);        
-        } else {
-            log.info("Couldn't access " + data.url);
-        }
+        log.info('Target : ' + data.url);
+        log.info('Ping (ms) : ' + data.ping);
+        log.info('Number of routers : ' + data.ttl);
+        log.info('Traceroute : ' + data.traceroute);        
     });
   
   
@@ -85,12 +81,10 @@ Full Example
 
     var apm = require('apm');
     apm.onDownloadCompleted('url-to-file.ext', function(data) {
-        if (data.success) {
-            log.info('Target : ' + data.url);
-            log.info('Download speed (mbps) : ' + data.speed); 
-        } else {
-            log.info("Couldn't access " + data.url);
-        }
+        log.info('Target : ' + data.url);
+        log.info('Download speed (mbps) : ' + data.speed); 
+        log.info('Download size (bytes) : ' + evt.size);
+        log.info('Download time (s) : ' + evt.time);
     });
 
 onUploadCompleted
@@ -124,10 +118,8 @@ Full Example
 
     var apm = require('apm');
     apm.onUploadCompleted('ftp', 'host', 'username', 'password', size, function(data) {
-        if (data.success) {
-            log.info('Target : ' + data.url);
-            log.info('Upload speed (mbps) : ' + data.speed);
-        } else {
-            log.info("Couldn't access " + data.url);
-        }
+        log.info('Target : ' + data.url);
+        log.info('Upload speed (mbps) : ' + data.speed);
+        log.info('Upload size (bytes) : ' + evt.size);
+        log.info('Upload time (s) : ' + evt.time);
     });

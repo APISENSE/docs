@@ -14,4 +14,3 @@ Attributes
 - ping (ms)
 - ttl
 - traceroute
-- success
