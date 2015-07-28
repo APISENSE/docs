@@ -99,12 +99,13 @@ Next, open a terminal and go to your project folder.
 - Tap `pod init`
 - You should have a file named `Podfile`, copy paste the following code in your first target block. These are the dependencies used in the APISENSE® project.
 
-		pod 'AFNetworking', '~> 2.5.1'
-		pod 'CocoaSecurity'
-		pod 'Objection', '~> 1.4'
-		pod 'Mantle', '~> 1.5.4'
-		pod 'tolo', '~> 1.0.0'
-		pod 'Reachability', '~> 3.2'
+        pod 'AFNetworking', '~> 2.5.1'
+        pod 'CocoaSecurity'
+        pod 'Objection', '~> 1.4'
+        pod 'Mantle', '~> 1.5.4'
+        pod 'tolo', '~> 1.0.0'
+        pod 'CocoaLumberjack', '~> 2.0.1'
+        pod 'FTPManager', '~> 1.6.5'
 
 - Run `pod install`, close your project and open it again with the `*.sxworkspace` file.
 
