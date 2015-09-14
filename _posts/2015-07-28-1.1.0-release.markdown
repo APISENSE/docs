@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Keep it up ! 1.1.0 released"
+date:   2015-07-28 15:00:00
+categories: annonce
+---
+
+This is a minor update but a nice one ! You can now create private collect for yourself or your company.
+If you want to be sure that only your community is contributing, create your application, set-up your access key and you're good to go!
+
+Hope you like it!
