@@ -21,7 +21,7 @@ SDK stands for `Software Development Kit`. Basically it's some code we wrote for
 
 ## Download: 
 
-Get our [Android SDK here]({{ "get/apisense-android-sdk-1.0.0.tgz" | prepend: site.url }}).
+Get our [Android SDK here](../../get/apisense-android-sdk.tgz).
 
 ## Installation:
 
@@ -82,14 +82,14 @@ In your Application class, you can initialise the APISENSE Sdk like this:
 
 ## Download: 
 
-Get our [iOS SDK here]({{ "get/apisense-ios-sdk-release.zip" | prepend: site.url }}).
+Get our [iOS SDK here](../../get/apisense-ios-sdk-release.zip).
 
 ## Installation:
 
 It should take less than 5 minutes to configure your project be able to use our SDK.
 
 - Extract the `zip` archive
-- Drag & drop `lib` and `apisense` folders inside your target application besides your sources. Check copy files if needed.
+- Drag &amp; drop `lib` and `apisense` folders inside your target application besides your sources. Check copy files if needed.
 - In `Build settings` > `Header Search Path` add `$SOURCE_ROOT/apisense`
 - In `Build Phases` check that you have our `apisense-android-sdk-release.a` file or add it.
 - In `Build settings` > `Other Linker Flags` add `-ObjC`

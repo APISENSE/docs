@@ -65,6 +65,10 @@ p, blockquote, a {
 	text-align:justify;
 }
 
+a:hover {
+	cursor:pointer;
+}
+
 article h1, .post-title {
 	font-size: 30px;
 	color: $orange;

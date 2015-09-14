@@ -1,7 +1,7 @@
 
 <div id="leftNav">
 
-	{% assign defaultVersion = "1.1.0" %} <!-- Default version if not found is 1.1.0 -->
+	{% assign defaultVersion = "1.0.0" %} <!-- Default version if not found is 1.2.0 -->
 
 	{% assign words = page.url | split: '/' %}
 	{% assign version = words[2] | getVersion	%}	
@@ -30,8 +30,8 @@
 
 		<a href="">SDKs</a>
 		<li><a href="{{ "en/version/guide/sdk" | prepend: site.url | replace: "version",selectedVersion }}">How to use it ?</a></li>
-		<li><img class="mobile-logo" src="{{ "images/android_logo.png" | prepend: site.url }}" alt="android"/><a class="os-target" href="{{ "get/version/apisense-android-sdk.tgz" | prepend: site.url | replace: "version",selectedVersion }}">Android (bêta)</a></li>
-		<li><img class="mobile-logo" src="{{ "images/ios_logo.png" | prepend: site.url }}" alt="iOS"/><a class="os-target" href="{{ "get/version/apisense-ios-sdk-release.zip" | prepend: site.url | replace: "version",selectedVersion }}">iOS (alpha)</a></li>
+		<li><img class="mobile-logo" src="{{ "images/android_logo.png" | prepend: site.url }}" alt="android"/><a class="os-target" href="{{ "en/version/get/apisense-android-sdk.tgz" | prepend: site.url | replace: "version",selectedVersion }}">Android (bêta)</a></li>
+		<li><img class="mobile-logo" src="{{ "images/ios_logo.png" | prepend: site.url }}" alt="iOS"/><a class="os-target" href="{{ "en/version/get/apisense-ios-sdk-release.zip" | prepend: site.url | replace: "version",selectedVersion }}">iOS (alpha)</a></li>
 
 
 		<script type="text/javascript">
@@ -46,10 +46,12 @@
 			  })
 		</script>
 		
+		<br/>
 		<a href="">SDK Version</a>
 		<select id="sdkVersion" name="sdkVersion" class="form-control version">
 			<option value="1.0.0" {% if selectedVersion == "1.0.0" %}selected="selected"{% endif %}>1.0.0</option>
-			<option value="1.1.0" {% if selectedVersion == "1.1.0" %}selected="selected"{% endif %}>1.1.0</option>
+			<option disabled>1.1.0 - Disabled</option>
+			<option value="1.2.0" {% if selectedVersion == "1.2.0" %}selected="selected"{% endif %}>1.2.0</option>
 		</select>
 	</ul>
 </div>

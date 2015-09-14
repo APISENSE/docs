@@ -13,7 +13,7 @@ Bee is a mobile application created to give access to all public colllects creat
 How to use it ?
 ---------------
 
-As any other application you can download it from your PlayStore for Android or AppStore for iOS. Install it, create an account and start contributing.
+As any other application you can (soon) download it from your PlayStore for Android or AppStore for iOS. Install it, create an account and start contributing.
 
 Example
 -------
