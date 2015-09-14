@@ -23,7 +23,7 @@ $grey-color-dark:  darken($grey-color, 25%);
 $orange: 			#FE7D00;
 
 // Width of the content area
-$content-width:    920px;
+$content-width:    55%;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -55,6 +55,10 @@ $on-laptop:        800px;
 
 // Global
 
+hr {
+	margin: 15px;
+}
+
 p, blockquote, a {
 	font-size: $base-font-size;
 	font-family: $base-font-family;
@@ -70,6 +74,19 @@ article h1, .post-title {
 	font-style: italic;
 	font-size: 14px;
 	color: $orange;
+}
+
+.post-content h3 {
+	font-style: italic;
+	font-size: 12px;
+	color: $orange;
+}
+
+h3:before {
+  content: '■ ';
+    position: relative;
+    bottom: .1em;
+    color: $grey-color-dark;
 }
 
 pre, code{
