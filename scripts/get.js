@@ -23,7 +23,7 @@ function displayIOS() {
 	targets.androidBtn.className = "btn btn-default navbar-btn";
 }
 
-$( document ).ready(function() {
+$(document).ready(function() {
 	targets = new Targets;
 	displayAndroid();
 });	

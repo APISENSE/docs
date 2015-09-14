@@ -4,13 +4,16 @@
 	{% assign defaultVersion = "1.1.0" %} <!-- Default version if not found is 1.1.0 -->
 
 	{% assign words = page.url | split: '/' %}
-	{% if words.size <= 2 %}
-		{% assign selectedVersion = defaultVersion %}
-	{% else %}
+	{% assign version = words[2] | getVersion	%}	
+
+	{% if version != null %}
 		{% assign selectedVersion = words[2] %}
+	{% else %}
+		{% assign selectedVersion = defaultVersion %}
 	{% endif %}
 
 	<ul class="nav nav-pills nav-stacked">
+		<p class="text-center"><span class="label label-info">SDK Version {{selectedVersion}}</span></p>
 		<a href="{{ "en/version/guide/" | prepend: site.url | replace: "version",selectedVersion | replace: "version",selectedVersion }}">Guide</a>
 		<li><a href="{{ "en/version/guide/bee/" | prepend: site.url | replace: "version",selectedVersion }}">Mobile application</a></li>
 		<li><a href="{{ "en/version/guide/dashboard/" | prepend: site.url | replace: "version",selectedVersion }}">Web interface</a></li>
@@ -36,7 +39,8 @@
 			     $('#sdkVersion').change(function() {
 			         var version = this.value; // value of the select element
 			         var currentUrl = window.location.href
-			         var updatedUrl = currentUrl.replace(/\/([0-9]+.?){3}\//, "/"+version+"/");
+			         var updatedUrl = currentUrl.replace(/\/([0-9]+\.?){3}\//, "/"+version+"/");
+			         console.log(updatedUrl);
 			         window.location.assign(updatedUrl);
 			     })
 			  })
