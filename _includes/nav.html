@@ -1,7 +1,7 @@
 
 <div id="leftNav">
 
-	{% assign defaultVersion = "1.0.0" %} <!-- Default version if not found is 1.2.0 -->
+	{% assign defaultVersion = "1.2.0" %} <!-- Default version if not found is 1.2.0 -->
 
 	{% assign words = page.url | split: '/' %}
 	{% assign version = words[2] | getVersion	%}	
@@ -20,15 +20,9 @@
 		<li><a href="{{ "en/version/guide/sdk/" | prepend: site.url | replace: "version",selectedVersion }}">SDK</a></li>	
 
 		<a href="{{ "en/version/stings/" | prepend: site.url | replace: "version",selectedVersion }}">Stings</a>
-		<li><a href="{{ "en/version/stings/battery/" | prepend: site.url | replace: "version",selectedVersion }}">Battery</a></li>
-		<li><a href="{{ "en/version/stings/location/" | prepend: site.url | replace: "version",selectedVersion }}">Location</a></li>
-		<li><a href="{{ "en/version/stings/log/" | prepend: site.url | replace: "version",selectedVersion }}">Log</a></li>
-		<li><a href="{{ "en/version/stings/recorder/" | prepend: site.url | replace: "version",selectedVersion }}">Recorder</a></li>
-		<li><a href="{{ "en/version/stings/timer/" | prepend: site.url | replace: "version",selectedVersion }}">Timer</a></li>
-		<li><a href="{{ "en/version/stings/wifi/" | prepend: site.url | replace: "version",selectedVersion }}">Wifi</a></li>
-		<li><a href="{{ "en/version/stings/apm/" | prepend: site.url | replace: "version",selectedVersion }}">APM</a></li>
-
-		<a href="">SDKs</a>
+		{{ selectedVersion | generateStingsList }}
+		
+		<a href="{{site.url}}">SDKs</a>
 		<li><a href="{{ "en/version/guide/sdk" | prepend: site.url | replace: "version",selectedVersion }}">How to use it ?</a></li>
 		<li><img class="mobile-logo" src="{{ "images/android_logo.png" | prepend: site.url }}" alt="android"/><a class="os-target" href="{{ "en/version/get/apisense-android-sdk.tgz" | prepend: site.url | replace: "version",selectedVersion }}">Android (bêta)</a></li>
 		<li><img class="mobile-logo" src="{{ "images/ios_logo.png" | prepend: site.url }}" alt="iOS"/><a class="os-target" href="{{ "en/version/get/apisense-ios-sdk-release.zip" | prepend: site.url | replace: "version",selectedVersion }}">iOS (alpha)</a></li>

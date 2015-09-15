@@ -2,6 +2,7 @@
 layout: post
 ---
 
-# Bee
+# Guide
 
-Bee is a multi-platform application used to retrieve and launch experiments on your device.
+In this guide you will find multiple files to help you to understand how to use our plateforme.
+If you have any question: [contact@apisense.com](contact@apisense.com)
