@@ -8,8 +8,8 @@ description: >
 
 baseurl: ""
 
-#url: http://docs.apisense.com/
-url: http://127.0.0.1:4000/ # "http://apisense.github.io/docs/"
+url: http://docs.apisense.com/
+#url: http://127.0.0.1:4000/ # "http://apisense.github.io/docs/"
 
 twitter_username: APISENSE
 github_username:  APISENSE
