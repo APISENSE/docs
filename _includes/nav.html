@@ -20,7 +20,8 @@
 		<li><a href="{{ "en/version/guide/sdk/" | prepend: site.url | replace: "version",selectedVersion }}">SDK</a></li>	
 
 		<a href="{{ "en/version/stings/" | prepend: site.url | replace: "version",selectedVersion }}">Stings</a>
-		{{ selectedVersion | generateStingsList }}
+		{% assign stings = selectedVersion | generateStingsList %}
+		{{stings}}
 		
 		<a href="{{site.url}}">SDKs</a>
 		<li><a href="{{ "en/version/guide/sdk" | prepend: site.url | replace: "version",selectedVersion }}">How to use it ?</a></li>
