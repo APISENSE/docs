@@ -76,6 +76,12 @@ In your Application class, you can initialise the APISENSE Sdk like this:
     APISENSE.Sdk sdk = apisense.getSdk(); // Initialisation
     APISENSE.Sdk sdk2 = apisense.getSdk(); // Same instance
     
+## Add your private key
+
+If you want allow people to see your private collects, add the following line before creating the Sdk singleton:
+
+    apisense.useAccessKey(accessKey);
+
 </div>
 
 <div id="show-ios" markdown="1"> 
@@ -114,8 +120,14 @@ Next, open a terminal and go to your project folder.
 At this point, you should be able to create an instance of Apisense SDK using:
 
 	#import "apisense/APISENSE.h"
-	APISENSE* sdk = [[APISENSE alloc] init];
+	APISENSE* sdk = [[APISENSE alloc] init]; // Standard initialization
 
 - Run your application, if everything is ok you should see `[INFO]	APISENSE - SDK Initiliazed` in the log section.
+
+## Add your private key
+
+If you want allow people to see your private collects, add the following line:
+
+    [sdk useAccessKey:accessKey];
 
 </div>
