@@ -131,3 +131,8 @@ If you want allow people to see your private collects, add the following line:
     [sdk useAccessKey:accessKey];
 
 </div>
+
+<div style="float:right">
+<button onClick="displayAndroid()" type="button" class="btn btn-primary navbar-btn" id="android-btn">Android</button>
+<button onClick="displayIOS()" type="button" class="btn btn-default navbar-btn" id="ios-btn">iOS</button>
+</div>
