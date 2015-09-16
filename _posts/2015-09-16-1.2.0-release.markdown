@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Big update ! 1.2.0 available !"
+date:   2015-09-16 17:00:00
+categories: annonce
+---
+
+After a little bit more than two months of work we are glad to share with you our new SDK version !
+With it comes a lot of new features, check-it out:
+
+- Privacy managment: You can setup your privacy settings to only run collects that use things you want to share and automatically stop the others.
+- Google play games: Let's have some fun, unlock some nice achievements and see your progression!
+- Collect statistics: See how many people are contributing to every collect, always good to know you're not alone! (but you can be the first :D)
+
+Hope you like it!
