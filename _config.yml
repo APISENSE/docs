@@ -17,3 +17,5 @@ github_username:  APISENSE
 # Build settings
 markdown: kramdown
 highlighter: pygments #rouge
+
+exclude: [vendor]
