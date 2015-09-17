@@ -2,11 +2,15 @@ language: ruby
 rvm:
 - 2.1
 
-script: ./scripts/cibuild
-
 branches:
   only:
   - master
+
+before_script:
+- git config --global user.name 'Travis CI'
+- git config --global user.email 'apisense@gmail.com'
+
+script: ./scripts/cibuild
 
 after_success:
 - mkdir .deploy
