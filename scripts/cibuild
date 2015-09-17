@@ -1,2 +1,1 @@
-gem install jekyll html-proofer
-jekyll build && htmlproof ./_site
+jekyll build
