@@ -20,14 +20,7 @@
 		<li><a href="{{ "en/version/guide/sdk/" | prepend: site.url | replace: "version",selectedVersion }}">SDK</a></li>	
 
 		<a href="{{ "en/version/stings/" | prepend: site.url | replace: "version",selectedVersion }}">Stings</a>
-		<!-- {{ selectedVersion | generateStingsList }} -->
-		<li><a href="{{ "en/version/stings/battery/" | prepend: site.url | replace: "version",selectedVersion }}">Battery</a></li>
-		<li><a href="{{ "en/version/stings/location/" | prepend: site.url | replace: "version",selectedVersion }}">Location</a></li>
-		<li><a href="{{ "en/version/stings/log/" | prepend: site.url | replace: "version",selectedVersion }}">Log</a></li>
-		<li><a href="{{ "en/version/stings/recorder/" | prepend: site.url | replace: "version",selectedVersion }}">Recorder</a></li>
-		<li><a href="{{ "en/version/stings/timer/" | prepend: site.url | replace: "version",selectedVersion }}">Timer</a></li>
-		<li><a href="{{ "en/version/stings/wifi/" | prepend: site.url | replace: "version",selectedVersion }}">Wifi</a></li>
-		<li><a href="{{ "en/version/stings/apm/" | prepend: site.url | replace: "version",selectedVersion }}">APM</a></li>
+		{{ selectedVersion | generateStingsList }}
 		
 		<a href="{{site.url}}">SDKs</a>
 		<li><a href="{{ "en/version/guide/sdk" | prepend: site.url | replace: "version",selectedVersion }}">How to use it ?</a></li>
