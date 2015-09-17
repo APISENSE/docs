@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>APISENSE® Documentation</title>
+    <description>APISENSE® makes it easy to collect data with crowds of mobile phone sensors. Make sense and innovate on top of real world data feedback, in real time!.
+</description>
+    <link>http://docs.apisense.com//</link>
+    <atom:link href="http://docs.apisense.com//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 17 Sep 2015 15:44:01 +0000</pubDate>
+    <lastBuildDate>Thu, 17 Sep 2015 15:44:01 +0000</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Big update ! 1.2.0 available !</title>
+        <description>&lt;p&gt;After a little bit more than two months of work we are glad to share with you our new SDK version !
+With it comes a lot of new features, check-it out:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Privacy managment: You can setup your privacy settings to only run collects that use things you want to share and automatically stop the others.&lt;/li&gt;
+  &lt;li&gt;Google play games: Let’s have some fun, unlock some nice achievements and see your progression!&lt;/li&gt;
+  &lt;li&gt;Collect statistics: See how many people are contributing to every collect, always good to know you’re not alone! (but you can be the first :D)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hope you like it!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 16 Sep 2015 17:00:00 +0000</pubDate>
+        <link>http://docs.apisense.com//annonce/2015/09/16/1.2.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.com//annonce/2015/09/16/1.2.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
+    
+      <item>
+        <title>Keep it up ! 1.1.0 released</title>
+        <description>&lt;p&gt;This is a minor update but a nice one ! You can now create private collect for yourself or your company.
+If you want to be sure that only your community is contributing, create your application, set-up your access key and you’re good to go!&lt;/p&gt;
+
+&lt;p&gt;Note that we also temporarily set up subscriptionUrl in base64 because of problems with collect names using spaces.&lt;/p&gt;
+
+&lt;p&gt;Hope you like it!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 28 Jul 2015 15:00:00 +0000</pubDate>
+        <link>http://docs.apisense.com//annonce/2015/07/28/1.1.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.com//annonce/2015/07/28/1.1.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
+    
+      <item>
+        <title>Let&#39;s start ! 1.0.0 is available !!</title>
+        <description>&lt;p&gt;We are glad to annonce the first release of our APISENSE® SDK.
+With it you can collect data from most common smartphone sensors on Android and iOS and retrieve data later! This is the very first step to our project but we think there is a lot of things you can already do.&lt;/p&gt;
+
+&lt;p&gt;Be sure to share with us your impressions so we can make it better :D&lt;/p&gt;
+
+&lt;p&gt;Hope you like it!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 01 May 2015 10:29:44 +0000</pubDate>
+        <link>http://docs.apisense.com//annonce/2015/05/01/1.0.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.com//annonce/2015/05/01/1.0.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
+    
+  </channel>
+</rss>
