@@ -1,4 +1,4 @@
-APISENSE® Documentation
+APISENSE® Documentation [![Build Status](https://travis-ci.org/APISENSE/docs.svg?branch=master)](https://travis-ci.org/APISENSE/docs)
 =======================
 
 Requirements
