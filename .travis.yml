@@ -2,6 +2,10 @@ language: ruby
 rvm:
 - 2.1
 
+before_script:
+- git config --global user.name 'Apisense team'
+- git config --global user.email 'apisense@gmail.com'
+
 script: ./scripts/cibuild
 
 branches:
