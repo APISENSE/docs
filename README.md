@@ -17,6 +17,11 @@ Note: Github only supports pygments, rouge is no longer used.
 How to run
 ----------
 
+Github doesn't allow to run custom plugin directly. Using Travis we can build on the branch master everything. All you've to do is to merge _site from master into gh-pages.
+
+How to run
+----------
+
 By default the server is running on port 4000, you can change its configuration in the `_config.yml` file and then run it !
 
 	jekyll serve
