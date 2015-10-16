@@ -64,6 +64,7 @@ That being said, you may want to add those permisions in your _manifest.xml_:
 ## Usage
 
 In your Application class, you can initialise the APISENSE Sdk like this:
+
     import com.apisense.sdk.APISENSE;
 
     // Create the SDK instance
@@ -78,10 +79,59 @@ In your Application class, you can initialise the APISENSE Sdk like this:
     
 ## Add your private key
 
-If you want allow people to see your private collects, add the following line before creating the Sdk singleton:
+If you want to see your private collects, add the following line before creating the Sdk singleton:
 
     apisense.useAccessKey(accessKey);
 
+## Install a specific collect
+
+You may want to install a specific collect, here is a sample to do so:
+
+    // You can find this value at the end of the URL when looking at your collect on the Honeycomb server
+    String cropIdentifier = "ZzQq5wW8zgIn3mJ3ylnw";
+
+    // Find the collect on the store, using your accessKey if private
+    sdk.getStoreManager().findSpecificCrop(cropIdentifier, new APSCallback<Crop>() {
+      @Override
+      public void onDone(final Crop crop) {
+        subscribeCrop(crop);
+      }
+
+      @Override
+      public void onError(Exception e) {
+        e.printStackTrace();
+      }
+    }
+
+    // Subscribe to the found collect
+    void subscribeCrop(Crop crop) {
+      sdk.getCropManager().subscribe(crop, new APSCallback<Crop>() {
+        @Override
+        public void onDone(final Crop crop) {
+          startCrop(crop);
+        }
+
+        @Override
+        public void onError(Exception e) {
+          e.printStackTrace();
+        }
+      }
+    }
+
+    // Start your collect when ready
+    void startCrop(Crop crop) {
+      sdk.getCropManager().start(crop, new APSCallback<Crop>() {
+        @Override
+        public void onDone(final Crop crop) {
+          // Your collect is already gathering data!
+        }
+
+        @Override
+        public void onError(Exception e) {
+          e.printStackTrace();
+        }
+      }
+    }
 </div>
 
 <div id="show-ios" markdown="1"> 
