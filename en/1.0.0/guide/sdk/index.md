@@ -64,6 +64,7 @@ That being said, you may want to add those permisions in your _manifest.xml_:
 ## Usage
 
 In your Application class, you can initialise the APISENSE Sdk like this:
+
     import com.apisense.sdk.APISENSE;
 
     // Create the SDK instance
