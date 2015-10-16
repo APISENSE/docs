@@ -302,10 +302,11 @@
 
   <h2 id="usage">Usage</h2>
 
-  <p>In your Application class, you can initialise the APISENSE Sdk like this:
-    import com.apisense.sdk.APISENSE;</p>
+  <p>In your Application class, you can initialise the APISENSE Sdk like this:</p>
 
-  <pre><code>// Create the SDK instance
+  <pre><code>import com.apisense.sdk.APISENSE;
+
+// Create the SDK instance
 APISENSE apisense = new APISENSE(); // Standard config
 
 // Add optional configuration
@@ -318,11 +319,61 @@ APISENSE.Sdk sdk2 = apisense.getSdk(); // Same instance
 
   <h2 id="add-your-private-key">Add your private key</h2>
 
-  <p>If you want allow people to see your private collects, add the following line before creating the Sdk singleton:</p>
+  <p>If you want to see your private collects, add the following line before creating the Sdk singleton:</p>
 
   <pre><code>apisense.useAccessKey(accessKey);
 </code></pre>
 
+  <h2 id="install-a-specific-collect">Install a specific collect</h2>
+
+  <p>You may want to install a specific collect, here is a sample to do so:</p>
+
+  <pre><code>// You can find this value at the end of the URL when looking at your collect on the Honeycomb server
+String cropIdentifier = "ZzQq5wW8zgIn3mJ3ylnw";
+
+// Find the collect on the store, using your accessKey if private
+sdk.getStoreManager().findSpecificCrop(cropIdentifier, new APSCallback&lt;Crop&gt;() {
+  @Override
+  public void onDone(final Crop crop) {
+    subscribeCrop(crop);
+  }
+
+  @Override
+  public void onError(Exception e) {
+    e.printStackTrace();
+  }
+}
+
+// Subscribe to the found collect
+void subscribeCrop(Crop crop) {
+  sdk.getCropManager().subscribe(crop, new APSCallback&lt;Crop&gt;() {
+    @Override
+    public void onDone(final Crop crop) {
+      startCrop(crop);
+    }
+
+    @Override
+    public void onError(Exception e) {
+      e.printStackTrace();
+    }
+  }
+}
+
+// Start your collect when ready
+void startCrop(Crop crop) {
+  sdk.getCropManager().start(crop, new APSCallback&lt;Crop&gt;() {
+    @Override
+    public void onDone(final Crop crop) {
+      // Your collect is already gathering data!
+    }
+
+    @Override
+    public void onError(Exception e) {
+      e.printStackTrace();
+    }
+  }
+}
+</code></pre>
 </div>
 
 <div id="show-ios">
