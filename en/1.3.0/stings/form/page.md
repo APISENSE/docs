@@ -17,12 +17,12 @@ Methods
 -------
 
 - [checkbox](#checkbox)
-- [datePicker](#datePicker)
+- [datepicker](#datePicker)
 - [photo](#photo)
-- [radioButton](#radiobutton)
+- [radiobutton](#radiobutton)
 - [sound](#sound)
-- [textArea](#textarea)
-- [textField](#textfield)
+- [textarea](#textarea)
+- [textfield](#textfield)
 - [video](#video)
 
 link
@@ -89,7 +89,7 @@ Return
 
 - __Page__ : Instance of the current Page
 
-datePicker
+datepicker
 ==========
 
 > Create a datePicker formulary
@@ -131,7 +131,7 @@ Return
 
 - __Page__ : Instance of the current Page
 
-radioButton
+radiobutton
 ===========
 
 > Create a radius button
@@ -174,7 +174,7 @@ Return
 
 - __Page__ : Instance of the current Page
 
-textArea
+textarea
 ========
 
 > Create a text area
@@ -195,7 +195,7 @@ Return
 
 - __Page__ : Instance of the current Page
 
-textField
+textfield
 =========
 
 > Create a text field
