@@ -5,7 +5,7 @@ layout: post
 Form
 ====
 
-> Build forms
+> Build forms to query info directly from the user.
 
 Usage
 -----
@@ -17,34 +17,39 @@ Usage
 Methods
 -------
 
-- [builder](#builder)
-- [page](#page)
+- [singlePage](#singlepage)
+- [multiPage](#multipage)
+- [onResult](#onresult)
 
-builder
-=======
+singlePage
+==========
 
 > Create a simple linear form.
 
-    var form = require('form');
-    var builder = form.builder();
+    singlePage(title);
 
 Parameters
 ----------
 
-- None.
+- __title__: Form title.
 
 Return
 ------
 
-- __builder__ : [Builder](builder.html), Instance of FormBuilder
+- __singlePage__ : [SinglePageForm](singlePage.html), Builder for simple form.
+
+Example
+-------
+
+    var form = require('form');
+    var builder = form.singlePage("Title");
     
-page
-====
+multiPage
+=========
 
 > Create a formulary page.
 
-    var form = require('form');
-    var page = form.page();
+    multiPage();
 
 Parameters
 ----------
@@ -54,4 +59,42 @@ Parameters
 Return
 ------
 
-- __page__ : [Page](page.html), Instance of Page
+- __multiPage__ : [MultiPageForm](multiPage.html), Builder for more complex form.
+
+Example
+-------
+
+    var form = require('form');
+    var page = form.multiPage();
+
+
+onResult
+========
+
+> Set the behaviour of the Sting when a form is finished
+
+    onResult(function(result) {
+      // Callback
+    });
+
+Parameters
+----------
+
+- __function(result)__: The method to execute when a form is completed.
+- __result__: [FormData](formData.html), The form result.
+
+Return
+------
+
+- __token__ : [Token](../../extra/stingToken.html) used to cancel event listener. 
+
+Example
+-------
+
+    var form = require('form');
+    var rec = require('recorder');
+
+    form.onResult(function(formResult) {
+      rec.save(formResult);
+      rec.sync();
+    });
