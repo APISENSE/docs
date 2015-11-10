@@ -263,7 +263,7 @@ Parameters
 
 - __params__ : JSON, defines the mode and the minimal distance between each new location. Can be empty.
 - __event__ : function(data), callback function giving access to methods from an event object. 
-- __data__ : locationData, object containing all information about the new location status.
+- __data__ : [LocationData](locationData.html), object containing all information about the new location status.
 
 Return
 ------
