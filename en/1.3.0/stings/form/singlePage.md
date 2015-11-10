@@ -2,8 +2,8 @@
 layout: post
 ---
 
-SinglePage
-==========
+SinglePageForm
+==============
 
 > Builder for single page forms.
 
