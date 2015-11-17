@@ -82,6 +82,41 @@ If you want allow people to see your private collects, add the following line be
 
     apisense.useAccessKey(accessKey);
 
+## Install a specific collect
+
+You may want to install a specific collect, here is a sample to do so:
+
+    // You can find this value at the end of the URL when looking at your collect on the Honeycomb server
+    String cropIdentifier = "ZzQq5wW8zgIn3mJ3ylnw";
+
+    // Log your _Bee_ user in.
+    sdk.getSessionManager().login("my@email.com", "myPassword",  new APSCallback<Void>() {
+      @Override
+      public void onDone(Void aVoid) {
+        installExperiment(); // You can now install the experiment.
+      }
+
+      @Override
+      public void onError(Exception e) {
+        e.printStackTrace();
+      }
+    });
+
+    // Install and start the collect, using your accessKey if the access is private
+    private void installExperiment() {
+      sdk.getCropManager().installSpecific(cropIdentifier, new APSCallback<Crop>() {
+        @Override
+        public void onDone(final Crop crop) {
+         // Crop Installed and started
+        }
+
+        @Override
+        public void onError(Exception e) {
+          e.printStackTrace();
+        }
+      }
+    }
+
 </div>
 
 <div id="show-ios" markdown="1"> 
