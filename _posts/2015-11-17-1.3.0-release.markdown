@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Wait, there is more! 1.3.0 available !"
+date:   2015-11-17 11:00:00
+categories: annonce
+---
+
+We bring you this new version with some nice new features!
+
+- **G**oogle **C**loud **M**essaging:
+    Link your application to the Google notification service to automatically update your collect on deployement. [Over here to see how to do it!](/en/1.3.0/guide/advanced/gcm/)
+- New Sting: the _form_:
+    Create your [form](/en/1.3.0/stings/form/) to ask questions to the user.
+- Filter your collected data before using them:
+    You want to save some bandwidth or lower your treatment on custom views?
+    Create a [filter](http://docs.apisense.com/en/1.3.0/guide/dashboard/#filter-the-output) to make your data what you want them to be.
+
+Have fun!
