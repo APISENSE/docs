@@ -131,22 +131,22 @@ It should take less than 5 minutes to configure your project be able to use our 
 
 - Extract the `zip` archive
 - Drag &amp; drop `lib` and `apisense` folders inside your target application besides your sources. Check copy files if needed.
-- In `Build settings` > `Header Search Path` add `$SOURCE_ROOT/apisense`
-- In `Build Phases` check that you have our `apisense-android-sdk-release.a` file or add it.
-- In `Build settings` > `Other Linker Flags` add `-ObjC`
+- In `Build Phases` check that you have our `lib/apisense-android-sdk-release.a` file in `link binary with libraries` section.
 
 Next, open a terminal and go to your project folder.
 
 - Tap `pod init`
 - You should have a file named `Podfile`, copy paste the following code in your first target block. These are the dependencies used in the APISENSE® project.
 
-        pod 'AFNetworking', '~> 2.5.1'
-        pod 'CocoaSecurity'
-        pod 'Objection', '~> 1.4'
-        pod 'Mantle', '~> 1.5.4'
+        pod 'AFNetworking', '~> 2.6.1'
+        pod 'CocoaSecurity', '~> 1.2.4'
+        pod 'Objection', '~> 1.6.1'
+        pod 'Mantle', '~> 2.0.6'
         pod 'tolo', '~> 1.0.0'
-        pod 'CocoaLumberjack', '~> 2.0.1'
+        pod 'CocoaLumberjack', '~> 2.2.0'
         pod 'FTPManager', '~> 1.6.5'
+        pod 'Google/CloudMessaging', '~> 1.2.1'
+        pod 'QuickDialog', '~> 1.1.0'
 
 - Run `pod install`, close your project and open it again with the `*.sxworkspace` file.
 
@@ -157,7 +157,7 @@ At this point, you should be able to create an instance of Apisense SDK using:
 	#import "apisense/APISENSE.h"
 	APISENSE* sdk = [[APISENSE alloc] init]; // Standard initialization
 
-- Run your application, if everything is ok you should see `[INFO]	APISENSE - SDK Initiliazed` in the log section.
+- Run your application, if everything is ok you should see `[INFO]  11/30 11:38:04  APISENSE - SDK Initiliazed` in the log section.
 
 ## Add your private key
 
