@@ -451,9 +451,7 @@ private void installExperiment() {
   <ul>
     <li>Extract the <code>zip</code> archive</li>
     <li>Drag &amp; drop <code>lib</code> and <code>apisense</code> folders inside your target application besides your sources. Check copy files if needed.</li>
-    <li>In <code>Build settings</code> &gt; <code>Header Search Path</code> add <code>$SOURCE_ROOT/apisense</code></li>
-    <li>In <code>Build Phases</code> check that you have our <code>apisense-android-sdk-release.a</code> file or add it.</li>
-    <li>In <code>Build settings</code> &gt; <code>Other Linker Flags</code> add <code>-ObjC</code></li>
+    <li>In <code>Build Phases</code> check that you have our <code>lib/apisense-android-sdk-release.a</code> file in <code>link binary with libraries</code> section.</li>
   </ul>
 
   <p>Next, open a terminal and go to your project folder.</p>
@@ -463,13 +461,15 @@ private void installExperiment() {
     <li>
       <p>You should have a file named <code>Podfile</code>, copy paste the following code in your first target block. These are the dependencies used in the APISENSE® project.</p>
 
-      <pre><code>  pod 'AFNetworking', '~&gt; 2.5.1'
-  pod 'CocoaSecurity'
-  pod 'Objection', '~&gt; 1.4'
-  pod 'Mantle', '~&gt; 1.5.4'
+      <pre><code>  pod 'AFNetworking', '~&gt; 2.6.1'
+  pod 'CocoaSecurity', '~&gt; 1.2.4'
+  pod 'Objection', '~&gt; 1.6.1'
+  pod 'Mantle', '~&gt; 2.0.6'
   pod 'tolo', '~&gt; 1.0.0'
-  pod 'CocoaLumberjack', '~&gt; 2.0.1'
+  pod 'CocoaLumberjack', '~&gt; 2.2.0'
   pod 'FTPManager', '~&gt; 1.6.5'
+  pod 'Google/CloudMessaging', '~&gt; 1.2.1'
+  pod 'QuickDialog', '~&gt; 1.1.0'
 </code></pre>
     </li>
     <li>Run <code>pod install</code>, close your project and open it again with the <code>*.sxworkspace</code> file.</li>
@@ -484,7 +484,7 @@ APISENSE* sdk = [[APISENSE alloc] init]; // Standard initialization
 </code></pre>
 
   <ul>
-    <li>Run your application, if everything is ok you should see <code>[INFO]	APISENSE - SDK Initiliazed</code> in the log section.</li>
+    <li>Run your application, if everything is ok you should see <code>[INFO]  11/30 11:38:04  APISENSE - SDK Initiliazed</code> in the log section.</li>
   </ul>
 
   <h2 id="add-your-private-key-1">Add your private key</h2>
