@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "1.4.0 available !"
+date:   2016-01-17 11:00:00
+categories: annonce
+---
+
+More more more ! 
+
+- You can now install a crop using its QRCode
+- More control on your crop, public, private and now... Unlisted ! Available for all but only if you know its ID or using the right QRCode !
+
+Have fun!
