@@ -305,9 +305,9 @@
 
 <h1 id="sdk">SDK</h1>
 
-<h2 id="what-is-it-">What is it ?</h2>
+<h2 id="what-is-it">What is it?</h2>
 
-<p>SDK stands for <code>Software Development Kit</code>. Basically it’s some code we wrote for you so you can use our technology easily !</p>
+<p>SDK stands for <code>Software Development Kit</code>. Basically it’s some code we wrote so you can use our technology easily.</p>
 
 <hr />
 
@@ -352,9 +352,9 @@
 
   <h2 id="permissions">permissions</h2>
 
-  <p>We intend to let you a total control on your application permissions so the SDK does not add permissions by default.</p>
+  <p>We intend to give you a total control on your application permissions. Hence the SDK does not add permissions by default.</p>
 
-  <p>That being said, you may want to add those permisions in your <em>manifest.xml</em>:</p>
+  <p>That being said, you may want to add those permissions in your <em>manifest.xml</em>:</p>
 
   <ul>
     <li>If you need to communicate with the apisense server <strong>(most likely the case)</strong>:
@@ -379,7 +379,7 @@
 
   <h2 id="usage">Usage</h2>
 
-  <p>In your Application class, you can initialise the APISENSE Sdk like this:
+  <p>In your Application class, you can initialise the APISENSE SDK like this:
     import com.apisense.sdk.APISENSE;</p>
 
   <pre><code>// Create the SDK instance
@@ -395,7 +395,7 @@ APISENSE.Sdk sdk2 = apisense.getSdk(); // Same instance
 
   <h2 id="add-your-private-key">Add your private key</h2>
 
-  <p>If you want allow people to see your private collects, add the following line before creating the Sdk singleton:</p>
+  <p>If you want to allow people to see your private collects, add the following line before creating the SDK singleton:</p>
 
   <pre><code>apisense.useAccessKey(accessKey);
 </code></pre>
@@ -446,7 +446,7 @@ private void installExperiment() {
 
   <h2 id="installation-1">Installation:</h2>
 
-  <p>It should take less than 5 minutes to configure your project be able to use our SDK.</p>
+  <p>It should take less than 5 minutes to configure your project to be able to use our SDK.</p>
 
   <ul>
     <li>Extract the <code>zip</code> archive</li>
@@ -477,7 +477,7 @@ private void installExperiment() {
 
   <h2 id="usage-1">Usage</h2>
 
-  <p>At this point, you should be able to create an instance of Apisense SDK using:</p>
+  <p>At this point, you should be able to create an instance of APISENSE SDK using:</p>
 
   <pre><code>#import "apisense/APISENSE.h"
 APISENSE* sdk = [[APISENSE alloc] init]; // Standard initialization
@@ -489,7 +489,7 @@ APISENSE* sdk = [[APISENSE alloc] init]; // Standard initialization
 
   <h2 id="add-your-private-key-1">Add your private key</h2>
 
-  <p>If you want allow people to see your private collects, add the following line:</p>
+  <p>If you want to allow people to see your private collects, add the following line:</p>
 
   <pre><code>[sdk useAccessKey:accessKey];
 </code></pre>
