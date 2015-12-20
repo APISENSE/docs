@@ -2,7 +2,7 @@
 layout: post
 ---
 
-The **G**oogle **C**loud **M**essaging enables you to command the collect installed on your mobile applications from the web dashboard.
+The **G**oogle **C**loud **M**essaging enables to command the collect installed on your mobile applications from the web dashboard.
 
 
 <div class="alert alert-info" role="alert">
@@ -75,7 +75,7 @@ To use GCM on an Android application, you have to :
 
 ## Enables GCM notifications on the dashboard
 
-Once you prepared your application to receive _GCM_ notification from APISENSE,
+Once you have prepared your application to receive _GCM_ notification from APISENSE,
 you will have to activate the feature on the dashboard:
 
 1. On your home page, click on `edit Profile`
@@ -84,4 +84,4 @@ you will have to activate the feature on the dashboard:
     - Your application name, which is only a reminder for you.
     - The server GCM key that APISENSE can use to send notifications.
     - In case of a notification, set the values you want to use on it.
-4. Confirm the form, your collects can now be remote controlled.
+4. Confirm the form, your collects can now be remotely controlled.
