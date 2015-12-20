@@ -6,9 +6,9 @@ layout: page
 
 # SDK
 
-## What is it ?
+## What is it?
 
-SDK stands for `Software Development Kit`. Basically it's some code we wrote for you so you can use our technology easily !
+SDK stands for `Software Development Kit`. Basically it's some code we wrote so you can use our technology easily.
 
 <hr/>
 
@@ -46,9 +46,9 @@ To install it with __Gradle__ all you have to do is:
 
 ## permissions
 
-We intend to let you a total control on your application permissions so the SDK does not add permissions by default.
+We intend to give you a total control on your application permissions. Hence the SDK does not add permissions by default.
 
-That being said, you may want to add those permisions in your _manifest.xml_:
+That being said, you may want to add those permissions in your _manifest.xml_:
 
 - If you need to communicate with the apisense server __(most likely the case)__:
     - `<uses-permission android:name="android.permission.INTERNET"/>`
@@ -63,7 +63,7 @@ That being said, you may want to add those permisions in your _manifest.xml_:
 
 ## Usage
 
-In your Application class, you can initialise the APISENSE Sdk like this:
+In your Application class, you can initialise the APISENSE SDK like this:
     import com.apisense.sdk.APISENSE;
 
     // Create the SDK instance
@@ -78,7 +78,7 @@ In your Application class, you can initialise the APISENSE Sdk like this:
     
 ## Add your private key
 
-If you want allow people to see your private collects, add the following line before creating the Sdk singleton:
+If you want to allow people to see your private collects, add the following line before creating the SDK singleton:
 
     apisense.useAccessKey(accessKey);
 
@@ -127,7 +127,7 @@ Get our [iOS SDK here](../../get/apisense-ios-sdk-release.zip).
 
 ## Installation:
 
-It should take less than 5 minutes to configure your project be able to use our SDK.
+It should take less than 5 minutes to configure your project to be able to use our SDK.
 
 - Extract the `zip` archive
 - Drag &amp; drop `lib` and `apisense` folders inside your target application besides your sources. Check copy files if needed.
@@ -152,7 +152,7 @@ Next, open a terminal and go to your project folder.
 
 ## Usage
 
-At this point, you should be able to create an instance of Apisense SDK using:
+At this point, you should be able to create an instance of APISENSE SDK using:
 
 	#import "apisense/APISENSE.h"
 	APISENSE* sdk = [[APISENSE alloc] init]; // Standard initialization
@@ -161,7 +161,7 @@ At this point, you should be able to create an instance of Apisense SDK using:
 
 ## Add your private key
 
-If you want allow people to see your private collects, add the following line:
+If you want to allow people to see your private collects, add the following line:
 
     [sdk useAccessKey:accessKey];
 
