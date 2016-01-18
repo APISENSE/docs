@@ -8,6 +8,9 @@ categories: annonce
 More more more ! 
 
 - You can now install a crop using its QRCode
-- More control on your crop, public, private and now... Unlisted ! Available for all but only if you know its ID or using the right QRCode !
+- More control on your crop, public, private and now... Unlisted ! Everybody can use the crop, but only with the right QRCode (or ID)!
+- The script editor has also been enhanced, now giving autocompletion and automatically binding you to the documentation of the stings you use.
+- You can add your custom stings to the editor autocompletion.
+- Last but not least, the servers now uses HTTPS to communicate!
 
 Have fun!
