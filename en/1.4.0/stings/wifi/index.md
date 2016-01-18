@@ -30,7 +30,7 @@ Data
 Events
 ------
 
-- [onScanChanged](#onscanchanged)
+- [onScanCompleted](#onscancompleted)
 - [onSsidChanged](#onssidchanged)
 - [onStateChanged](#onstatechanged)
 
@@ -224,12 +224,12 @@ Return
 
 - __type__ : [WifiState](wifiState.html), current wifi state.
 
-onScanChanged
+onScanCompleted
 =============
 
 > Start a listener on the wifi scan and execute some actions when it changes.
 
-    onScanChanged(callback)
+    onScanCompleted(callback)
 
 Parameters
 ----------
