@@ -13,7 +13,7 @@ module Jekyll
     def generateStingsList(version)
       stings = ""
       folders = Dir.glob('en/'+version+'/stings/*').each
-      folders.each do |f|
+      folders.sort.each do |f|
         if File.directory?(f)
           folderName = f.split('/').last
           stings += '<li><a href="/en/'+version+'/stings/'+folderName+'">'+folderName.capitalize+'</a></li>'
