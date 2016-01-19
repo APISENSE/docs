@@ -218,6 +218,72 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
         -->
         <a class="page-link" target="_blank" href="http://apisense.io">Apisense</a>
       </div>
@@ -262,31 +328,33 @@
 		<li><img class="mobile-logo" src="http://docs.apisense.com/images/ios_logo.png" alt="iOS"/><a class="os-target" href="http://docs.apisense.com/en/1.0.0/get/apisense-ios-sdk-release.zip">iOS (alpha)</a></li>
 
 
-		<script type="text/javascript">
-			$(function() {
-			  $('#sdkVersion').change(function() {
-			         var version = this.value; // value of the select element
-			         var currentUrl = window.location.href
-			         var updatedUrl = currentUrl.replace(/\/([0-9]+\.?){3}\//, "/"+version+"/");
-			         console.log(updatedUrl);
-			         window.location.assign(updatedUrl);
-                          });
+    <script type="text/javascript">
+      $(function() {
+        var availableVersions = ["1.0.0","1.2.0","1.3.0","1.4.0"]
+        availableVersions.sort().forEach(function (version){
+          $("#sdkVersion").append($('<option>', { value : version, text : version }));
+        });
+        $("#sdkVersion option[value='1.0.0']").attr("selected","selected");
 
-                          $('#adv-menu').on('shown.bs.collapse', function () {
-                            $(".glyphicon").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-down");
-                          });
-                          $('#adv-menu').on('hidden.bs.collapse', function () {
-                            $(".glyphicon").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-right");
-                          });
+        $("#sdkVersion").change(function() {
+          var version = this.value; // value of the select element
+          var currentUrl = window.location.href
+          var updatedUrl = currentUrl.replace(/\/([0-9]+\.?){3}\//, "/"+version+"/");
+          console.log(updatedUrl);
+          window.location.assign(updatedUrl);
+        });
+
+        $('#adv-menu').on('shown.bs.collapse', function () {
+          $(".glyphicon").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-down");
+        });
+        $('#adv-menu').on('hidden.bs.collapse', function () {
+          $(".glyphicon").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-right");
+        });
 			});
 		</script>
 		<br/>
 		<a href="">SDK Version</a>
 		<select id="sdkVersion" name="sdkVersion" class="form-control version">
-			<option value="1.0.0" selected="selected">1.0.0</option>
-			<option disabled>1.1.0 - Disabled</option>
-			<option value="1.2.0" >1.2.0</option>
-			<option value="1.3.0" >1.3.0</option>
 		</select>
 	</ul>
 </div>

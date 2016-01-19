@@ -6,9 +6,32 @@
 </description>
     <link>http://docs.apisense.com//</link>
     <atom:link href="http://docs.apisense.com//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 20 Dec 2015 22:08:08 +0000</pubDate>
-    <lastBuildDate>Sun, 20 Dec 2015 22:08:08 +0000</lastBuildDate>
+    <pubDate>Tue, 19 Jan 2016 10:51:02 +0000</pubDate>
+    <lastBuildDate>Tue, 19 Jan 2016 10:51:02 +0000</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>1.4.0 available !</title>
+        <description>&lt;p&gt;More more more !&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You can now install a crop using its QRCode&lt;/li&gt;
+  &lt;li&gt;More control on your crop, public, private and now… Unlisted ! Everybody can use the crop, but only with the right QRCode (or ID)!&lt;/li&gt;
+  &lt;li&gt;The script editor has also been enhanced, now giving autocompletion and automatically binding you to the documentation of the stings you use.&lt;/li&gt;
+  &lt;li&gt;You can add your custom stings to the editor autocompletion.&lt;/li&gt;
+  &lt;li&gt;Last but not least, the servers now uses HTTPS to communicate!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Have fun!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 17 Jan 2016 11:00:00 +0000</pubDate>
+        <link>http://docs.apisense.com//annonce/2016/01/17/1.4.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.com//annonce/2016/01/17/1.4.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
     
       <item>
         <title>Wait, there is more! 1.3.0 available !</title>
