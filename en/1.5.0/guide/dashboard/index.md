@@ -97,4 +97,41 @@ In this menu, you will find a script editor, in which you can add routes with th
     });
 
 
-After saving your script, you can access the result from the route `/api/v1/$collectIdentifier/data/meta`.
+After saving your script, you can access the result from the route `/api/v1/$cropIdentifier/data/meta`.
+
+## Retrieve your media
+
+Some stings will record media files (like pictures, sound, or video).
+For obvious reasons, those media will not directly be saved in the data JSON,
+but an identifier will be set instead.
+
+
+### Metadata format:
+
+You can retrieve medatada for every media uploaded on a crop from the route `/api/v1/$cropIdentifier/media`.
+Every metadata object will contain the following elements:
+
+    {
+      "cropIdentifier": "Zz86D0v6O1CWGldoD5Zg",
+      "identifier": "64C8356C-5C91-48E4-AE5D-E88F3AF047A8",
+      "size": 142222,
+      "upload": 1455618401229,
+      "contentType": "image/jpeg",
+      "url": "/api/v1/Zz86D0v6O1CWGldoD5Zg/media/64C8356C-5C91-48E4-AE5D-E88F3AF047A8"
+    }
+
+With:
+
+- `identifier`: Media identifier set in your sting result.
+- `size`: Media size in bytes.
+- `upload`: Upload timestamp.
+- `contentType`: Mime type found by the honeycomb (may be null if the type isn't recognized).
+- `url`: Media location on the honeycomb.
+
+### Retrieve the media file
+
+A raw media file can be retrieved using the route `/api/v1/$cropIdentifier/media/$mediaID`,
+where mediaID is the media identifier set in the sting result.
+
+The file will be sent via an `application/octet-stream` content type,
+whichever the file type may be.
