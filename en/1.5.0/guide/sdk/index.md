@@ -91,30 +91,39 @@ You may want to install a specific collect, here is a sample to do so:
 
     // Log your _Bee_ user in.
     sdk.getSessionManager().login("my@email.com", "myPassword",  new APSCallback<Void>() {
-      @Override
-      public void onDone(Void aVoid) {
-        installExperiment(); // You can now install the experiment.
-      }
-
-      @Override
-      public void onError(Exception e) {
-        e.printStackTrace();
-      }
-    });
-
-    // Install and start the collect, using your accessKey if the access is private
-    private void installExperiment() {
-      sdk.getCropManager().installSpecific(cropIdentifier, new APSCallback<Crop>() {
         @Override
-        public void onDone(final Crop crop) {
-         // Crop Installed and started
+        public void onDone(Void aVoid) {
+            installExperiment(); // You can now install the experiment.
         }
 
         @Override
         public void onError(Exception e) {
-          e.printStackTrace();
+            e.printStackTrace();
         }
-      }
+    });
+
+    // Install and start the collect, using your accessKey if the access is private
+    private void installExperiment() {
+        sdk.getStoreManager().findSpecificCrop(cropIdentifier,  new SimpleAPSCallback<Crop>() {
+            @Override
+            public void onDone(Crop crop) {
+                if (sdk.getCropManager().isInstalled(crop)) {
+                    sdk.getCropManager().update(crop.getLocation(), new SimpleAPSCallback<Crop>() {
+                        @Override
+                        public void onDone(Crop crop) {
+                            // Crop automatically re-started if running before update.
+                        }
+                    });
+                } else {
+                    sdk.getCropManager().installSpecific(cropIdentifier,  new SimpleAPSCallback<Crop>() {
+                        @Override
+                        public void onDone(Crop crop) {
+                            // Crop Installed, ready to be started.
+                        }
+                    });
+                }
+            }
+        });
     }
 
 </div>
