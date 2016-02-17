@@ -65,7 +65,7 @@ Parameters
 ----------
 
 - __target__ : The website to analyse.
-- __[callback](../../extra/callback.html)__ : Method executed when event triggered, returns [Network Infos](apmData.html) object.
+- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [Network Infos](apmData.html) object.
 
 Return
 ------
@@ -83,7 +83,7 @@ Parameters
 ----------
 
 - __target__ : The website to analyse.
-- __[callback](../../extra/callback.html)__ : Method executed when event triggered, returns [Network Speed](apmSpeedData.html) object.
+- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [Network Speed](apmSpeedData.html) object.
 
 Return
 ------
@@ -105,7 +105,7 @@ Parameters
 - __username__ : `Host` username
 - __password__ : `Host` password
 - __size__ : Size of the file to upload in `mega-octects`. __WILL BE UPLOADED, BE CAREFUL__.
-- __[callback](../../extra/callback.html)__ : Method executed when event triggered, returns [Network Speed](apmSpeedData.html) object.
+- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [Network Speed](apmSpeedData.html) object.
 
 Return
 ------

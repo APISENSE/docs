@@ -10,16 +10,31 @@ module Jekyll
       end
     end
 
-    def generateStingsList(version)
-      stings = ""
-      folders = Dir.glob('en/'+version+'/stings/*').each
+    def generateSectionList(version, section)
+      elements = ""
+      folders = Dir.glob('en/'+version+'/'+section+'/*').each
       folders.sort.each do |f|
         if File.directory?(f)
           folderName = f.split('/').last
-          stings += '<li><a href="/en/'+version+'/stings/'+folderName+'">'+folderName.capitalize+'</a></li>'
+          elements +=
+            '<li><a href="/en/' + version + '/' + section + '/' + folderName + '">' +
+            folderName.capitalize +
+            '</a></li>'
         end
       end
-      stings
+      elements
+    end
+
+    def generateStingsList(version)
+      generateSectionList(version, "stings")
+    end
+
+    def generateAdvancedGuidesList(version)
+      generateSectionList(version, "guide/advanced")
+    end
+
+    def generateExtraList(version)
+      generateSectionList(version, "extra")
     end
   end
 

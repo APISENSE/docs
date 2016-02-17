@@ -222,9 +222,9 @@ Parameters
 ----------
 
 - __params__ : JSON, defines the mode and the minimal distance between each new location. Can be empty.
-- __[callback](../../extra/callback.html)__ : Method executed when event triggered, returns [LocationData](locationData.html) object.
+- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [LocationData](locationData.html) object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/stingToken.html) used to cancel event listener.
+- __token__ : [Token](../../extra/token) used to cancel event listener.

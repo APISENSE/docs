@@ -234,12 +234,12 @@ onScanCompleted
 Parameters
 ----------
 
-- __[callback](../../extra/callback.html)__ : Method executed when event triggered, returns [WifiData](wifiData.html) object.
+- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [WifiData](wifiData.html) object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/stingToken.html) used to cancel event listener.
+- __token__ : [Token](../../extra/token) used to cancel event listener.
 
 onSsidChanged
 =============
@@ -251,12 +251,12 @@ onSsidChanged
 Parameters
 ----------
 
-- __[callback](../../extra/callback.html)__ : Method executed when event triggered, returns [WifiData](wifiData.html) object.
+- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [WifiData](wifiData.html) object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/stingToken.html) used to cancel event listener.
+- __token__ : [Token](../../extra/token) used to cancel event listener.
 
 onStateChanged
 =============
@@ -268,9 +268,9 @@ onStateChanged
 Parameters
 ----------
 
-- __[callback](../../extra/callback.html)__ : Method executed when event triggered, returns [WifiData](wifiData.html) object.
+- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [WifiData](wifiData.html) object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/stingToken.html) used to cancel event listener.
+- __token__ : [Token](../../extra/token) used to cancel event listener.
