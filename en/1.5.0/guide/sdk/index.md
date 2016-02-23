@@ -44,7 +44,7 @@ To install it with __Gradle__ all you have to do is:
             compile 'com.apisense.sdk:apisense-android-sdk:1.0.0'
         }
 
-## permissions
+## Add Manifest permissions
 
 We intend to let you a total control on your application permissions so the SDK does not add permissions by default.
 
@@ -60,8 +60,7 @@ That being said, you may want to add those permisions in your _manifest.xml_:
     - `<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />`
     - `<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />`
 
-
-## Usage
+## Initialize
 
 In your Application class, you can initialise the APISENSE Sdk like this:
     import com.apisense.sdk.APISENSE;
@@ -125,6 +124,32 @@ You may want to install a specific collect, here is a sample to do so:
             }
         });
     }
+
+### Handle Runtime permissions
+
+Android 6 comes with the support of [permissions at runtime](http://developer.android.com/training/permissions/requesting.html).
+
+The permissions needed by a crop depends on the Stings used by your script, and this may change at runtime, after a crop update for instance).
+
+To help you handle needed permissions on crop startup, the SDK provide 2 methods:
+
+    sdk.getCropManager().neededPermissions(crop);
+    sdk.getCropManager().deniedPermissions(crop);
+
+So, before starting a crop, you may want to check for permissions:
+
+    private void start(Crop crop) {
+        Set<String> deniedPermissions = sdk.getCropManager().deniedPermissions(crop);
+        if (deniedPermissions.isEmpty()) {
+            apisenseSdk.getCropManager().start(crop, callback);
+        } else {
+            // Request missing permissions before starting the crop
+        }
+    }
+
+The permissions needed at runtime are checked before usage on the official Stings,
+so if you don't check for permissions, your application will not crash because of a `SecurityException` 
+but you crop will not have the expected behavior.
 
 </div>
 
