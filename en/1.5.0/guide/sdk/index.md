@@ -59,10 +59,14 @@ That being said, you may want to add those permisions in your _manifest.xml_:
     - `<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />`
     - `<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />`
     - `<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />`
+- If you intend to capture media with the [FormSting]({{ "../../stings/form" }}):
+   - `<uses-permission android:name="android.permission.RECORD_AUDIO" />` (for sound capture)
+   - `<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="18" />` (for any media)
 
 ## Initialize
 
 In your Application class, you can initialise the APISENSE Sdk like this:
+
     import com.apisense.sdk.APISENSE;
 
     // Create the SDK instance

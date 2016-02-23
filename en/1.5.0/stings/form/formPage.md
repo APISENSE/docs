@@ -19,9 +19,12 @@ Content
 - [checkbox](#checkbox)
 - [datepicker](#datepicker)
 - [numberfield](#numberfield)
+- [picture](#picture)
 - [radiobutton](#radiobutton)
+- [sound](#sound)
 - [textarea](#textarea)
 - [textfield](#textfield)
+- [video](#video)
 
 Full Example
 ------------
@@ -122,6 +125,26 @@ Return
 
 - __FormPage__ : Instance of the current page.
 
+picture
+=======
+
+> Create a picture capture field, waiting for user interaction
+
+    picture(label, id, mandatory)
+
+Parameters
+----------
+
+- __label__ : Text to display before the number field.
+- __id__ : Identify the number field.
+- __mandatory__ : true if required, false otherwise.
+
+Return
+------
+
+- __FormPage__ : Instance of the current page.
+
+
 radiobutton
 ===========
 
@@ -136,6 +159,26 @@ Parameters
 - __id__ : Identify the radio button.
 - __mandatory__ : true if required, false otherwise.
 - __values__ : Array string values, only one can be picked.
+
+Return
+------
+
+- __FormPage__ : Instance of the current page.
+
+sound
+=====
+
+> Create a sound capture field, waiting for user interaction
+
+    sound(label, id, mandatory, duration)
+
+Parameters
+----------
+
+- __label__ : Text to display before the number field.
+- __id__ : Identify the number field.
+- __mandatory__ : true if required, false otherwise.
+- __duration__ : [Time String](../../extra/timeScheduleFormat.html#duration), duration of the capture.
 
 Return
 ------
@@ -174,6 +217,26 @@ Parameters
 - __label__ : Text to display before the text field.
 - __id__ : Identify the text field.
 - __mandatory__ : true if required, false otherwise.
+
+Return
+------
+
+- __FormPage__ : Instance of the current page.
+
+video
+=====
+
+> Create a video capture field, waiting for user interaction
+
+    video(label, id, mandatory, duration)
+
+Parameters
+----------
+
+- __label__ : Text to display before the number field.
+- __id__ : Identify the number field.
+- __mandatory__ : true if required, false otherwise.
+- __duration__ : [Time String](../../extra/timeScheduleFormat.html#duration), duration of the capture.
 
 Return
 ------
