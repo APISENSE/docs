@@ -55,13 +55,13 @@ Execute some operations repeatedly at specific time.
 Parameters
 ----------
 
-- __time__ : [Time String](../../extra/timeScheduleFormat.html), execution clock.
-- __[callback](../../extra/callback.html)__ : Method executed when event triggered, returns current time object.
+- __time__ : [Time String](../../extra/time), execution clock.
+- __[callback](../../extra/callback)__ : Method executed when event triggered, returns current time object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/stingToken.html) used to cancel scheduling.
+- __token__ : [Token](../../extra/token) used to cancel scheduling.
 
 every
 =====
@@ -73,13 +73,13 @@ Execute some operations repeatedly every specified time.
 Parameters
 ----------
 
-- __time__ : [Time String](../../extra/timeScheduleFormat.html), interval of time between every execution.
-- __[callback](../../extra/callback.html)__ : Method executed when event triggered, returns current time object.
+- __time__ : [Time String](../../extra/time), interval of time between every execution.
+- __[callback](../../extra/callback)__ : Method executed when event triggered, returns current time object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/stingToken.html) used to cancel scheduling.
+- __token__ : [Token](../../extra/token) used to cancel scheduling.
 
 once
 ====
@@ -91,10 +91,10 @@ Execute some operations once at specific time.
 Parameters
 ----------
 
-- __time__ : [Time String](../../extra/timeScheduleFormat.html), execution clock.
-- __[callback](../../extra/callback.html)__ : Method executed when event triggered, returns current time object.
+- __time__ : [Time String](../../extra/time), execution clock.
+- __[callback](../../extra/callback)__ : Method executed when event triggered, returns current time object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/stingToken.html) used to cancel scheduling.
+- __token__ : [Token](../../extra/token) used to cancel scheduling.

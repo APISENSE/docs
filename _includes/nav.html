@@ -1,39 +1,37 @@
 
 <div id="leftNav">
 
-	{% assign defaultVersion = "1.5.0" %} <!-- Default version if not found is 1.5.0 -->
+  {% assign defaultVersion = "1.5.0" %} <!-- Default version if not found is 1.5.0 -->
 
-	{% assign words = page.url | split: '/' %}
-	{% assign version = words[2] | getVersion	%}	
+  {% assign words = page.url | split: '/' %}
+  {% assign version = words[2] | getVersion	%}
 
-	{% if version != null %}
-		{% assign selectedVersion = words[2] %}
-	{% else %}
-		{% assign selectedVersion = defaultVersion %}
-	{% endif %}
+  {% if version != null %}
+    {% assign selectedVersion = words[2] %}
+  {% else %}
+    {% assign selectedVersion = defaultVersion %}
+  {% endif %}
 
-	<ul class="nav nav-pills nav-stacked">
-		<p class="text-center"><span class="label label-info">SDK Version {{selectedVersion}}</span></p>
-		<a href="{{ "en/version/guide/" | prepend: site.url | replace: "version",selectedVersion | replace: "version",selectedVersion }}">Guide</a>
-		<li><a href="{{ "en/version/guide/bee/" | prepend: site.url | replace: "version",selectedVersion }}">Mobile application</a></li>
-		<li><a href="{{ "en/version/guide/dashboard/" | prepend: site.url | replace: "version",selectedVersion }}">Web interface</a></li>
-		<li><a href="{{ "en/version/guide/sdk/" | prepend: site.url | replace: "version",selectedVersion }}">SDK</a></li>	
-		<li>
-                  <a href="#" data-toggle="collapse" data-target="#adv-menu" aria-expended="false" aria-controls="adv-menu">
-                    <span class="glyphicon glyphicon-chevron-right"> Advanced
-                  </a>
-                  <ul class="collapse" id="adv-menu">
-                      <li><a  href="{{ "en/version/guide/advanced/gcm" | prepend: site.url | replace: "version",selectedVersion }}">Google Cloud Messaging</a></li>
-                  </ul>
-                </li>
+  <ul class="nav nav-pills nav-stacked">
+    <p class="text-center"><span class="label label-info">SDK Version {{selectedVersion}}</span></p>
 
-		<a href="{{ "en/version/stings/" | prepend: site.url | replace: "version",selectedVersion }}">Stings</a>
-		{{ selectedVersion | generateStingsList }}
-		
-		<a href="{{site.url}}">SDKs</a>
-		<li><a href="{{ "en/version/guide/sdk" | prepend: site.url | replace: "version",selectedVersion }}">How to use it ?</a></li>
-		<li><img class="mobile-logo" src="{{ "images/android_logo.png" | prepend: site.url }}" alt="android"/><a class="os-target" href="{{ "en/version/get/apisense-android-sdk.tgz" | prepend: site.url | replace: "version",selectedVersion }}">Android (bêta)</a></li>
-		<li><img class="mobile-logo" src="{{ "images/ios_logo.png" | prepend: site.url }}" alt="iOS"/><a class="os-target" href="{{ "en/version/get/apisense-ios-sdk-release.zip" | prepend: site.url | replace: "version",selectedVersion }}">iOS (alpha)</a></li>
+    <!-- User Guides -->
+    <a href="{{ "en/version/guide/" | prepend: site.url | replace: "version", selectedVersion }}">Guide</a>
+    {{ selectedVersion | generateGuidesList }}
+
+    <!-- Stings documentation -->
+    <a href="{{ "en/version/stings/" | prepend: site.url | replace: "version", selectedVersion }}">Stings</a>
+    {{ selectedVersion | generateStingsList }}
+
+    <!-- Extra documentation elements -->
+    <a href="{{ "en/version/extra/" | prepend: site.url | replace: "version", selectedVersion }}">Extra</a>
+    {{ selectedVersion | generateExtraList }}
+
+    <!-- SDKs download & doc -->
+    <a href="{{site.url}}">SDKs</a>
+    <li><a href="{{ "en/version/guide/sdk" | prepend: site.url | replace: "version",selectedVersion }}">How to use it ?</a></li>
+    <li><img class="mobile-logo" src="{{ "images/android_logo.png" | prepend: site.url }}" alt="android"/><a class="os-target" href="{{ "en/version/get/apisense-android-sdk.tgz" | prepend: site.url | replace: "version",selectedVersion }}">Android (bêta)</a></li>
+    <li><img class="mobile-logo" src="{{ "images/ios_logo.png" | prepend: site.url }}" alt="iOS"/><a class="os-target" href="{{ "en/version/get/apisense-ios-sdk-release.zip" | prepend: site.url | replace: "version",selectedVersion }}">iOS (alpha)</a></li>
 
 
     <script type="text/javascript">
@@ -50,13 +48,6 @@
           var updatedUrl = currentUrl.replace(/\/([0-9]+\.?){3}\//, "/"+version+"/");
           console.log(updatedUrl);
           window.location.assign(updatedUrl);
-        });
-
-        $('#adv-menu').on('shown.bs.collapse', function () {
-          $(".glyphicon").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-down");
-        });
-        $('#adv-menu').on('hidden.bs.collapse', function () {
-          $(".glyphicon").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-right");
         });
 			});
 		</script>
