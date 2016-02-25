@@ -14,8 +14,8 @@ Usage
 
 	var battery = require('battery');
 
-Data
-----
+Data accessors
+--------------
 
 - [connector](#connector)
 - [data](#data)

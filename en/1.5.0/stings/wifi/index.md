@@ -14,8 +14,8 @@ Usage
 
 	var wifi = require('wifi');
 
-Data
-----
+Data accessors
+--------------
 
 - [authentication](#authentication)
 - [bssid](#bssid)
