@@ -14,12 +14,13 @@ Usage
 
 	var location = require('location');
 
-Data
-----
+Data accessors
+--------------
 
 - [accuracy](#accuracy)
 - [altitude](#altitude)
 - [bearing](#bearing)
+- [data](#data)
 - [latitude](#latitude)
 - [longitude](#longitude)
 - [mode](#mode)
@@ -38,6 +39,11 @@ Full Example
     var recorder = require('recorder');
     var timer = require('timer');
 
+    var filters = {
+        "distance": 10,
+        "mode" : gps.ACTIVE
+    };
+
     recorder.save({
         'accuracy' : gps.accuracy(),
         'altitude' : gps.altitude(),
@@ -50,7 +56,7 @@ Full Example
         'json' : data(),
     });
 
-    gps.onLocationChanged(params, function(data) {
+    gps.onLocationChanged(filters, function(data) {
         recorder.save(data);
     });
 
@@ -216,12 +222,12 @@ onLocationChanged
 
 > Start a listener on the location state and execute some actions when it changes.
 
-    onLocationChanged(params, callback)
+    onLocationChanged(filters, callback)
 
 Parameters
 ----------
 
-- __params__ : JSON, defines the mode and the minimal distance between each new location. Can be empty.
+- __[filters](locationFilter.html)__ : JSON, defines the mode and the minimal distance between each new location. Can be empty.
 - __[callback](../../extra/callback)__ : Method executed when event triggered, returns [LocationData](locationData.html) object.
 
 Return
