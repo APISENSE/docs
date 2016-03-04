@@ -71,6 +71,7 @@ In your Application class, you can initialise the APISENSE Sdk like this:
 
     // Create the SDK instance
     APISENSE apisense = new APISENSE(); // Standard config
+    apisense.useSdkKey("mySdkKey"); // Enable your SDK to contact the server
 
     // Add optional configuration
     apisense.addStingsModules(new MyOwnStingModule()); // More Stings injected!
