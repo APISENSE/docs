@@ -21,7 +21,7 @@ module Jekyll
       # Generate collapsible menu name
       '<a href="#" data-toggle="collapse" aria-expended="false"' +
         'data-target="#' + menuId + '" aria-controls="' + menuId + '">' +
-        '<span class="glyphicon glyphicon-chevron-right" id="' + iconId + '">' + subfolderName.capitalize +
+        '<span class="glyphicon glyphicon-chevron-right" id="' + iconId + '"> ' + subfolderName.capitalize + ' <span class="glyphicon glyphicon-chevron-right" id="' + iconId + '">'+
         '</a>' +
         # Generate submenu content
         '<ul class="collapse" id="' + menuId + '">' +
