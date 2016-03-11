@@ -10,34 +10,52 @@ What is it ?
 
 The [dashboard](http://apisense.io/) is the main interface to all data collectors. Using it you will be able to:
 	
-* Customize your profile settings
-* Create your own collects
-* Retrieve and analyze fresh data
+* [Create your own crops](#manage-crops)
+* [Retrieve and analyze fresh data](#retrieve-your-data)
 
-How to use it ?
----------------
 
-1. __Sign up__:
-First of all you have to create an account. Some personal information like your username will be linked to your collects and shwon in our store. Chose it wisely !
+## Manage crops
 
-2. __Create a collect__:
-Then you have to create a collect and set its name, description and optionaly your website. Those information will be used in our store to explain what you are planning to do with this collect. Again these are really important and must be filled carefully.
+### Create
 
-    <div class="alert alert-warning" role="alert">WARN: By default your collect is private so people won't be able to see it until you finish to write it. Remember to set it visible once it's ready!</div>
+Then you have to create a collect and set its name, description and optionaly your website.
+Those information will be used in our store to explain what you are planning to do with this collect.
+Again these are really important and must be filled carefully.
+Keep in mind that if your crop is _Public_ or _Unlisted_, anybody will be able to contribute from our application [Bee](../bee).
 
-    <div class="alert alert-info" role="alert">INFO: A unique identifier is created for your collect, it should look like PzeDd1r0nNtN8JdNNrlY and can be found in the details menu of your collect.</div>
+<div class="alert alert-warning" role="alert">WARN: By default your collect is private so people won't be able to see it until you finish to write it. Remember to set it visible once it's ready!</div>
+<div class="alert alert-info" role="alert">INFO: A unique identifier is created for your collect, it should look like PzeDd1r0nNtN8JdNNrlY and can be found in the details menu of your collect.</div>
 
-3. __Code it__:
-Last crutial step, you have to write your collect using our documentation. It should be quite easy and user friendly but if you're in trouble, you can contact us at [contact@apisense.com](contact@apisense.com)
+### Code it
+Last crutial step, you have to write your crop's script using every [Sting](../../stings) you need.
+It should be quite easy and user friendly but if you're in trouble, you can contact us at [contact@apisense.com](contact@apisense.com)
 
-4. __Publish it__:
-First of all you have to create an account. Some personal information like your username will be linked to your collects and shwon in our store. Chose it wisely !
+### Publish it
+First of all you have to create an account.
+Some personal information like your username will be linked to your collects and shwon in our store.
+Chose it wisely!
 
-Create private collects
------------------------
+## Handle private crop
 
-If you want to create collect only accessible by your communuty, you will need to let it private __and__ create your own application using your private access key. Doing so, people with your application will be able to see it in the store !
-Open your profile settings and copy the key inside _Read only API Key_. See [how to use it here](../sdk)
+If you want to create crops only accessible by your communuty,
+you will need to configure it as a _Private_ crop,
+which will be invisible and unusable for every APISENSE sdk instances other than yours.
+
+### Create your own application
+
+To configure the APISENSE SDK as needed to use your private crop, you will need to create an application using the APISENSE sdk, [as documented here](../sdk).
+
+### Enable your APISENSE sdk
+
+Don't forget to reference the application on your [dashboard](../dashboard) profile, in the submenu _Mobile Applications_,
+this will generate a key enabling your sdk instance to contact the APISENSE server, [see how to set it in your application](../sdk#initialize).
+
+### Add access to your crops
+
+You will have to set the access key referencing your account to grant access to your crops.
+Open your profile settings and copy the key from the field _Read only API Key_.
+See [how to use the key in your sdk](../sdk#add-your-private-key).
+
 
 ## Retrieve your data
 
