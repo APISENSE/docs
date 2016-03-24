@@ -184,8 +184,9 @@ Next, open a terminal and go to your project folder.
         pod 'tolo', '~> 1.0.0'
         pod 'CocoaLumberjack', '~> 2.2.0'
         pod 'FTPManager', '~> 1.6.5'
-        pod 'Google/CloudMessaging', '~> 1.2.1'
         pod 'QuickDialog', '~> 1.1.0'
+        pod 'UzysAssetsPickerController', '~> 0.9.9'
+        pod 'YLProgressBar', '~> 3.8.0'
 
 - Run `pod install`, close your project and open it again with the `*.sxworkspace` file.
 
@@ -194,19 +195,23 @@ Next, open a terminal and go to your project folder.
 At this point, you should be able to create an instance of Apisense SDK using:
 
 	#import "apisense/APISENSE.h"
-	APISENSE* sdk = [[APISENSE alloc] init]; // Standard initialization
+	APISENSE* sdk = apisense = [[[[[APISENSE alloc] init]
+                                                    useAccessKey:accessKey] // To see private collects
+                                                    useSdkKey:sdkKey] // To contact our server
+                                                    getSdk];
 
 - Run your application, if everything is ok you should see `[INFO]  11/30 11:38:04  APISENSE - SDK Initiliazed` in the log section.
+
+## Add your sdk key
+
+To be able to use our SDK, you have to set the sdkKey, otherwise every request will fail.
+
+    [sdk useSdkKey:sdkKey];
 
 ## Add your private key
 
 If you want allow people to see your private collects, add the following line:
 
-    [sdk useAccessKey:accessKey];
+    [sdk useAccessKey:accessKey];         
 
-</div>
-
-<div style="float:right">
-<button onClick="displayAndroid()" type="button" class="btn btn-primary navbar-btn" id="android-btn">Android</button>
-<button onClick="displayIOS()" type="button" class="btn btn-default navbar-btn" id="ios-btn">iOS</button>
 </div>
