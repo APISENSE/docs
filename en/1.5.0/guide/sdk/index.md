@@ -19,14 +19,13 @@ SDK stands for `Software Development Kit`. Basically it's some code we wrote for
 
 <div id="show-android" markdown="1">
 
-## Download: 
-
-Get our [Android SDK here](../../get/apisense-android-sdk.tgz).
-
 ## Installation:
+
+### Standalone jar
 
 To install it with __Gradle__ all you have to do is:
 
+- Get our [Android SDK here](../../get/apisense-android-sdk.tgz).
 - Extract the tarball inside a library folder, _libs_ for example.
 - Add this folder as a maven repository in your main _build.gradle_:
 
@@ -37,12 +36,29 @@ To install it with __Gradle__ all you have to do is:
                 }
             }
         }
-
 - Add the dependency on your project's _build.gradle_:
 
         dependencies {
-            compile 'com.apisense.sdk:apisense-android-sdk:1.0.0'
+            compile 'com.apisense.sdk:apisense-android-sdk:1.5.0'
         }
+
+### From our repository
+
+Since the version 1.5, you can use our maven repository to retrieve the dependency:
+
+- Add our maven repository in your main _build.gradle_:
+
+        repositories {
+            maven {
+                url 'http://repo.apisense.com/apisense'
+            }
+        }
+- Add the dependency on your project's _build.gradle_:
+
+        dependencies {
+            compile 'com.apisense.sdk:apisense-android-sdk:1.5.0'
+        }
+
 
 ## Add Manifest permissions
 
