@@ -86,7 +86,7 @@ In your Application class, you can initialise the APISENSE Sdk like this:
     import com.apisense.sdk.APISENSE;
 
     // Create the SDK instance
-    APISENSE apisense = new APISENSE(); // Standard config
+    APISENSE apisense = new APISENSE(application); // Standard config
     apisense.useSdkKey("mySdkKey"); // Enable your SDK to contact the server
 
     // Add optional configuration

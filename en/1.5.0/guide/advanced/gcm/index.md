@@ -69,7 +69,7 @@ To use GCM on an Android application, you have to :
     5. Set your `senderID` into _APISENSE_:
 
        ~~~ android
-       APISENSE apisense = new APISENSE().enableGCM(getString(R.string.gcm_defaultSenderId));
+       APISENSE apisense = new APISENSE(application).enableGCM(getString(R.string.gcm_defaultSenderId));
        ~~~
 
 
