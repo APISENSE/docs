@@ -510,7 +510,7 @@
     import com.apisense.sdk.APISENSE;</p>
 
   <pre><code>// Create the SDK instance
-APISENSE apisense = new APISENSE(); // Standard config
+APISENSE apisense = new APISENSE(application); // Standard config
 
 // Add optional configuration
 apisense.addStingsModules(new MyOwnStingModule()); // More Stings injected!
@@ -522,7 +522,7 @@ APISENSE.Sdk sdk2 = apisense.getSdk(); // Same instance
 
   <h2 id="add-your-private-key">Add your private key</h2>
 
-  <p>If you want allow people to see your private collects, add the following line before creating the Sdk singleton:</p>
+  <p>If you want to allow people to see your private collects, add the following line before creating the Sdk singleton:</p>
 
   <pre><code>apisense.useAccessKey(accessKey);
 </code></pre>
@@ -616,7 +616,7 @@ APISENSE* sdk = [[APISENSE alloc] init]; // Standard initialization
 
   <h2 id="add-your-private-key-1">Add your private key</h2>
 
-  <p>If you want allow people to see your private collects, add the following line:</p>
+  <p>If you want to allow people to see your private collects, add the following line:</p>
 
   <pre><code>[sdk useAccessKey:accessKey];
 </code></pre>

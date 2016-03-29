@@ -541,7 +541,7 @@
   <pre><code>import com.apisense.sdk.APISENSE;
 
 // Create the SDK instance
-APISENSE apisense = new APISENSE(); // Standard config
+APISENSE apisense = new APISENSE(application); // Standard config
 apisense.useSdkKey("mySdkKey"); // Enable your SDK to contact the server
 
 // Add optional configuration
@@ -554,7 +554,7 @@ APISENSE.Sdk sdk2 = apisense.getSdk(); // Same instance
 
   <h2 id="add-your-private-key">Add your private key</h2>
 
-  <p>If you want allow people to see your private collects, add the following line before creating the Sdk singleton:</p>
+  <p>If you want to allow people to see your private collects, add the following line before creating the Sdk singleton:</p>
 
   <pre><code>apisense.useAccessKey(accessKey);
 </code></pre>
@@ -696,7 +696,7 @@ APISENSE* sdk = apisense = [[[[[APISENSE alloc] init]
 
   <h2 id="add-your-private-key-1">Add your private key</h2>
 
-  <p>If you want allow people to see your private collects, add the following line:</p>
+  <p>If you want to allow people to see your private collects, add the following line:</p>
 
   <pre><code>[sdk useAccessKey:accessKey];         
 </code></pre>
