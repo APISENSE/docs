@@ -6,9 +6,41 @@
 </description>
     <link>http://docs.apisense.com//</link>
     <atom:link href="http://docs.apisense.com//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Jan 2016 10:52:13 +0000</pubDate>
-    <lastBuildDate>Tue, 19 Jan 2016 10:52:13 +0000</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+    <pubDate>Tue, 29 Mar 2016 12:48:58 +0000</pubDate>
+    <lastBuildDate>Tue, 29 Mar 2016 12:48:58 +0000</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Here comes 1.5.0 !</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;Features:
+    &lt;ul&gt;
+      &lt;li&gt;The SDK now needs an initialization key to contact the Hive, &lt;a href=&quot;/en/1.5.0/guide/dashboard/#handle-private-crop&quot;&gt;See there&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;You can now upload media (&lt;a href=&quot;/en/1.5.0/stings/form/formPage.html#video&quot;&gt;video&lt;/a&gt;, &lt;a href=&quot;/en/1.5.0/stings/form/formPage.html#sound&quot;&gt;audio&lt;/a&gt;, and &lt;a href=&quot;/en/1.5.0/stings/form/formPage.html#picture&quot;&gt;pictures&lt;/a&gt;) from &lt;em&gt;form&lt;/em&gt;.&lt;/li&gt;
+      &lt;li&gt;Needed runtime permissions for &lt;em&gt;Android M&lt;/em&gt; are now declared per Sting, you can see required and missing runtime permissions for each crop.&lt;/li&gt;
+      &lt;li&gt;You can write scripts to process each uploaded data block before insertion in database. &lt;a href=&quot;/en/1.5.0/guide/dashboard/#filter-uploaded-data&quot;&gt;More info over here&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Enhancements:
+    &lt;ul&gt;
+      &lt;li&gt;The SDK will now automatically log out users whose session has become invalid.&lt;/li&gt;
+      &lt;li&gt;The Honeycomb UI has been refactored, hope you like it better.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;alert alert-danger&quot; role=&quot;alert&quot;&gt;IMPORTANT: If you created your own application using APISENSE, you must authorize your SDK or it will not work anymore.&lt;/div&gt;
+
+&lt;p&gt;Enjoy!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 23 Mar 2016 10:00:00 +0000</pubDate>
+        <link>http://docs.apisense.com//annonce/2016/03/23/1.5.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.com//annonce/2016/03/23/1.5.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
     
       <item>
         <title>1.4.0 available !</title>
