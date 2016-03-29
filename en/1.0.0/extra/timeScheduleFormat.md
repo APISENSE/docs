@@ -40,7 +40,7 @@ Time of day
 
 > Defines a specific moment in a day.
 
-The string recognition use the regex `^\s*(\d{1,2})\s*:\s*(\d{2})\s*([aApP][mM])\s*$`
+The string recognition uses the regex `^\s*(\d{1,2})\s*:\s*(\d{2})\s*([aApP][mM])\s*$`
 
 Examples
 --------
