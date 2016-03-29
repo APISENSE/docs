@@ -31,7 +31,7 @@ Then you have to create a collect and set its name, description and optionally y
 Last crucial step, you have to write your collect using our documentation. It should be quite easy and user friendly but if you're in trouble, you can contact us at [contact@apisense.com](contact@apisense.com)
 
 4. __Publish it__:
-First of all you have to create an account. Some personal information like your username will be linked to your collects and shown in our store. Chose it wisely!
+First of all you have to create an account. Some personal information like your username will be linked to your collects and shown in our store. Choose it wisely!
 
 Create private collects
 -----------------------

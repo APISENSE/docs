@@ -10,7 +10,7 @@ Bee
 What is it ?
 ------------
 
-Bee is a mobile application created to give access to all public colllects created. Every Bee user can decide to contribute or not to any collect.
+Bee is a mobile application created to give access to all public collects created. Every Bee user can decide to contribute or not to any collect.
 
 How to use it ?
 ---------------
@@ -23,11 +23,11 @@ First of all you have to create an account. If it's not already done, create an 
     <div class="alert alert-info" role="alert">INFO: Nobody except you will see your username. It's impossible to associate data you will send to your real name nor username.</div>
 
 2. __Setup your privacy settings__:
-By default every sensors are available. If you don't want to share some data like your GPS position for privacy reason or battery saving, this is were you should disabled it.
+By default every sensors are available. If you don't want to share some data like your GPS position for privacy reason or battery saving, this is where you should disable it.
 
     <div class="alert alert-warning" role="alert">WARN: If you disable "save/export data" option, you won't be able to join any collect.</div>
 
 3. __Visit the store__:
-Based on your privacy settings, you will be able to see more or less collects in our store. If you see nothing, that's because non of the running collect match your privacy settings. Once you've selected one collect, click on it, press the subscribe button and you're good to go. The collect will automatically starts.
+Based on your privacy settings, you will be able to see more or less collects in our store. If you see nothing, that's because none of the running collect match your privacy settings. Once you've selected one collect, click on it, press the subscribe button and you're good to go. The collect will automatically start.
 
 Screenshots will come soon ;)

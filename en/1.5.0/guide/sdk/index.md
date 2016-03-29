@@ -98,7 +98,7 @@ In your Application class, you can initialise the APISENSE Sdk like this:
     
 ## Add your private key
 
-If you want allow people to see your private collects, add the following line before creating the Sdk singleton:
+If you want to allow people to see your private collects, add the following line before creating the Sdk singleton:
 
     apisense.useAccessKey(accessKey);
 
@@ -226,7 +226,7 @@ To be able to use our SDK, you have to set the sdkKey, otherwise every request w
 
 ## Add your private key
 
-If you want allow people to see your private collects, add the following line:
+If you want to allow people to see your private collects, add the following line:
 
     [sdk useAccessKey:accessKey];         
 

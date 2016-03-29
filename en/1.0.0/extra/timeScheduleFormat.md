@@ -18,7 +18,7 @@ Duration
 
 > Defines a time period with common language.
 
-The string recognition use the regex `^\s*(\d+)\s*(\w+)\s*$`,
+The string recognition uses the regex `^\s*(\d+)\s*(\w+)\s*$`,
 with the keywords defined in the below table:
 
 | Keywords  	| 

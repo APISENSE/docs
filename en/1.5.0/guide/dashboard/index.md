@@ -32,12 +32,12 @@ It should be quite easy and user friendly but if you're in trouble, you can cont
 
 ### Publish it
 First of all you have to create an account.
-Some personal information like your username will be linked to your collects and shwon in our store.
-Chose it wisely!
+Some personal information like your username will be linked to your collects and shown in our store.
+Choose it wisely!
 
 ## Handle private crop
 
-If you want to create crops only accessible by your communuty,
+If you want to create crops only accessible by your community,
 you will need to configure it as a _Private_ crop,
 which will be invisible and unusable for every APISENSE sdk instances other than yours.
 
