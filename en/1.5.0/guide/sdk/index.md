@@ -87,40 +87,53 @@ In your Application class, you can initialise the APISENSE Sdk like this:
 
     // Create the SDK instance
     APISENSE apisense = new APISENSE(application); // Standard config
-    apisense.useSdkKey("mySdkKey"); // Enable your SDK to contact the server
 
-    // Add optional configuration
-    apisense.addStingsModules(new MyOwnStingModule()); // More Stings injected!
+### Authorize your SDK
 
-    // Create the Sdk singleton and use it
-    APISENSE.Sdk sdk = apisense.getSdk(); // Initialisation
-    APISENSE.Sdk sdk2 = apisense.getSdk(); // Same instance
-    
-## Add your private key
+Your sdk instance need to be authorized to contact our server, to do so you will have to call the following method:
+
+    apisense.useSdkKey("mySdkKey"); // Authorize your SDK to contact the server
+
+### Add your private key
 
 If you want to allow people to see your private collects, add the following line before creating the Sdk singleton:
 
-    apisense.useAccessKey(accessKey);
+    apisense.useAccessKey("accessKey"); // Authorize the SDK to see your private crops
 
-## Install a specific collect
+### Configure your SDK
 
-You may want to install a specific collect, here is a sample to do so:
+You can add custom Sting implementations using [Dagger](http://square.github.io/dagger/) modules:
 
-    // You can find this value at the end of the URL when looking at your collect on the Honeycomb server
+    apisense.addStingsModules(new MyOwnStingModule()); // More Stings injected!
+
+### Instanciate the SDK
+
+When done with the configuration, you will have to call the method `getSdk()` at least one to initialize it, then the method will return the same instance at each call.
+
+    // Create the Sdk singleton and use it
+    APISENSE.Sdk sdk = apisense.getSdk(); // Initialisation
+    APISENSE.Sdk sdk2 = apisense.getSdk(); // Same instance as sdk
+
+
+## Install and start a specific crop
+
+You may want to install a specific crop, here is a sample to do so:
+
+    // You can find this value by looking at your crop details menu on apisense.io
     String cropIdentifier = "ZzQq5wW8zgIn3mJ3ylnw";
 
-    // Log your _Bee_ user in.
-    sdk.getSessionManager().login("my@email.com", "myPassword",  new APSCallback<Void>() {
-        @Override
-        public void onDone(Void aVoid) {
-            installExperiment(); // You can now install the experiment.
-        }
+    // Log your Bee user in if no session available.
+    if (sdk.getSessionManager().isConnected()) {
+        installExperiment();
+    } else {
+        sdk.getSessionManager().login("my@email.com", "myPassword",  new SimpleAPSCallback<Void>() {
+            @Override
+            public void onDone(Void aVoid) {
+                installExperiment(); // You can now install the experiment.
+            }
+        });
+    }
 
-        @Override
-        public void onError(Exception e) {
-            e.printStackTrace();
-        }
-    });
 
     // Install and start the collect, using your accessKey if the access is private
     private void installExperiment() {
@@ -139,6 +152,12 @@ You may want to install a specific collect, here is a sample to do so:
                         @Override
                         public void onDone(Crop crop) {
                             // Crop Installed, ready to be started.
+                            sdk.getCropManager().start(cropIdentifier, new SimpleAPSCallback<Void>() {
+                                @Override
+                                public void onDone(Crop crop) {
+                                    // Crop finally started.
+                                }
+                            });
                         }
                     });
                 }
@@ -162,7 +181,7 @@ So, before starting a crop, you may want to check for permissions:
     private void start(Crop crop) {
         Set<String> deniedPermissions = sdk.getCropManager().deniedPermissions(crop);
         if (deniedPermissions.isEmpty()) {
-            apisenseSdk.getCropManager().start(crop, callback);
+            sdk.getCropManager().start(crop, callback);
         } else {
             // Request missing permissions before starting the crop
         }
