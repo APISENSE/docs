@@ -48,7 +48,7 @@ To configure the APISENSE SDK as needed to use your private crop, you will need 
 ### Enable your APISENSE sdk
 
 Don't forget to reference the application on your [dashboard](../dashboard) profile, in the submenu _Mobile Applications_,
-this will generate a key enabling your sdk instance to contact the APISENSE server, [see how to set it in your application](../sdk#initialize).
+this will generate a key enabling your sdk instance to contact the APISENSE server, [see how to set it in your application](../sdk#authorize-your-sdk).
 
 ### Add access to your crops
 
