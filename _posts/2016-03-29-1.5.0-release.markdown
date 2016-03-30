@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Here comes 1.5.0 !"
+date:   2016-03-23 10:00:00
+categories: annonce
+---
+
+- Features:
+  - The SDK now needs an initialization key to contact the Hive, [See there](/en/1.5.0/guide/dashboard/#handle-private-crop).
+  - You can now upload media ([video](/en/1.5.0/stings/form/formPage.html#video), [audio](/en/1.5.0/stings/form/formPage.html#sound), and [pictures](/en/1.5.0/stings/form/formPage.html#picture)) from _form_.
+  - Needed runtime permissions for _Android M_ are now declared per Sting, you can see required and missing runtime permissions for each crop.
+  - You can write scripts to process each uploaded data block before insertion in database. [More info over here](/en/1.5.0/guide/dashboard/#filter-uploaded-data).
+- Enhancements:
+  - The SDK will now automatically log out users whose session has become invalid.
+  - The Honeycomb UI has been refactored, hope you like it better.
+  
+<div class="alert alert-danger" role="alert">IMPORTANT: If you created your own application using APISENSE, you must authorize your SDK or it will not work anymore.</div>
+
+Enjoy!

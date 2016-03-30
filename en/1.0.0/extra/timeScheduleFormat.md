@@ -5,9 +5,21 @@ layout: post
 Time
 ====
 
-> Supported time units.
+> Enables to generate time period or moment in day from common language.
 
-Regex used: `^\s*(\d+)\s*(\w+)\s*$`
+Syntaxes
+--------
+
+- [duration](#duration)
+- [time of day](#time-of-day)
+
+Duration
+========
+
+> Defines a time period with common language.
+
+The string recognition uses the regex `^\s*(\d+)\s*(\w+)\s*$`,
+with the keywords defined in the below table:
 
 | Keywords  	| 
 | ------------- |
@@ -23,9 +35,12 @@ Examples
 	10 hours
 	2 d
 
-> Supported time format.
+Time of day
+===========
 
-Regex used: `^\s*(\d{1,2})\s*:\s*(\d{2})\s*([aApP][mM])\s*$`
+> Defines a specific moment in a day.
+
+The string recognition uses the regex `^\s*(\d{1,2})\s*:\s*(\d{2})\s*([aApP][mM])\s*$`
 
 Examples
 --------

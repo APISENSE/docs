@@ -68,7 +68,7 @@ In your Application class, you can initialise the APISENSE Sdk like this:
     import com.apisense.sdk.APISENSE;
 
     // Create the SDK instance
-    APISENSE apisense = new APISENSE(); // Standard config
+    APISENSE apisense = new APISENSE(application); // Standard config
 
     // Add optional configuration
     apisense.addStingsModules(new MyOwnStingModule()); // More Stings injected!
@@ -176,7 +176,7 @@ At this point, you should be able to create an instance of Apisense SDK using:
 
 ## Add your private key
 
-If you want allow people to see your private collects, add the following line:
+If you want to allow people to see your private collects, add the following line:
 
     [sdk useAccessKey:accessKey];
 

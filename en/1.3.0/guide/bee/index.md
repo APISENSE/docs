@@ -23,7 +23,7 @@ First of all you have to create an account. If it's not already done, create an 
     <div class="alert alert-info" role="alert">INFO: Nobody except you will see your username. Data you will send can neither be associated to your real name nor to your username.</div>
 
 2. __Setup your privacy settings__:
-By default all sensors are available. If you don't want to share some data like your GPS position for privacy reason or battery saving, this is where you should disabled it.
+By default all sensors are available. If you don't want to share some data like your GPS position for privacy reason or battery saving, this is where you should disable it.
 
     <div class="alert alert-warning" role="alert">WARN: If you disable the "save/export data" option, you won't be able to join any collect.</div>
 

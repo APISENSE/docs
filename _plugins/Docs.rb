@@ -10,16 +10,62 @@ module Jekyll
       end
     end
 
-    def generateStingsList(version)
-      stings = ""
-      folders = Dir.glob('en/'+version+'/stings/*').each
-      folders.sort.each do |f|
-        if File.directory?(f)
-          folderName = f.split('/').last
-          stings += '<li><a href="/en/'+version+'/stings/'+folderName+'">'+folderName.capitalize+'</a></li>'
+    def containsFolder(path)
+      subDirs = Dir.glob(path + "/*").select { |f| File.directory?(f) and !(f =='.' || f == '..') }
+      !subDirs.empty?
+    end
+
+    def writeExpandableMenu(version, section, subfolderName)
+      iconId = section + "-" + subfolderName + "-menu-ic"
+      menuId = section + "-" + subfolderName + "-menu"
+      # Generate collapsible menu name
+      '<a href="#" data-toggle="collapse" aria-expended="false"' +
+        'data-target="#' + menuId + '" aria-controls="' + menuId + '">' +
+        '<span class="glyphicon glyphicon-chevron-right" id="' + iconId + '"> ' + subfolderName.capitalize + ' <span class="glyphicon glyphicon-chevron-right" id="' + iconId + '">'+
+        '</a>' +
+        # Generate submenu content
+        '<ul class="collapse" id="' + menuId + '">' +
+        generateSectionList(version, section + '/' + subfolderName) +
+        '</ul>' +
+        # Generate the arrow icon control script
+        '<script type="text/javascript"> $(function() {' +
+        '  $("#' + menuId + '").on("shown.bs.collapse", function () {' +
+        '    $(".glyphicon#' + iconId + '").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-down");' +
+        '  });' +
+        '  $("#' + menuId + '").on("hidden.bs.collapse", function () {' +
+        '    $(".glyphicon#' + iconId + '").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-right");' +
+        '  });' +
+        '}); </script>'
+    end
+
+    def generateSectionList(version, section)
+      dirName = 'en/' + version + '/' + section
+      elements = ""
+      Dir.glob(dirName + '/*').sort.each do |currentPath|
+        if File.directory?(currentPath)
+          subfolderName = currentPath.split('/').last
+          elements += '<li>'
+          if (containsFolder(currentPath))
+            elements += writeExpandableMenu(version, section, subfolderName)
+          else
+            elements += '<a href="/' + currentPath + '">' + subfolderName.capitalize + '</a>'
+          end
+          elements += '</li>'
         end
       end
-      stings
+      elements
+    end
+
+    def generateStingsList(version)
+      generateSectionList(version, "stings")
+    end
+
+    def generateGuidesList(version)
+      elements = generateSectionList(version, "guide")
+    end
+
+    def generateExtraList(version)
+      generateSectionList(version, "extra")
     end
   end
 
