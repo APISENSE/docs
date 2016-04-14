@@ -1,9 +1,7 @@
 ---
 layout: post
+title: Time
 ---
-
-Time
-====
 
 > Supported time units.
 
