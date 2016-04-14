@@ -1,5 +1,6 @@
 ---
 layout: post
+title: GCM
 ---
 
 The **G**oogle **C**loud **M**essaging enables you to command the collect installed on your mobile applications from the web dashboard.

@@ -1,9 +1,7 @@
 ---
 layout: post
+title: FormPage
 ---
-
-FormPage
-========
 
 > Represents a single page on a form.
 
