@@ -51,7 +51,7 @@ Full Example
     });
 
     timer.at('12:00 PM', function(event) {
-        timer.sync();
+        recorder.sync();
     });
 
 onScanCompleted
