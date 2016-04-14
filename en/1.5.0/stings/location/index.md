@@ -12,7 +12,9 @@ Usage
 
 `location` keyword is needed to instanciate this sting.
 
-	var location = require('location');
+	var gps = require('location');
+
+<div class="alert alert-warning" role="warning">WARNING: the JavaScript variable named 'location' is already used by browsers, thus the syntactic check will forbid you to use it.</div>
 
 Data accessors
 --------------
