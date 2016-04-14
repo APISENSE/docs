@@ -1,9 +1,7 @@
 ---
 layout: post
+title: batterySource
 ---
-
-batterySource
-=============
 
 > Defines acceptable values relative to location mode.
 

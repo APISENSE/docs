@@ -1,9 +1,7 @@
 ---
 layout: post
+title: batteryData
 ---
-
-batteryData
-===========
 
 > Contains all information about the battery.
 
