@@ -1,9 +1,7 @@
 ---
 layout: post
+title: apmSpeedData
 ---
-
-apmSpeedData
-===========
 
 > Contains all information about the network speed quality.
 

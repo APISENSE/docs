@@ -1,9 +1,7 @@
 ---
 layout: post
+title: BatteryConnector
 ---
-
-BatteryConnector
-================
 
 > Defines acceptable values relative to battery connector.
 

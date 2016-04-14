@@ -70,10 +70,15 @@ a:hover {
 	cursor:pointer;
 }
 
-article h1, .post-title {
-	font-size: 45px;
-	color: $orange;
+.post-title {
+  font-size: 45px;
+  color: $orange;
   text-align: center;
+}
+
+.post-content h1 {
+  font-size: 30px;
+  color: $orange-light;
 }
 
 .post-content h2 {

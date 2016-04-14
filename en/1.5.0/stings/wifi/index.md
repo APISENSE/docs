@@ -1,9 +1,7 @@
 ---
 layout: post
+title: Wifi
 ---
-
-Wifi
-====
 
 > Handle operation on WiFi sensor.
 

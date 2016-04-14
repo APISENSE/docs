@@ -1,8 +1,6 @@
 ---
 layout: post
+title: Extra
 ---
-
-Extra
-=====
 
 This section documents some common elements of the APISENSE platform.
