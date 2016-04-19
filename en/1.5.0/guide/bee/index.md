@@ -1,9 +1,7 @@
 ---
 layout: post
+title: Bee
 ---
-
-Bee
-===
 
 <div class="alert alert-info" role="alert">NOTE: We highly recommend you to be connected over Wifi or 3/4G network while you are using Bee ! If you face any trouble, let us know :)</div>
 

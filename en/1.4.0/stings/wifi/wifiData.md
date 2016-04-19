@@ -1,9 +1,7 @@
 ---
 layout: post
+title: wifiData
 ---
-
-wifiData
-========
 
 > Contains all information about the wifi.
 

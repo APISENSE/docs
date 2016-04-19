@@ -1,9 +1,7 @@
 ---
 layout: post
+title: Location filters
 ---
-
-Location filters
-================
 
 > Filters are used to specify the behavior on the location acquisition.
 

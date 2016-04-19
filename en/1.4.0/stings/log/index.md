@@ -1,9 +1,7 @@
 ---
 layout: post
+title: Log
 ---
-
-Log
-===
 
 > Log some valuable information at runtime.
 

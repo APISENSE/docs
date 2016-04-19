@@ -1,9 +1,7 @@
 ---
 layout: post
+title: Location
 ---
-
-Location
-========
 
 > Handle operation on location sensor.
 

@@ -1,9 +1,7 @@
 ---
 layout: post
+title: Time
 ---
-
-Time
-====
 
 > Enables to generate time period or moment in day from common language.
 

@@ -1,9 +1,7 @@
 ---
 layout: post
+title: Recorder
 ---
-
-Recorder
-========
 
 > Store and export collected data.
 

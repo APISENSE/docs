@@ -1,9 +1,7 @@
 ---
 layout: post
+title: locationData
 ---
-
-locationData
-===========
 
 > Contains all information about the current location.
 

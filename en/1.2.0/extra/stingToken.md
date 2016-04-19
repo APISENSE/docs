@@ -1,9 +1,7 @@
 ---
 layout: post
+title: StringToken
 ---
-
-StringToken
-=======
 
 > Handle cancel operation on sensor.
 

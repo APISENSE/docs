@@ -1,9 +1,7 @@
 ---
 layout: post
+title: SinglePageForm
 ---
-
-SinglePageForm
-==============
 
 > Builder for single page forms.
 

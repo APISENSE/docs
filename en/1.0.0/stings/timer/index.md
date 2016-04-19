@@ -1,9 +1,7 @@
 ---
 layout: post
+title: Timer
 ---
-
-Timer
-=====
 
 > Schedule stings operations.
 

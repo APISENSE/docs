@@ -1,9 +1,7 @@
 ---
 layout: post
+title: MultiPageForm
 ---
-
-MultiPageForm
-=============
 
 > Builder for forms using multiple, linear pages.
 

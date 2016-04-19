@@ -1,9 +1,7 @@
 ---
 layout: post
+title: FormData
 ---
-
-FormData
-========
 
 > Contains the form result.
 

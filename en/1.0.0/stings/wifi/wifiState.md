@@ -1,9 +1,7 @@
 ---
 layout: post
+title: wifiAuthentication
 ---
-
-wifiAuthentication
-==================
 
 > Defines acceptable values relative to wifi state.
 
