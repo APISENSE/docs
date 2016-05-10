@@ -1,6 +1,6 @@
 ---
 layout: post
-title:Form
+title: Form
 ---
 
 > Build forms to query info directly from the user.
