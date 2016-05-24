@@ -7,7 +7,7 @@ The **G**oogle **C**loud **M**essaging enables you to command the collect instal
 
 
 <div class="alert alert-info" role="alert">
-     INFO: At the moment, GCM will only automatically update your collects when you deploy them.
+     INFO: On top of enabling remote control, GCM will automatically update your collects when you deploy them.
 </div>
 
 
@@ -19,7 +19,7 @@ To use GCM on an Android application, you have to :
  2. The [installation instructions](https://developers.google.com/cloud-messaging/android/client) are slightly changed. You'll have to:
     1. Copy the generated `google-services.json` to your project's `app` folder.
     2. Add the _GCM_ plugin (which will use the previous file) to your _gradle_ configuration:
-       1. In your `buildscript.dependencies`, add `classpath 'com.google.gms:google-services:1.3.0-beta1'`
+       1. In your `buildscript.dependencies`, add `classpath 'com.google.gms:google-services:3.0.0'`
        2. Apply the plugin: `apply plugin: 'com.google.gms.google-services'`
     3. Add the following permissions to your `AndroidManifest.xml`:
 
