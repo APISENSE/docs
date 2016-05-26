@@ -6,9 +6,49 @@
 </description>
     <link>http://docs.apisense.com//</link>
     <atom:link href="http://docs.apisense.com//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 30 Mar 2016 09:17:24 +0000</pubDate>
-    <lastBuildDate>Wed, 30 Mar 2016 09:17:24 +0000</lastBuildDate>
-    <generator>Jekyll v3.1.2</generator>
+    <pubDate>Thu, 26 May 2016 15:08:59 +0000</pubDate>
+    <lastBuildDate>Thu, 26 May 2016 15:08:59 +0000</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Make place for version 1.6.0 !</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;Features:
+    &lt;ul&gt;
+      &lt;li&gt;Hive API is internationalized, and now provides error codes.&lt;/li&gt;
+      &lt;li&gt;You can now start and disable your crop remotely on applications linked to GCM.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Enhancements:
+    &lt;ul&gt;
+      &lt;li&gt;Graphic enhancement of the whole server interface.&lt;/li&gt;
+      &lt;li&gt;Deploying a script enables the crop.&lt;/li&gt;
+      &lt;li&gt;Hive no longer have info about uploaded data size.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Fixed bugs:
+    &lt;ul&gt;
+      &lt;li&gt;Mobile applications name are limited to 40 characters.&lt;/li&gt;
+      &lt;li&gt;Read only API key is now selectable on firefox.&lt;/li&gt;
+      &lt;li&gt;Commented Stings in script will no longer appear on used stings.&lt;/li&gt;
+      &lt;li&gt;Stings won’t be duplicated in used stings.&lt;/li&gt;
+      &lt;li&gt;Android (Wifi Sting): SSID won’t be between escaped quotes anymore.&lt;/li&gt;
+      &lt;li&gt;Android (CropManager): synchronise method will subscribe to crops GCM channel.&lt;/li&gt;
+      &lt;li&gt;Android: Crop update will not multiply records anymore&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Have fun!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 25 May 2016 10:00:00 +0000</pubDate>
+        <link>http://docs.apisense.com//annonce/2016/05/25/1.6.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.com//annonce/2016/05/25/1.6.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
     
       <item>
         <title>Here comes 1.5.0 !</title>

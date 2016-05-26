@@ -460,10 +460,14 @@ p, blockquote, a {
 a:hover {
   cursor: pointer; }
 
-article h1, .post-title {
+.post-title {
   font-size: 45px;
   color: #FE7D00;
   text-align: center; }
+
+.post-content h1 {
+  font-size: 30px;
+  color: #FF9500; }
 
 .post-content h2 {
   font-style: italic;
