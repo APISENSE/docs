@@ -1,9 +1,7 @@
 ---
 layout: post
+title: Callback
 ---
-
-Callback
-=======
 
 > Give access to different type of data depending of the method using it.
 

@@ -1,9 +1,7 @@
 ---
 layout: post
+title: APM
 ---
-
-APM
-===
 
 > Handle operation on network analysis.
 
@@ -51,7 +49,7 @@ Full Example
     });
 
     timer.at('12:00 PM', function(event) {
-        timer.sync();
+        recorder.sync();
     });
 
 onScanCompleted

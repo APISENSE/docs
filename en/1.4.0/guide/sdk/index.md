@@ -1,10 +1,9 @@
 ---
 layout: page
+title: SDK
 ---
 
 <script type="text/javascript" src="../../../../scripts/get.js"></script>
-
-# SDK
 
 ## What is it ?
 

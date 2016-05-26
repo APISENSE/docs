@@ -1,9 +1,7 @@
 ---
 layout: post
+title: Battery
 ---
-
-Battery
-=======
 
 > Handle operation on battery sensor.
 

@@ -1,9 +1,7 @@
 ---
 layout: post
+title: Location
 ---
-
-Location
-========
 
 > Handle operation on location sensor.
 
@@ -55,7 +53,7 @@ Full Example
     });
 
     timer.at('12:00 PM', function(event) {
-        timer.sync();
+        recorder.sync();
     });
 
 accuracy

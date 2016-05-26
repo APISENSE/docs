@@ -1,9 +1,7 @@
 ---
 layout: post
+title: batteryState
 ---
-
-batteryState
-============
 
 > Defines acceptable values relative to battery state.
 
