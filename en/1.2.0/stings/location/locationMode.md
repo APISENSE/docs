@@ -1,6 +1,6 @@
 ---
 layout: post
-title:locationMode
+title: locationMode
 ---
 
 > Defines acceptable values relative to location mode.
