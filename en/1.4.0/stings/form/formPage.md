@@ -32,7 +32,7 @@ Full Example
 
     singlePage.section('Section title')
         .checkbox("Pick some letters", "letter", true, ["a", "b", "c", "d"])
-        .datePicker("Pick a date", "date", false)
+        .datepicker("Pick a date", "date", false)
         .numberfield("Enter a number", "number", true)
         .radiobutton("Pick one letter", "radio", false, ["a", "b", "c", "d"])
         .textarea("Describe something", "area", false)
@@ -85,15 +85,15 @@ Return
 datepicker
 ==========
 
-> Create a datePicker formulary
+> Create a date picker formulary
 
-    datePicker(label, id, mandatory);
+    datepicker(label, id, mandatory);
 
 Parameters
 ----------
 
-- __label__ : Text to display before the datePicker.
-- __id__ : Identify the datePicker.
+- __label__ : Text to display before the date picker.
+- __id__ : Identify the date picker.
 - __mandatory__ : true if required, false otherwise.
 
 Return

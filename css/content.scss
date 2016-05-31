@@ -1,0 +1,80 @@
+---
+# Content Sass file
+---
+@charset "utf-8";
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "constants",
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
+
+.post-title {
+    font-size: 45px;
+    color: $orange;
+    text-align: center;
+}
+
+.post-content {
+        
+    // Home links
+    .post-link {
+        display: block;
+        font-size: 24px;
+    }
+    
+    // Titles
+    h1 {
+        font-size: 30px;
+        color: $orange-light;
+    }
+    
+    h2 {
+	      font-style: ital ic;
+	      font-size: 16px;
+	      color: $orange;
+        font-weight:bold;
+    }
+    
+    h3 {
+	      font-style: italic;
+	      font-size: 14px;
+	      color: $orange-light;
+        font-weight:bold;
+        margin: 30px 0 10px 0;
+    }
+
+    h3:before {
+        content: '► ';
+        color: $grey-color-dark;
+    }
+    
+    // Table
+    table {
+	      width: 100%;
+	      margin: 20px 0;
+    }
+
+    th, tr, td {
+	      border: 1px solid black;
+	      padding: 5px;
+    }
+
+    th {
+	      background: #E0E0E0;
+    }
+
+    // Code samples & content
+    pre, code{
+        font-size: $base-font-size - 3;
+        background-color: #F2F2F2;
+    }
+
+    p, blockquote, a {
+	      font-size: $base-font-size;
+	      font-family: $base-font-family;
+	      text-align:justify;
+    }
+}

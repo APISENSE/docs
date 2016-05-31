@@ -103,15 +103,15 @@ Example
 datepicker
 ==========
 
-> Create a datePicker formulary
+> Create a date picker formulary
 
-    datePicker(label, id, mandatory);
+    datepicker(label, id, mandatory);
 
 Parameters
 ----------
 
-- __label__ : Text to display before the datePicker.
-- __id__ : Identify the datePicker.
+- __label__ : Text to display before the date picker.
+- __id__ : Identify the date picker.
 - __mandatory__ : true if required, false otherwise.
 
 Return
@@ -124,7 +124,7 @@ Example
 
     var form = require('form');
     var sp = form.singlePage("My new form!");
-    sp.datePicker("Pick a date", "date", false);
+    sp.datepicker("Pick a date", "date", false);
 
 numberfield
 ===========
