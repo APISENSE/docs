@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Reset some basic elements
  */
@@ -448,28 +449,43 @@ pre {
   .highlight .il {
     color: #099; }
 
-hr {
-  margin: 15px; }
+.post-title {
+  font-size: 45px;
+  color: #FE7D00;
+  text-align: center; }
 
-#leftNav {
-  float: left;
-  margin: 20px; }
-
-#leftNav li a {
-  padding: 2px 12px; }
-
-#leftNav ul > a {
-  color: #FE7D00; }
-
-#leftNav .os-target {
-  display: inline-block; }
-
-#leftNav .not-active {
-  pointer-events: none;
-  cursor: default;
-  color: #E0E0E0; }
-
-.mobile-logo {
-  width: 25px;
-  height: 25px;
-  margin: 0 10px; }
+.post-content .post-link {
+  display: block;
+  font-size: 24px; }
+.post-content h1 {
+  font-size: 30px;
+  color: #FF9500; }
+.post-content h2 {
+  font-style: ital ic;
+  font-size: 16px;
+  color: #FE7D00;
+  font-weight: bold; }
+.post-content h3 {
+  font-style: italic;
+  font-size: 14px;
+  color: #FF9500;
+  font-weight: bold;
+  margin: 30px 0 10px 0; }
+.post-content h3:before {
+  content: '► ';
+  color: #424242; }
+.post-content table {
+  width: 100%;
+  margin: 20px 0; }
+.post-content th, .post-content tr, .post-content td {
+  border: 1px solid black;
+  padding: 5px; }
+.post-content th {
+  background: #E0E0E0; }
+.post-content pre, .post-content code {
+  font-size: 10px;
+  background-color: #F2F2F2; }
+.post-content p, .post-content blockquote, .post-content a {
+  font-size: 13px;
+  font-family: Arial, Helvetica;
+  text-align: justify; }
