@@ -103,15 +103,15 @@ Example
 datepicker
 ==========
 
-> Create a datePicker formulary
+> Create a date picker formulary
 
     datepicker(label, id, mandatory);
 
 Parameters
 ----------
 
-- __label__ : Text to display before the datePicker.
-- __id__ : Identify the datePicker.
+- __label__ : Text to display before the date picker.
+- __id__ : Identify the date picker.
 - __mandatory__ : true if required, false otherwise.
 
 Return
