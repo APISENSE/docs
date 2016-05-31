@@ -21,7 +21,7 @@ Example
     var p1 = multiPage.page("My first form page")
         .section('Section title')
         .checkbox("Pick some letters", "letter", true, ["a", "b", "c", "d"])
-        .datePicker("Pick a date", "date", false)
+        .datepicker("Pick a date", "date", false)
         .numberfield("Enter a number", "number", true);
 
     var p2 = multiPage.page("The second page")
