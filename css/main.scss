@@ -3,135 +3,20 @@
 ---
 @charset "utf-8";
 
-
-
-// Our variables
-$base-font-family: Arial, Helvetica;
-$base-font-size:   13px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-$orange: 			     #FE7D00;
-$orange-light: 		 #FF9500;
-
-// Width of the content area
-$content-width:    55%;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "constants",
         "base",
         "layout",
         "syntax-highlighting"
 ;
 
-
 // Global
-
 hr {
 	margin: 15px;
 }
 
-p, blockquote, a {
-	font-size: $base-font-size;
-	font-family: $base-font-family;
-	text-align:justify;
-}
-
-a:hover {
-	cursor:pointer;
-}
-
-.post-title {
-  font-size: 45px;
-  color: $orange;
-  text-align: center;
-}
-
-.post-content h1 {
-  font-size: 30px;
-  color: $orange-light;
-}
-
-.post-content h2 {
-	font-style: italic;
-	font-size: 16px;
-	color: $orange;
-  font-weight:bold;
-}
-
-.post-content h3 {
-	font-style: italic;
-	font-size: 14px;
-	color: $orange-light;
-  font-weight:bold;
-  margin: 30px 0 10px 0;
-
-}
-
-h3:before {
-  content: '► ';
-  color: $grey-color-dark;
-}
-
-pre, code{
-	font-size: $base-font-size - 3;
-	background-color: #F2F2F2;
-}
-
-.img-small-size {
-	width: 30%;
-	height: 30%;
-	margin: 10px;
-	display:inline-block;
-}
-
-// Table
-
-table {
-	width: 100%;
-	margin: 20px 0;
-}
-
-th, tr, td {
-	border: 1px solid black;
-	padding: 5px;
-}
-
-th {
-	background: #E0E0E0;
-}
-
 // Navigation
-
 #leftNav {
 	float: left;
 	margin: 20px;
@@ -155,6 +40,7 @@ th {
 	color: #E0E0E0;
 }
 
+// Icons
 .mobile-logo {
 	width: 25px;
 	height: 25px;
