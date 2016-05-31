@@ -35,7 +35,7 @@ Full Example
 
     singlePage.section('Section title')
         .checkbox("Pick some letters", "letter", true, ["a", "b", "c", "d"])
-        .datePicker("Pick a date", "date", false)
+        .datepicker("Pick a date", "date", false)
         .numberfield("Enter a number", "number", true)
         .radiobutton("Pick one letter", "radio", false, ["a", "b", "c", "d"])
         .textarea("Describe something", "area", false)
@@ -90,7 +90,7 @@ datepicker
 
 > Create a datePicker formulary
 
-    datePicker(label, id, mandatory);
+    datepicker(label, id, mandatory);
 
 Parameters
 ----------

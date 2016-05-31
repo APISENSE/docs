@@ -80,7 +80,7 @@ datepicker
 
 > Create a datePicker formulary
 
-    datePicker(label, id, mandatory);
+    datepicker(label, id, mandatory);
 
 Parameters
 ----------
@@ -99,7 +99,7 @@ Example
 
     var form = require('form');
     var mp = form.multiPage();
-    mp.datePicker("Pick a date", "date", false);
+    mp.datepicker("Pick a date", "date", false);
 
 numberfield
 ===========

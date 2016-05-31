@@ -105,7 +105,7 @@ datepicker
 
 > Create a datePicker formulary
 
-    datePicker(label, id, mandatory);
+    datepicker(label, id, mandatory);
 
 Parameters
 ----------
@@ -124,7 +124,7 @@ Example
 
     var form = require('form');
     var sp = form.singlePage("My new form!");
-    sp.datePicker("Pick a date", "date", false);
+    sp.datepicker("Pick a date", "date", false);
 
 numberfield
 ===========
