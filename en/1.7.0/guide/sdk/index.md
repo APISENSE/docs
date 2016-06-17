@@ -38,7 +38,7 @@ To install it with __Gradle__ all you have to do is:
 - Add the dependency on your project's _build.gradle_:
 
         dependencies {
-            compile 'com.apisense.sdk:apisense-android-sdk:1.5.0'
+            compile 'com.apisense.sdk:apisense-android-sdk:1.7.0'
         }
 
 ### From our repository
@@ -55,7 +55,7 @@ Since the version 1.5, you can use our maven repository to retrieve the dependen
 - Add the dependency on your project's _build.gradle_:
 
         dependencies {
-            compile 'com.apisense.sdk:apisense-android-sdk:1.5.0'
+            compile 'com.apisense.sdk:apisense-android-sdk:1.7.0'
         }
 
 
@@ -93,9 +93,9 @@ Your sdk instance need to be authorized to contact our server, to do so you will
 
     apisense.useSdkKey("mySdkKey"); // Authorize your SDK to contact the server
 
-### Add your private key
+### Handle private crops
 
-If you want to allow people to see your private collects, add the following line before creating the Sdk singleton:
+If you want to allow people to see your private crops, add the following line before creating the Sdk singleton:
 
     apisense.useAccessKey("accessKey"); // Authorize the SDK to see your private crops
 
