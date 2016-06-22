@@ -75,8 +75,28 @@ That being said, you may want to add those permisions in your _manifest.xml_:
     - `<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />`
     - `<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />`
 - If you intend to capture media with the [FormSting]({{ "../../stings/form" }}):
-   - `<uses-permission android:name="android.permission.RECORD_AUDIO" />` (for sound capture)
-   - `<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="18" />` (for any media)
+
+        <!-- only needed for sound capture -->
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+         <!-- for any kind of media -->
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="18" />
+        <application ...>
+            <!--[...]-->
+            <!-- applicationId is the package of your application,
+            this variable is automatically set when building with gradle -->
+            <provider
+                android:name="android.support.v4.content.FileProvider"
+                android:authorities="${applicationId}.APSFileProvider"
+                android:exported="false"
+                android:grantUriPermissions="true" >
+                <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/aps_media_path"
+                />
+            </provider>
+            <!--[...]-->
+        </application>
 
 ## Initialize
 
