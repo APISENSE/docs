@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Version 1.7.0 is available !"
+date:   2016-07-07 10:00:00
+categories: annonce
+---
+
+- Features:
+  - _Dashboard_: Separation between the [Dashboard](/en/1.7.0/guide/dashboard) (available at [https://apisense.io](https://apisense.io)) and the [Honeycomb](/en/1.7.0/guide/honeycomb).
+  You can now manage your own Honeycomb server and use it as backend for any of your crops. Or you can stick to the official Honeycomb server.
+  - _Dashboard_: Add the possibility to see reported exceptions about your crops scripts. Exceptions will be reported from Android sdk 1.7.1
+- Enhancements:
+  - _Android:Bee_: Graphic enhancement of the whole Android application.
+  - _Android:Bee_: Application is available for Android N.
+  - _Android:Sdk_: Location sting now retrieve current position in Android system for each call on data accessors.
+- Fixed bugs:
+  - _Android:Sdk_: APISENSE does not define its [own file provider anymore](/en/1.7.0/guide/sdk/#add-manifest-permissions) for the Form sting,
+  which was mixing authorities for multiple applications using the SDK.
+  - _Android:Sdk_: Resolved crash with GCM and any application using android N.
+  - _Android:Sdk_: Runtime exception on script will not crash the applications anymore.
+Have fun!
