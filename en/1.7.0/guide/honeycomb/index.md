@@ -14,6 +14,10 @@ The Honeycomb purpose is to store and [serve your collected data](#retrieve-your
 The Honeycomb server can be deployed anywhere, 
 given it is [linked to your dashboard](../dashboard#add-a-custom-backend) and provided a _mongodb_ database.
 
+### Download a Honeycomb
+
+The honeycomb is a [scala Play!](https://playframework.com/) server available as a docker image on the [docker hub](https://hub.docker.com/r/apisense/honeycomb/).
+
 ### Configuration
 
 The Honeycomb configuration can be changed thanks to environment variables:
