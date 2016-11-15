@@ -6,9 +6,43 @@
 </description>
     <link>http://docs.apisense.com//</link>
     <atom:link href="http://docs.apisense.com//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Jul 2016 12:12:34 +0000</pubDate>
-    <lastBuildDate>Mon, 18 Jul 2016 12:12:34 +0000</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <pubDate>Tue, 15 Nov 2016 10:55:21 +0000</pubDate>
+    <lastBuildDate>Tue, 15 Nov 2016 10:55:21 +0000</lastBuildDate>
+    <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Version 1.8.0 is out !</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;Features:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Android:Bee&lt;/em&gt;: Create a bee from your facebook or google account.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: New methods to stop all crops.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Enhancements:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Dashboard&lt;/em&gt;: New script management, you can now snapshot scripts to reuse.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Dashboard&lt;/em&gt;: User creation does not require invitations anymore.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Honeycomb&lt;/em&gt;: Docker image is lighter, using &lt;a href=&quot;https://hub.docker.com/r/library/openjdk/&quot;&gt;openjdk:1.8-jre&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: APISENSE is now on maven central!&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: User creation now require an email validation (if not from social network).&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: Every Bee can change its password.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: Capture period can be changed on location Sting.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: Stings are now completely generated.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Have fun!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 15 Nov 2016 10:00:00 +0000</pubDate>
+        <link>http://docs.apisense.com//annonce/2016/11/15/1.8.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.com//annonce/2016/11/15/1.8.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
     
       <item>
         <title>Version 1.7.0 is available !</title>
@@ -18,6 +52,7 @@
       &lt;li&gt;&lt;em&gt;Dashboard&lt;/em&gt;: Separation between the &lt;a href=&quot;/en/1.7.0/guide/dashboard&quot;&gt;Dashboard&lt;/a&gt; (available at &lt;a href=&quot;https://apisense.io&quot;&gt;https://apisense.io&lt;/a&gt;) and the &lt;a href=&quot;/en/1.7.0/guide/honeycomb&quot;&gt;Honeycomb&lt;/a&gt;.
 You can now manage your own Honeycomb server and use it as backend for any of your crops. Or you can stick to the official Honeycomb server.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Dashboard&lt;/em&gt;: Add the possibility to see reported exceptions about your crops scripts. Exceptions will be reported from Android sdk 1.7.1&lt;/li&gt;
+      &lt;li&gt;[1.7.1] &lt;em&gt;Dashboard&lt;/em&gt;: You can now clear data from a crop&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Enhancements:
@@ -29,7 +64,8 @@ You can now manage your own Honeycomb server and use it as backend for any of yo
   &lt;/li&gt;
   &lt;li&gt;Fixed bugs:
     &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: APISENSE does not define its &lt;a href=&quot;/en/1.7.0/guide/sdk/#add-manifest-permissions&quot;&gt;own file provider anymore&lt;/a&gt; for the Form sting,
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: APISENSE does not define its &lt;a href=&quot;/en/1.7.0/guide/sdk/#add-manifest-permissions&quot;&gt;own file provider anymore&lt;/a&gt; for the Form sting,&lt;/li&gt;
+      &lt;li&gt;[1.7.1] &lt;em&gt;Dashboard&lt;/em&gt;: The “Download all” zip is now correctly generated.
 which was mixing authorities for multiple applications using the SDK.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: Resolved crash with GCM and any application using android N.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: Runtime exception on script will not crash the applications anymore.
@@ -208,7 +244,7 @@ If you want to be sure that only your community is contributing, create your app
       </item>
     
       <item>
-        <title>Let&#39;s start ! 1.0.0 is available !!</title>
+        <title>Let's start ! 1.0.0 is available !!</title>
         <description>&lt;p&gt;We are glad to annonce the first release of our APISENSE® SDK.
 With it you can collect data from most common smartphone sensors on Android and iOS and retrieve data later! This is the very first step to our project but we think there is a lot of things you can already do.&lt;/p&gt;
 
