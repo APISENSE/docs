@@ -171,7 +171,7 @@ You may want to install a specific crop, here is a sample to do so:
                         @Override
                         public void onDone(Crop crop) {
                             // Crop Installed, ready to be started.
-                            sdk.getCropManager().start(cropIdentifier, new SimpleAPSCallback<Void>() {
+                            sdk.getCropManager().start(crop, new SimpleAPSCallback<Crop>() {
                                 @Override
                                 public void onDone(Crop crop) {
                                     // Crop finally started.
