@@ -16,63 +16,40 @@ The **G**oogle **C**loud **M**essaging enables you to command the collect instal
 To use GCM on an Android application, you have to :
 
  1. Create a GCM project [here](https://developers.google.com/mobile/add)
- 2. The [installation instructions](https://developers.google.com/cloud-messaging/android/client) are slightly changed. You'll have to:
+ 2. The [installation instructions](https://firebase.google.com/docs/cloud-messaging/) are slightly changed. You'll have to:
     1. Copy the generated `google-services.json` to your project's `app` folder.
     2. Add the _GCM_ plugin (which will use the previous file) to your _gradle_ configuration:
        1. In your `buildscript.dependencies`, add `classpath 'com.google.gms:google-services:3.0.0'`
        2. Apply the plugin: `apply plugin: 'com.google.gms.google-services'`
-    3. Add the following permissions to your `AndroidManifest.xml`:
+    3. Register the following receivers and services into your `AndroidManifest.xml`:
 
        ~~~ xml
-       <uses-permission android:name="android.permission.WAKE_LOCK" />
-       <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-       <permission android:name="your.registered.package.permission.C2D_MESSAGE"
-         android:protectionLevel="signature" />
-       <uses-permission android:name="your.registered.package.permission.C2D_MESSAGE" />
-       ~~~
-    4. Register the following receivers and services into your `AndroidManifest.xml`:
-
-       ~~~ xml
-       <receiver
-           android:name="com.google.android.gms.gcm.GcmReceiver"
-           android:exported="true"
-           android:permission="com.google.android.c2dm.permission.SEND" >
-           <intent-filter>
-               <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-               <category android:name="your.registered.package" />
-           </intent-filter>
-       </receiver>
-
        <service
-           android:name="com.apisense.sdk.push.APSGcmListenerService"
-           android:exported="false" >
-           <intent-filter>
-               <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-           </intent-filter>
-       </service>
+            android:name="com.apisense.sdk.push.APSGcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
-       <service
-           android:name="com.apisense.sdk.push.APSInstanceIDListenerService"
-           android:exported="false">
-           <intent-filter>
-               <action android:name="com.google.android.gms.iid.InstanceID"/>
-           </intent-filter>
-       </service>
+        <service
+            android:name="com.apisense.sdk.push.RegistrationIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.apisense.sdk.gcm.register"/>
+                <action android:name="com.apisense.sdk.gcm.pubsub.register"/>
+                <action android:name="com.apisense.sdk.gcm.pubsub.unsubscribe"/>
 
-       <activity
-           android:name="com.apisense.sdk.push.APSGcmNotificationHandlerActivity">
-           <intent-filter>
-               <action android:name="HANDLE_APISENSE_PUSH" />
-               <category android:name="android.intent.category.DEFAULT" />
-           </intent-filter>
-       </activity>
+                <category android:name="com.apisense.sdk.push"/>
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.apisense.sdk.push.APSGcmNotificationHandlerActivity">
+            <intent-filter>
+                <action android:name="HANDLE_APISENSE_PUSH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
        ~~~
-    5. Set your `senderID` into _APISENSE_:
-
-       ~~~ android
-       APISENSE apisense = new APISENSE(application).enableGCM(getString(R.string.gcm_defaultSenderId));
-       ~~~
-
 
 ## Enables GCM notifications on the dashboard
 
