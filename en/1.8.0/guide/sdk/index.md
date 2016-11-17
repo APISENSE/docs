@@ -126,30 +126,16 @@ You may want to install a specific crop, here is a sample to do so:
 
     // Install and start the collect, using your accessKey if the access is private
     private void installExperiment() {
-        sdk.getStoreManager().findSpecificCrop(cropIdentifier,  new SimpleAPSCallback<Crop>() {
+        sdk.getCropManager().installOrUpdate(cropIdentifier,  new SimpleAPSCallback<Crop>() {
             @Override
             public void onDone(Crop crop) {
-                if (sdk.getCropManager().isInstalled(crop)) {
-                    sdk.getCropManager().update(crop.getLocation(), new SimpleAPSCallback<Crop>() {
-                        @Override
-                        public void onDone(Crop crop) {
-                            // Crop automatically re-started if running before update.
-                        }
-                    });
-                } else {
-                    sdk.getCropManager().installSpecific(cropIdentifier,  new SimpleAPSCallback<Crop>() {
-                        @Override
-                        public void onDone(Crop crop) {
-                            // Crop Installed, ready to be started.
-                            sdk.getCropManager().start(crop, new SimpleAPSCallback<Crop>() {
-                                @Override
-                                public void onDone(Crop crop) {
-                                    // Crop finally started.
-                                }
-                            });
-                        }
-                    });
-                }
+                // Crop Installed, ready to be started.
+                sdk.getCropManager().start(crop, new SimpleAPSCallback<Crop>() {
+                    @Override
+                    public void onDone(Crop crop) {
+                        // Crop finally started.
+                    }
+                });
             }
         });
     }
