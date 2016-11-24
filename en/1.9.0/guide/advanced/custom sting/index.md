@@ -84,8 +84,8 @@ This enables you to get every version of a same API in various languages and a d
 ### One shot
 
 You will have to use the _dart-generator_
-[tarball](file:///tmp/sdkRepo/service/local/staging/deploy/maven2/io/apisense/dart-generator/1.1.0/dart-generator-1.1.0.tar)
-or [zip file](file:///tmp/sdkRepo/service/local/staging/deploy/maven2/io/apisense/dart-generator/1.1.0/dart-generator-1.1.0.zip)
+[tarball](http://repo1.maven.org/maven2/io/apisense/dart-generator/1.2.0/dart-generator-1.2.0.tar)
+or [zip file](http://repo1.maven.org/maven2/io/apisense/dart-generator/1.2.0/dart-generator-1.2.0.zip)
 in order to create your _Dart_ from the description file.
 
 Decompress the file, then start the binary as follow:
@@ -101,8 +101,8 @@ You should find a `generated` folder containing:
 
 If you want to generate the API documentation for the _Dashboard_ editor,
 you will have to download _java-api-generator_
-[tarball](file:///tmp/sdkRepo/service/local/staging/deploy/maven2/io/apisense/dart-generator/1.1.0/java-api-generator-1.1.0.tar)
-or [zip file](file:///tmp/sdkRepo/service/local/staging/deploy/maven2/io/apisense/dart-generator/1.1.0/java-api-generator-1.1.0.zip).
+[tarball](http://repo1.maven.org/maven2/io/apisense/java-api-generator/1.2.0/java-api-generator-1.2.0.tar)
+or [zip file](http://repo1.maven.org/maven2/io/apisense/java-api-generator/1.2.0/java-api-generator-1.2.0.zip).
 
 Decompress the file, then start the binary as follow:
 
@@ -256,15 +256,14 @@ You will have to create a class extending the _dart_ skeleton.
 
 Create a Dagger module that is added to `StingModule` and put all your Stings as injected values.
 
-    import io.apisense.sdk.core.sting.StingModule;
     import dagger.Module;
     
     @Module(
-        addsTo = StingModule.class,
+        complete = false,
         injects = {
             MySting.class,
         }
     )
     public class MyModule { }
     
-You will then only have to [provide your module to the SDK initialization](../../sdk/#configure-your-sdk)
+You will then only have to [provide your module to the SDK initialization](../../sdk/#configure-your-sdk).

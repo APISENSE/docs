@@ -25,25 +25,25 @@ To use GCM on an Android application, you have to :
 
        ~~~ xml
        <service
-            android:name="com.apisense.sdk.push.APSGcmListenerService">
+            android:name="io.apisense.sdk.push.APSGcmListenerService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
         <service
-            android:name="com.apisense.sdk.push.RegistrationIntentService"
+            android:name="io.apisense.sdk.push.RegistrationIntentService"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.apisense.sdk.gcm.register"/>
-                <action android:name="com.apisense.sdk.gcm.pubsub.register"/>
-                <action android:name="com.apisense.sdk.gcm.pubsub.unsubscribe"/>
+                <action android:name="io.apisense.sdk.gcm.register"/>
+                <action android:name="io.apisense.sdk.gcm.pubsub.register"/>
+                <action android:name="io.apisense.sdk.gcm.pubsub.unsubscribe"/>
 
-                <category android:name="com.apisense.sdk.push"/>
+                <category android:name="io.apisense.sdk.push"/>
             </intent-filter>
         </service>
 
-        <activity android:name="com.apisense.sdk.push.APSGcmNotificationHandlerActivity">
+        <activity android:name="io.apisense.sdk.push.APSGcmNotificationHandlerActivity">
             <intent-filter>
                 <action android:name="HANDLE_APISENSE_PUSH" />
                 <category android:name="android.intent.category.DEFAULT" />

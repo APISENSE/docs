@@ -72,7 +72,7 @@ That being said, you may want to add those permisions in your _manifest.xml_:
 
 In your Application class, you can initialise the APISENSE Sdk like this:
 
-    import com.apisense.sdk.APISENSE;
+    import io.apisense.sdk.APISENSE;
 
     // Create the SDK instance
     APISENSE apisense = new APISENSE(application); // Standard config
