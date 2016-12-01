@@ -84,13 +84,13 @@ This enables you to get every version of a same API in various languages and a d
 ### One shot
 
 You will have to use the _dart-generator_
-[tarball](http://repo1.maven.org/maven2/io/apisense/dart-generator/1.1.0/dart-generator-1.1.0.tar)
-or [zip file](http://repo1.maven.org/maven2/io/apisense/dart-generator/1.1.0/dart-generator-1.1.0.zip)
+[tarball](http://repo1.maven.org/maven2/io/apisense/dart-generator/1.1.1/dart-generator-1.1.1.tar)
+or [zip file](http://repo1.maven.org/maven2/io/apisense/dart-generator/1.1.1/dart-generator-1.1.1.zip)
 in order to create your _Dart_ from the description file.
 
 Decompress the file, then start the binary as follow:
     
-    $ ./dart-generator-1.1.0/bin/dart-generator file.dart [other.dart]
+    $ ./dart-generator-1.1.1/bin/dart-generator file.dart [other.dart]
 
 This will generate every possible outputs by type and dart.
 You should find a `generated` folder containing:
@@ -101,12 +101,12 @@ You should find a `generated` folder containing:
 
 If you want to generate the API documentation for the _Dashboard_ editor,
 you will have to download _java-api-generator_
-[tarball](http://repo1.maven.org/maven2/io/apisense/dart-generator/1.1.0/java-api-generator-1.1.0.tar)
-or [zip file](http://repo1.maven.org/maven2/io/apisense/dart-generator/1.1.0/java-api-generator-1.1.0.zip).
+[tarball](http://repo1.maven.org/maven2/io/apisense/dart-generator/1.1.1/java-api-generator-1.1.1.tar)
+or [zip file](http://repo1.maven.org/maven2/io/apisense/dart-generator/1.1.1/java-api-generator-1.1.1.zip).
 
 Decompress the file, then start the binary as follow:
 
-    $ ./java-api-generator-1.1.0/bin/java-api-generator -n libraryName -o output.json ./generated/java/io/apisense/dart/*/*Dart.java
+    $ ./java-api-generator-1.1.1/bin/java-api-generator -n libraryName -o output.json ./generated/java/io/apisense/dart/*/*Dart.java
 
 You can then import the file `output.json` into your _Dashboard_ settings.
 
