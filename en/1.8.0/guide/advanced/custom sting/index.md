@@ -125,7 +125,7 @@ To do so, make sure you have the following lines in your `build.gradle`:
             }
         }
         dependencies {
-            classpath 'io.apisense:dart-gradle-plugin:1.1.0'
+            classpath 'io.apisense:dart-gradle-plugin:1.1.1'
         }
     }
     apply plugin: 'dart-android'
