@@ -53,7 +53,7 @@ module Jekyll
           elements += '</li>'
         end
       end
-      elements
+      '<ul>' + elements + '</ul>'
     end
 
     def generateStingsList(version)
