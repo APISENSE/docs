@@ -67,6 +67,45 @@ That being said, you may want to add those permisions in your _manifest.xml_:
             </provider>
             <!--[...]-->
         </application>
+- If you intend to use the [CallSting]({{ "../../stings/call" }}):
+  - `<uses-permission android:name="android.permission.READ_PHONE_STATE" />`
+- If you intend to retrieve the foreground application with [SystemSting]({{ "../../stings/system" }}):
+  - `<uses-permission android:name="android.permission.GET_TASKS"/>`, under API 22.
+  - `<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" tools:ignore="ProtectedPermissions"/>`, from API 22.
+
+    <div class="alert alert-warning" role="alert">
+      This authorization must be explicitly given by the user in the parameters (<b>Parameters > Security > Access to usage info for Apps > *Authorize the app*</b>)
+    </div>
+
+    <div class="alert alert-info" role="alert">
+      Note: This step is not necessary if you are using an <b>AccessibilityService</b> (see below).
+    </div>
+- If you intend to monitor the current application on foreground with [SystemSting]({{ "../../stings/system" }}):
+
+        <!-- Declare an AccessibilityService to monitor the current foreground App -->
+        <service
+            android:label="@string/accessibility_service_name"
+            android:name="io.apisense.sting.phone.system.WindowChangeDetectingService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config"/>
+        </service>
+
+        <!-- Put this configuration in res/xml/accessibility_service_config.xml -->
+        <accessibility-service
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:accessibilityEventTypes="typeWindowStateChanged"
+            android:accessibilityFeedbackType="feedbackGeneric"
+            android:accessibilityFlags="flagIncludeNotImportantViews"
+            android:description="@string/accessibility_service_description"/>
+
+    <div class="alert alert-warning" role="alert">
+      The AccessibilityService must be authorized by the user (<b>Parameters > Accessibility > *Activate service*</b>) before being able to monitor your device
+    </div>
 
 ## Initialize
 
