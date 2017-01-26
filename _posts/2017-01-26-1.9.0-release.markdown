@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "Version 1.9.0 is here !"
+date:   2017-01-26 10:00:00
+categories: annonce
+---
+
+
+- Features:
+  - _Android:Sdk_: You don't have to create a Bee with a custom application anymore. [See the SDK Documentation](en/1.9.0/guide/sdk/#install-and-start-a-specific-crop).
+  - _Android:Sdk_: New Stings:
+    - [Call](en/1.9.0/stings/stings-phone/call),
+    - [Device](en/1.9.0/stings/stings-phone/device),
+    - [Local Storage](en/1.9.0/stings/stings-phone/localStorage),
+    - [Network Analysis](en/1.9.0/stings/stings-network/networkAnalysis),
+    - [System](en/1.9.0/stings/stings-phone/system),
+- Enhancements:
+  - _Android:Sdk_: Improvement in the reported exceptions clarity.
+  - _Android:Sdk_: The SDK is now modular, you will have to [import sting packages](en/1.9.0/guide/sdk/#installation)
+
+
+Please note that the package of the Android sdk changed from `com.apisense` to `io.apisense`.
+
+Have fun!

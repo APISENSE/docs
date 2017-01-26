@@ -25,7 +25,11 @@ Since version 1.8, you can use maven central repository to retrieve the dependen
 - Add the dependency on your project's _build.gradle_:
 
         dependencies {
-            compile 'io.apisense.sdk:apisense-android-sdk:1.8.0'
+            compile 'io.apisense.sdk:apisense-android-sdk:1.9.0'
+
+            # If you want to be able import more stings in APISENSE
+            compile 'io.apisense.sdk:stings-network:1.9.0'
+            compile 'io.apisense.sdk:stings-phone:1.9.0'
         }
 
 
@@ -37,14 +41,14 @@ That being said, you may want to add those permisions in your _manifest.xml_:
 
 - If you need to communicate with the apisense server __(most likely the case)__:
     - `<uses-permission android:name="android.permission.INTERNET"/>`
--  If you intend to use the [WifiSting]({{ "../../stings/wifi" }}):
+-  If you intend to use the [WifiSting]({{ "../../stings/sdk/wifi" }}):
     - `<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />`
     - `<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>`
-- If you intend to use the [LocationSting]({{ "../../stings/location" }}):
+- If you intend to use the [LocationSting]({{ "../../stings/sdk/location" }}):
     - `<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />`
     - `<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />`
     - `<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />`
-- If you intend to capture media with the [FormSting]({{ "../../stings/form" }}):
+- If you intend to capture media with the [FormSting]({{ "../../stings/sdk/form" }}):
 
         <!-- only needed for sound capture -->
         <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -67,9 +71,9 @@ That being said, you may want to add those permisions in your _manifest.xml_:
             </provider>
             <!--[...]-->
         </application>
-- If you intend to use the [CallSting]({{ "../../stings/call" }}):
+- If you intend to use the [CallSting]({{ "../../stings/stings-phone/call" }}):
   - `<uses-permission android:name="android.permission.READ_PHONE_STATE" />`
-- If you intend to retrieve the foreground application with [SystemSting]({{ "../../stings/system" }}):
+- If you intend to retrieve the foreground application with [SystemSting]({{ "../../stings/stings-phone/system" }}):
   - `<uses-permission android:name="android.permission.GET_TASKS"/>`, under API 22.
   - `<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" tools:ignore="ProtectedPermissions"/>`, from API 22.
 
@@ -80,7 +84,7 @@ That being said, you may want to add those permisions in your _manifest.xml_:
     <div class="alert alert-info" role="alert">
       Note: This step is not necessary if you are using an <b>AccessibilityService</b> (see below).
     </div>
-- If you intend to monitor the current application on foreground with [SystemSting]({{ "../../stings/system" }}):
+- If you intend to monitor the current application on foreground with [SystemSting]({{ "../../stings/stings-phone/system" }}):
 
         <!-- Declare an AccessibilityService to monitor the current foreground App -->
         <service
@@ -154,7 +158,7 @@ You may want to install a specific crop, here is a sample to do so:
     if (sdk.getSessionManager().isConnected()) {
         installExperiment();
     } else {
-        sdk.getSessionManager().login("my@email.com", "myPassword",  new SimpleAPSCallback<Void>() {
+        sdk.getSessionManager().applicationLogin(new SimpleAPSCallback<Void>() {
             @Override
             public void onDone(Void aVoid) {
                 installExperiment(); // You can now install the experiment.
@@ -261,6 +265,6 @@ To be able to use our SDK, you have to set the sdkKey, otherwise every request w
 
 If you want to allow people to see your private collects, add the following line:
 
-    [sdk useAccessKey:accessKey];         
+    [sdk useAccessKey:accessKey];
 
 </div>
