@@ -3,9 +3,17 @@ layout: post
 title: Custom Sting
 ---
 
+<script type="text/javascript" src="../../../../../scripts/get.js"></script>
+
 You may want to add custom sensors or features to your application using our SDK.
 To do so you will have to create a custom [Sting](../../../stings).
 
+<hr/>
+
+<button onClick="displayAndroid()" type="button" class="btn btn-primary navbar-btn" id="android-btn">Android</button>
+<button onClick="displayIOS()" type="button" class="btn btn-default navbar-btn" id="ios-btn">iOS</button>
+
+<div id="show-android" markdown="1">
 
 ## Define your Sting API
 
@@ -267,3 +275,32 @@ Create a Dagger module that is added to `StingModule` and put all your Stings as
     public class MyModule { }
     
 You will then only have to [provide your module to the SDK initialization](../../sdk/#configure-your-sdk).
+
+</div>
+
+<div id="show-ios" markdown="1"> 
+
+Until further updates, to create a custom sting you'll just have to create a new file, you can call it whatever you want.
+
+Example, CustomSting.swift
+
+    import Apisense
+    import JavaScriptCore
+    import CocoaLumberjack
+
+    @objc public protocol CustomStingExports: JSExport {
+        func info(_ param: String)
+    }
+
+    class CustomSting: Sting, CustomStingExports {
+        public func info(_ message: String) {
+            DDLogInfo(message)
+        }
+    }
+
+The protocol declare functions you want to expose in your javascript. In this example, we expose a function call `info` with one parameter called `message` which going to display this message (String) in the terminal.
+
+Then we implement this function in `CustomSting`, note that you'll have to extend `Sting` and implement your protocol.
+
+And that's it, once your `CustomSting` is pass to APISENSE during its initialization, you'll be able to execute crop using your own methods.
+</div>
