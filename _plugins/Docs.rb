@@ -15,30 +15,44 @@ module Jekyll
       !subDirs.empty?
     end
 
-    def writeExpandableMenu(version, section, subfolderName)
+    def writeExpandableMenu(version, section, subfolderName, expendable)
       iconId = section + "-" + subfolderName + "-menu-ic"
       menuId = section + "-" + subfolderName + "-menu"
       # Generate collapsible menu name
-      '<a href="#" data-toggle="collapse" aria-expended="false"' +
-        'data-target="#' + menuId + '" aria-controls="' + menuId + '">' +
-        '<span class="glyphicon glyphicon-chevron-right" id="' + iconId + '"> ' + subfolderName.capitalize + ' <span class="glyphicon glyphicon-chevron-right" id="' + iconId + '">'+
-        '</a>' +
-        # Generate submenu content
-        '<ul class="collapse" id="' + menuId + '">' +
-        generateSectionList(version, section + '/' + subfolderName) +
-        '</ul>' +
-        # Generate the arrow icon control script
-        '<script type="text/javascript"> $(function() {' +
-        '  $("#' + menuId + '").on("shown.bs.collapse", function () {' +
-        '    $(".glyphicon#' + iconId + '").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-down");' +
-        '  });' +
-        '  $("#' + menuId + '").on("hidden.bs.collapse", function () {' +
-        '    $(".glyphicon#' + iconId + '").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-right");' +
-        '  });' +
-        '}); </script>'
+
+      # Initialize
+      header = ""
+      footer = ""
+      body = ""
+
+      if (expendable)
+        header = '<a href="#" data-toggle="collapse" aria-expended="false" ' +
+          'data-target="#' + menuId + '" aria-controls="' + menuId + '">' +
+          '<span class="glyphicon glyphicon-chevron-right" id="' + iconId + '"> </span> ' + subfolderName.capitalize + ' <span class="glyphicon glyphicon-chevron-right" id="' + iconId + '"></span>'+
+          '</a><ul class="collapse" id="' + menuId + '">'
+      else
+        body = subfolderName.capitalize 
+      end
+        
+      # Generate submenu content
+      body += generateSectionList(version, section + '/' + subfolderName, true)
+      
+      # Generate the arrow icon control script
+      if (expendable)
+        footer = '</ul><script type="text/javascript"> $(function() {' +
+          '  $("#' + menuId + '").on("shown.bs.collapse", function () {' +
+          '    $(".glyphicon#' + iconId + '").removeClass("glyphicon-chevron-right").addClass("glyphicon-chevron-down");' +
+          '  });' +
+          '  $("#' + menuId + '").on("hidden.bs.collapse", function () {' +
+          '    $(".glyphicon#' + iconId + '").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-right");' +
+          '  });' +
+          '}); </script>'
+      end
+
+      header + body + footer
     end
 
-    def generateSectionList(version, section)
+    def generateSectionList(version, section, expendable)
       dirName = 'en/' + version + '/' + section
       elements = ""
       Dir.glob(dirName + '/*').sort.each do |currentPath|
@@ -46,7 +60,7 @@ module Jekyll
           subfolderName = currentPath.split('/').last
           elements += '<li>'
           if (containsFolder(currentPath))
-            elements += writeExpandableMenu(version, section, subfolderName)
+            elements += writeExpandableMenu(version, section, subfolderName, expendable)
           else
             elements += '<a href="/' + currentPath + '">' + subfolderName.capitalize + '</a>'
           end
@@ -56,16 +70,20 @@ module Jekyll
       '<ul>' + elements + '</ul>'
     end
 
+    def generateStingsListNoEffect(version)
+      generateSectionList(version, "stings", false)
+    end
+
     def generateStingsList(version)
-      generateSectionList(version, "stings")
+      generateSectionList(version, "stings", true)
     end
 
     def generateGuidesList(version)
-      elements = generateSectionList(version, "guide")
+      elements = generateSectionList(version, "guide", true)
     end
 
     def generateExtraList(version)
-      generateSectionList(version, "extra")
+      generateSectionList(version, "extra", true)
     end
   end
 
