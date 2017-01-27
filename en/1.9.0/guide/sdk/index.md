@@ -11,10 +11,8 @@ SDK stands for `Software Development Kit`. Basically it's some code we wrote for
 
 <hr/>
 
-<div style="float:right">
 <button onClick="displayAndroid()" type="button" class="btn btn-primary navbar-btn" id="android-btn">Android</button>
 <button onClick="displayIOS()" type="button" class="btn btn-default navbar-btn" id="ios-btn">iOS</button>
-</div>
 
 <div id="show-android" markdown="1">
 
@@ -215,56 +213,41 @@ but you crop will not have the expected behavior.
 
 ## Download: 
 
-Get our [iOS SDK here](../../get/apisense-ios-sdk-release.zip).
+You need to create a `Podfile`, just run `pod init` in a terminal if you don't already have one.
+Then you just add `Apisense` to it. The file should looks like:
 
-## Installation:
+    source 'https://github.com/APISENSE/ios-sdk-specs' # Our private repo
+    source 'https://github.com/CocoaPods/Specs.git'
 
-It should take less than 5 minutes to configure your project be able to use our SDK.
+    platform :ios, '9.3'
+    use_frameworks!
 
-- Extract the `zip` archive
-- Drag &amp; drop `lib` and `apisense` folders inside your target application besides your sources. Check copy files if needed.
-- In `Build Phases` check that you have our `lib/apisense-android-sdk-release.a` file in `link binary with libraries` section.
+    target 'yourTarget' do
+        pod 'Apisense', '~> 1.0.0' # Current version released
+    end
 
-Next, open a terminal and go to your project folder.
-
-- Tap `pod init`
-- You should have a file named `Podfile`, copy paste the following code in your first target block. These are the dependencies used in the APISENSE® project.
-
-        pod 'AFNetworking', '~> 2.6.1'
-        pod 'CocoaSecurity', '~> 1.2.4'
-        pod 'Objection', '~> 1.6.1'
-        pod 'Mantle', '~> 2.0.6'
-        pod 'tolo', '~> 1.0.0'
-        pod 'CocoaLumberjack', '~> 2.2.0'
-        pod 'FTPManager', '~> 1.6.5'
-        pod 'QuickDialog', '~> 1.1.0'
-        pod 'UzysAssetsPickerController', '~> 0.9.9'
-        pod 'YLProgressBar', '~> 3.8.0'
-
-- Run `pod install`, close your project and open it again with the `*.sxworkspace` file.
+Then run `pod install`. This will download it.
 
 ## Usage
 
 At this point, you should be able to create an instance of Apisense SDK using:
 
-	#import "apisense/APISENSE.h"
-	APISENSE* sdk = apisense = [[[[[APISENSE alloc] init]
-                                                    useAccessKey:accessKey] // To see private collects
-                                                    useSdkKey:sdkKey] // To contact our server
-                                                    getSdk];
+	import Apisense
 
-- Run your application, if everything is ok you should see `[INFO]  11/30 11:38:04  APISENSE - SDK Initiliazed` in the log section.
+    let custom = Sensor(name: "Custom", stingName: "custom", description: "Custom sting", iconID: "path/to/resources")
+    let newSensors = Set([custom])
+    let mapping = [ custom.getStingName() : CustomSting.self ]
 
-## Add your sdk key
+    sdk = APISENSE.sharedInstance
+            .useAccessKey(key: accessKey) // Optional: Authorize the SDK to see your private crops
+            .useSdkKey(key: sdkKey) // Required: Authorize your SDK to contact the server
+            .addStings(sensors: newSensors, mapping: mapping) // Optional: Add custom stings
+            .getSdk() // Required: Initialization
 
-To be able to use our SDK, you have to set the sdkKey, otherwise every request will fail.
+Note that everytime you'll call `APISENSE.sharedInstance.getSdk()` you'll get the same instance.
 
-    [sdk useSdkKey:sdkKey];
+Run your application, if everything is ok you should see in the log section:
 
-## Add your private key
-
-If you want to allow people to see your private collects, add the following line:
-
-    [sdk useAccessKey:accessKey];
+    [Info]: APISENSE® SDK initialized
 
 </div>
