@@ -127,13 +127,9 @@ To do so, make sure you have the following lines in your `build.gradle`:
     buildscript {
         repositories {
             mavenCentral()
-            maven {
-                // Used for dart-gradle-plugin dependencies
-                url 'https://repo.eclipse.org/content/repositories/eclipse-staging/'
-            }
         }
         dependencies {
-            classpath 'io.apisense:dart-gradle-plugin:1.1.0'
+            classpath 'io.apisense:dart-gradle-plugin:1.2.0'
         }
     }
     apply plugin: 'dart-android'
