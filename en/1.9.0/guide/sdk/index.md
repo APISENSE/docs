@@ -23,11 +23,11 @@ Since version 1.8, you can use maven central repository to retrieve the dependen
 - Add the dependency on your project's _build.gradle_:
 
         dependencies {
-            compile 'io.apisense.sdk:apisense-android-sdk:1.9.0'
+            compile 'io.apisense.sdk:apisense-android-sdk:1.9.1'
 
             # If you want to be able import more stings in APISENSE
-            compile 'io.apisense.sdk:stings-network:1.9.0'
-            compile 'io.apisense.sdk:stings-phone:1.9.0'
+            compile 'io.apisense.sdk:stings-network:1.9.1'
+            compile 'io.apisense.sdk:stings-phone:1.9.1'
         }
 
 
@@ -135,6 +135,7 @@ If you want to allow people to see your private crops, add the following line be
 You can add custom Sting implementations using [Dagger](http://square.github.io/dagger/) modules:
 
     apisense.addStingsModules(new MyOwnStingModule()); // More Stings injected!
+    apisense.addStingsModules(new PhoneStingModule(), new NetworkStingModule())
 
 ### Instanciate the SDK
 
