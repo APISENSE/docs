@@ -256,12 +256,12 @@ Parameters
 ----------
 
 - __[filters](scanCompletedFilter.html)__ : JSON, defines the filters. Can be empty.
-- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [ApmData](apmData.html) object.
+- __[callback](../../../extra/callback)__ : Method executed when event triggered, returns [ApmData](apmData.html) object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/token) used for canceling event listener.
+- __token__ : [Token](../../../extra/token) used for canceling event listener.
 
 onDownloadCompleted
 ===================
@@ -274,12 +274,12 @@ Parameters
 ----------
 
 - __[filters](downloadCompletedFilter.html)__ : JSON, defines the filters. Can be empty.
-- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [ApmData](apmData.html) object.
+- __[callback](../../../extra/callback)__ : Method executed when event triggered, returns [ApmData](apmData.html) object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/token) used for canceling event listener.
+- __token__ : [Token](../../../extra/token) used for canceling event listener.
 
 onUploadCompleted
 =================
@@ -292,9 +292,9 @@ Parameters
 ----------
 
 - __[filters](uploadCompletedFilter.html)__ : JSON, defines the filters. Can be empty.
-- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [ApmData](apmData.html) object.
+- __[callback](../../../extra/callback)__ : Method executed when event triggered, returns [ApmData](apmData.html) object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/token) used for canceling event listener.
+- __token__ : [Token](../../../extra/token) used for canceling event listener.

@@ -253,12 +253,12 @@ onLevelChanged
 Parameters
 ----------
 
-- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [BatteryData](batteryData.html) object.
+- __[callback](../../../extra/callback)__ : Method executed when event triggered, returns [BatteryData](batteryData.html) object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/token) used for canceling event listener.
+- __token__ : [Token](../../../extra/token) used for canceling event listener.
 
 onStateChanged
 ==============
@@ -270,9 +270,9 @@ onStateChanged
 Parameters
 ----------
 
-- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [BatteryData](batteryData.html) object.
+- __[callback](../../../extra/callback)__ : Method executed when event triggered, returns [BatteryData](batteryData.html) object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/token) used for canceling event listener.
+- __token__ : [Token](../../../extra/token) used for canceling event listener.
