@@ -152,9 +152,9 @@ onResult
 Parameters
 ----------
 
-- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [FormData](formData.html) object.
+- __[callback](../../../extra/callback)__ : Method executed when event triggered, returns [FormData](formData.html) object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/token) used for canceling event listener.
+- __token__ : [Token](../../../extra/token) used for canceling event listener.

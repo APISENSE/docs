@@ -292,9 +292,9 @@ Parameters
 ----------
 
 - __[filters](locationChangedFilter.html)__ : JSON, defines the filters. Can be empty.
-- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [LocationData](locationData.html) object.
+- __[callback](../../../extra/callback)__ : Method executed when event triggered, returns [LocationData](locationData.html) object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/token) used for canceling event listener.
+- __token__ : [Token](../../../extra/token) used for canceling event listener.

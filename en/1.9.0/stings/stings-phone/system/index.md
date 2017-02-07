@@ -221,12 +221,12 @@ onScreenUnlocked
 Parameters
 ----------
 
-- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [SystemData](systemData.html) object.
+- __[callback](../../../extra/callback)__ : Method executed when event triggered, returns [SystemData](systemData.html) object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/token) used for canceling event listener.
+- __token__ : [Token](../../../extra/token) used for canceling event listener.
 
 onScreenStateChanged
 ====================
@@ -238,12 +238,12 @@ onScreenStateChanged
 Parameters
 ----------
 
-- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [SystemData](systemData.html) object.
+- __[callback](../../../extra/callback)__ : Method executed when event triggered, returns [SystemData](systemData.html) object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/token) used for canceling event listener.
+- __token__ : [Token](../../../extra/token) used for canceling event listener.
 
 onForegroundAppChanged
 ======================
@@ -255,9 +255,9 @@ onForegroundAppChanged
 Parameters
 ----------
 
-- __[callback](../../extra/callback)__ : Method executed when event triggered, returns [SystemData](systemData.html) object.
+- __[callback](../../../extra/callback)__ : Method executed when event triggered, returns [SystemData](systemData.html) object.
 
 Return
 ------
 
-- __token__ : [Token](../../extra/token) used for canceling event listener.
+- __token__ : [Token](../../../extra/token) used for canceling event listener.
