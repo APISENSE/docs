@@ -6,8 +6,8 @@
 </description>
     <link>http://docs.apisense.com//</link>
     <atom:link href="http://docs.apisense.com//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 07 Feb 2017 13:19:00 +0000</pubDate>
-    <lastBuildDate>Tue, 07 Feb 2017 13:19:00 +0000</lastBuildDate>
+    <pubDate>Mon, 13 Feb 2017 10:31:30 +0000</pubDate>
+    <lastBuildDate>Mon, 13 Feb 2017 10:31:30 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -15,14 +15,14 @@
         <description>&lt;ul&gt;
   &lt;li&gt;Features:
     &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: You don’t have to create a Bee with a custom application anymore. &lt;a href=&quot;en/1.9.0/guide/sdk/#install-and-start-a-specific-crop&quot;&gt;See the SDK Documentation&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: You don’t have to create a Bee with a custom application anymore. &lt;a href=&quot;/en/1.9.0/guide/sdk/#install-and-start-a-specific-crop&quot;&gt;See the SDK Documentation&lt;/a&gt;.&lt;/li&gt;
       &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: New Stings:
         &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;en/1.9.0/stings/stings-phone/call&quot;&gt;Call&lt;/a&gt;,&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;en/1.9.0/stings/stings-phone/device&quot;&gt;Device&lt;/a&gt;,&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;en/1.9.0/stings/stings-phone/localStorage&quot;&gt;Local Storage&lt;/a&gt;,&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;en/1.9.0/stings/stings-network/networkAnalysis&quot;&gt;Network Analysis&lt;/a&gt;,&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;en/1.9.0/stings/stings-phone/system&quot;&gt;System&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-phone/call&quot;&gt;Call&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-phone/device&quot;&gt;Device&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-phone/localStorage&quot;&gt;Local Storage&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-network/networkAnalysis&quot;&gt;Network Analysis&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-phone/system&quot;&gt;System&lt;/a&gt;,&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -30,7 +30,7 @@
   &lt;li&gt;Enhancements:
     &lt;ul&gt;
       &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: Improvement in the reported exceptions clarity.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: The SDK is now modular, you will have to &lt;a href=&quot;en/1.9.0/guide/sdk/#installation&quot;&gt;import sting packages&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: The SDK is now modular, you will have to &lt;a href=&quot;/en/1.9.0/guide/sdk/#installation&quot;&gt;import sting packages&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
