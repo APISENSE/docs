@@ -11,8 +11,8 @@ categories: annonce
   - _Android:Sdk_: New Stings:
     - [Call](/en/1.9.0/stings/stings-phone/call),
     - [Device](/en/1.9.0/stings/stings-phone/device),
-    - [Local Storage](/en/1.9.0/stings/stings-phone/localStorage),
-    - [Network Analysis](/en/1.9.0/stings/stings-network/networkAnalysis),
+    - [Local Storage](/en/1.9.0/stings/stings-phone/localstorage),
+    - [Network Analysis](/en/1.9.0/stings/stings-network/networkanalysis),
     - [System](/en/1.9.0/stings/stings-phone/system),
 - Enhancements:
   - _Android:Sdk_: Improvement in the reported exceptions clarity.
