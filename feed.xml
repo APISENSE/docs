@@ -6,8 +6,8 @@
 </description>
     <link>http://docs.apisense.com//</link>
     <atom:link href="http://docs.apisense.com//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 Feb 2017 10:31:30 +0000</pubDate>
-    <lastBuildDate>Mon, 13 Feb 2017 10:31:30 +0000</lastBuildDate>
+    <pubDate>Mon, 13 Feb 2017 10:36:22 +0000</pubDate>
+    <lastBuildDate>Mon, 13 Feb 2017 10:36:22 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -20,8 +20,8 @@
         &lt;ul&gt;
           &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-phone/call&quot;&gt;Call&lt;/a&gt;,&lt;/li&gt;
           &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-phone/device&quot;&gt;Device&lt;/a&gt;,&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-phone/localStorage&quot;&gt;Local Storage&lt;/a&gt;,&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-network/networkAnalysis&quot;&gt;Network Analysis&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-phone/localstorage&quot;&gt;Local Storage&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-network/networkanalysis&quot;&gt;Network Analysis&lt;/a&gt;,&lt;/li&gt;
           &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-phone/system&quot;&gt;System&lt;/a&gt;,&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
