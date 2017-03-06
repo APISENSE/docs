@@ -27,20 +27,21 @@ The Honeycomb configuration can be changed thanks to environment variables:
   - __APP_SECRET__: [Play! specific configuration](https://www.playframework.com/documentation/2.5.x/ApplicationSecret) used for cryptographic operations.
 - Customize the Honeycomb behaviour:
   - __HONEYCOMB_MAX_DISK_BUFFER__: Maximum size for the uploaded media files (default: 100M).
-  - __HONEYCOMB_MAX_MEMORY_BUFFER__: Maximum size for the uploaded json files (default: 500K). Available as of version __1.9.1__
-  - __HONEYCOMB_RESPONSE_LIMIT__: Maximum number of element contained in a data page (default: 10, unlimited if negative). Available as of version __1.9.2__
+  - __HONEYCOMB_MAX_MEMORY_BUFFER__: Maximum size for the uploaded json files (default: 500K).
+  - __HONEYCOMB_RESPONSE_LIMIT__: Maximum number of element contained in a data page (default: 10, unlimited if negative).
+  - __HONEYCOMB_DATA_QUOTA__: Default quota set to each new user by default (default: 500M, unlimited if 0).
 - Configure MongoDB:
   - __MONGODB_PORT_27017_TCP_ADDR__: Mongodb server host. (Automatically filled if using a linked docker container).
   - __MONGODB_PORT_27017_TCP_PORT__: Mongodb server port. (Automatically filled if using a linked docker container).
-  - __HONEYCOMB_MONGODB_USERNAME__: [Mongodb user](https://docs.mongodb.com/manual/tutorial/enable-authentication/) to be used by the Honeycomb, not used if left empty. Available as of version __1.9.3__
-  - __HONEYCOMB_MONGODB_PASSWORD__: Password of the previous user, not used if left empty. Available as of version __1.9.3__
-  - __HONEYCOMB_MONGODB_AUTH_SOURCE__: Database containing the users (default: 'admin'). Available as of version __1.9.3__
-  - __HONEYCOMB_MONGODB_AUTH_MODE__: Authentication mode used by your Mongodb instance (default: 'SCRAM-SHA-1', [available values](https://docs.mongodb.com/manual/core/authentication/#authentication-mechanisms)). Available as of version __1.9.3__
+  - __HONEYCOMB_MONGODB_USERNAME__: [Mongodb user](https://docs.mongodb.com/manual/tutorial/enable-authentication/) to be used by the Honeycomb, not used if left empty.
+  - __HONEYCOMB_MONGODB_PASSWORD__: Password of the previous user, not used if left empty.
+  - __HONEYCOMB_MONGODB_AUTH_SOURCE__: Database containing the users (default: 'admin').
+  - __HONEYCOMB_MONGODB_AUTH_MODE__: Authentication mode used by your Mongodb instance (default: 'SCRAM-SHA-1', [available values](https://docs.mongodb.com/manual/core/authentication/#authentication-mechanisms)).
 - Use HTTPS, [as documented](https://www.playframework.com/documentation/2.5.x/ConfiguringHttps):
-  - __HONEYCOMB_SSL_KEYSTORE_PATH__: Path to the Java keyStore. Available as of version __1.9.3__
-  - __HONEYCOMB_SSL_KEYSTORE_TYPE__: Type of the keystore (default: 'JKS'). Available as of version __1.9.3__
-  - __HONEYCOMB_SSL_KEYSTORE_PASSWORD__: Password for the java keyStore. Available as of version __1.9.3__
-  - __HONEYCOMB_SSL_KEYSTORE_ALGORITHM__: Algorithm used by the keyStore. Available as of version __1.9.3__
+  - __HONEYCOMB_SSL_KEYSTORE_PATH__: Path to the Java keyStore.
+  - __HONEYCOMB_SSL_KEYSTORE_TYPE__: Type of the keystore (default: 'JKS').
+  - __HONEYCOMB_SSL_KEYSTORE_PASSWORD__: Password for the java keyStore.
+  - __HONEYCOMB_SSL_KEYSTORE_ALGORITHM__: Algorithm used by the keyStore.
 
 ### Docker compose example
 
