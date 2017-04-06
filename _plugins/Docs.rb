@@ -79,11 +79,23 @@ module Jekyll
     end
 
     def generateGuidesList(version)
-      elements = generateSectionList(version, "guide", true)
+      generateSectionList(version, "guide", true)
     end
 
     def generateExtraList(version)
       generateSectionList(version, "extra", true)
+    end
+
+    def generateJsDocList(version)
+      dirName = "jsdoc/" + version
+      elements = ""
+      Dir.glob(dirName + '/*').sort.each do |currentPath|
+        moduleName = currentPath.split("/").last
+        if File.directory?(currentPath)
+          elements += "<li><a href='/" + currentPath + "/index.html' target='_blank'>" + moduleName.capitalize + "</a></li>"
+        end
+      end
+      '<ul>' + elements + '</ul>'
     end
   end
 
