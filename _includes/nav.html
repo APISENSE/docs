@@ -14,22 +14,22 @@
     <p class="text-center"><span class="label label-info">SDK Version {{selectedVersion}}</span></p>
 
     <!-- User Guides -->
-    <a href="{{ "en/version/guide/" | prepend: site.url | replace: "version", selectedVersion }}">Guide</a>
+    <a href="{{ "en/version/guide/" | prepend: site.baseurl | prepend: site.url | replace: "version", selectedVersion }}">Guide</a>
     {{ selectedVersion | generateGuidesList }}
 
     <!-- Stings documentation -->
-    <a href="{{ "en/version/stings/" | prepend: site.url | replace: "version", selectedVersion }}">Stings</a>
+    <a href="{{ "en/version/stings/" | prepend: site.baseurl | prepend: site.url | replace: "version", selectedVersion }}">Stings</a>
     {{ selectedVersion | generateStingsList }}
 
     <!-- Extra documentation elements -->
-    <a href="{{ "en/version/extra/" | prepend: site.url | replace: "version", selectedVersion }}">Extra</a>
+    <a href="{{ "en/version/extra/" | prepend: site.baseurl | prepend: site.url | replace: "version", selectedVersion }}">Extra</a>
     {{ selectedVersion | generateExtraList }}
 
     <!-- SDKs download & doc -->
     <a href="{{site.url}}">SDKs</a>
     <li><a href="{{ "en/version/guide/sdk" | prepend: site.url | replace: "version",selectedVersion }}">How to use it ?</a></li>
-    <li><img class="mobile-logo" src="{{ "images/android_logo.png" | prepend: site.url }}" alt="android"/><a class="os-target" target="_blank" href="{{ "https://search.maven.org/#artifactdetails|io.apisense.sdk|apisense-android-sdk|version|aar" | replace: "version",selectedVersion }}">Android (beta)</a></li>
-    <li><img class="mobile-logo" src="{{ "images/ios_logo.png" | prepend: site.url }}" alt="iOS"/><a class="os-target" href="{{ "en/version/get/apisense-swift-sdk.tar.gz" | prepend: site.url | replace: "version",selectedVersion }}">iOS (alpha)</a></li>
+    <li><img class="mobile-logo" src="{{ "images/android_logo.png" | prepend: site.baseurl | prepend: site.url }}" alt="android"/><a class="os-target" target="_blank" href="{{ "https://search.maven.org/#artifactdetails|io.apisense.sdk|apisense-android-sdk|version|aar" | replace: "version",selectedVersion }}">Android (beta)</a></li>
+    <li><img class="mobile-logo" src="{{ "images/ios_logo.png" | prepend: site.baseurl | prepend: site.url }}" alt="iOS"/><a class="os-target" href="{{ "en/version/get/apisense-swift-sdk.tar.gz" | prepend: site.url | replace: "version",selectedVersion }}">iOS (alpha)</a></li>
 
 
     <script type="text/javascript">
