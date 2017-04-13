@@ -10,7 +10,7 @@ baseurl: ""
 
 defaultVersion: 1.9.0
 
-url: http://apisense.github.io/docs/
+url: "http://apisense.github.io/docs/"
 #url: http://127.0.0.1:4000/ # url: http://docs.apisense.io/
 
 twitter_username: APISENSE
