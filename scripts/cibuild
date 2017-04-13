@@ -5,6 +5,11 @@ if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
     gem install jekyll;
     jekyll build;
 
+    # Init & configure ssh agent
+    eval "$(ssh-agent -s)"
+    chmod 600 .travis_rsa
+    ssh-add .travis_rsa
+
     mkdir .deploy
     cd .deploy
     git clone --depth 1 --branch gh-pages --single-branch $DEPLOY_REPO . || (git init && git remote add -t gh-pages origin $DEPLOY_REPO)
