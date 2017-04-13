@@ -1,16 +1,16 @@
 # Site settings
 title: APISENSE® Documentation
 
-email: contact@apisense.com
+email: contact@apisense.io
 description: >
-  APISENSE® makes it easy to collect data with crowds of mobile phone sensors.
-  Make sense and innovate on top of real world data feedback, in real time!.
+  APISENSE® makes it easy to collect data from a crowd of mobile devices.
+  Observe and innovate using users' feedback, in real time!
 
 baseurl: ""
 
 defaultVersion: 1.9.0
 
-url: http://docs.apisense.com/
+url: http://docs.apisense.io/
 #url: http://127.0.0.1:4000/ # "http://apisense.github.io/docs/"
 
 twitter_username: APISENSE
