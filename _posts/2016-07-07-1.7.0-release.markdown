@@ -6,18 +6,19 @@ categories: annonce
 ---
 
 - Features:
-  - _Dashboard_: Separation between the [Dashboard](/en/1.7.0/guide/dashboard) (available at [https://apisense.io](https://apisense.io)) and the [Honeycomb](/en/1.7.0/guide/honeycomb).
-  You can now manage your own Honeycomb server and use it as backend for any of your crops. Or you can stick to the official Honeycomb server.
-  - _Dashboard_: Add the possibility to see reported exceptions about your crops scripts. Exceptions will be reported from Android sdk 1.7.1
+  - _Dashboard_: Separation between the [Dashboard](/en/1.7.0/guide/dashboard) (available from [https://apisense.io](https://apisense.io)) and the [Honeycomb](/en/1.7.0/guide/honeycomb) (data endpoint).
+  You can now manage your own Honeycomb server and use it as backend for any of your crops. Or, you can adopt to the official Honeycomb server.
+  - _Dashboard_: Add the possibility to see reported exceptions about your deployed crops. Exceptions will be reported from Android SDK 1.7.1
   - [1.7.1] _Dashboard_: You can now clear data from a crop
 - Enhancements:
-  - _Android:Bee_: Graphic enhancement of the whole Android application.
+  - _Android:Bee_: Graphic enhancement of the whole Android app.
   - _Android:Bee_: Application is available for Android N.
-  - _Android:Sdk_: Location sting now retrieve current position in Android system for each call on data accessors.
+  - _Android:SDK_: `location` sting now retrieve current position in Android system for each call on data accessors.
 - Fixed bugs:
-  - _Android:Sdk_: APISENSE does not define its [own file provider anymore](/en/1.7.0/guide/sdk/#add-manifest-permissions) for the Form sting,
+  - _Android:SDK_: APISENSE® does not define its [own file provider anymore](/en/1.7.0/guide/sdk/#add-manifest-permissions) for the Form sting,
   - [1.7.1] _Dashboard_: The "Download all" zip is now correctly generated.
   which was mixing authorities for multiple applications using the SDK.
-  - _Android:Sdk_: Resolved crash with GCM and any application using android N.
-  - _Android:Sdk_: Runtime exception on script will not crash the applications anymore.
+  - _Android:SDK_: Resolved crash with GCM and any application using android N.
+  - _Android:SDK_: Runtime exception on script will not crash the applications anymore.
+
 Have fun!
