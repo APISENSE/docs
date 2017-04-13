@@ -26,7 +26,7 @@ Keep in mind that if your crop is _Public_ or _Unlisted_, anybody will be able t
 
 ### Code it
 Last crutial step, you have to write your crop's script using every [Sting](../../stings) you need.
-It should be quite easy and user friendly but if you're in trouble, you can contact us at [contact@apisense.com](contact@apisense.com)
+It should be quite easy and user friendly but if you're in trouble, you can contact us at [contact@apisense.io](contact@apisense.io)
 
 ### Publish it
 First of all you have to create an account.

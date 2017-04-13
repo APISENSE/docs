@@ -28,7 +28,7 @@ While creating a crop, you will have to provide some configuration:
 ### Code it
 
 You can then use the editor to write your crop's script using every [Sting](../../stings) you need.
-It should be quite easy and user friendly but if you're in trouble, you can contact us at [contact@apisense.com](contact@apisense.com)
+It should be quite easy and user friendly but if you're in trouble, you can contact us at [contact@apisense.io](contact@apisense.io)
 
 ### Publish it
 
