@@ -1,24 +1,24 @@
 ---
 layout: post
-title:  "Make place for version 1.6.0 !"
+title:  "Version 1.6.0 is available!"
 date:   2016-05-25 10:00:00
 categories: annonce
 ---
 
 - Features:
-  - Hive API is internationalized, and now provides error codes.
-  - You can now start and disable your crop remotely on applications linked to GCM.
+  - Hive service API is internationalized, and now provides error codes.
+  - You can now start and disable your crop remotely for mobile apps linked to GCM.
 - Enhancements:
   - Graphic enhancement of the whole server interface.
-  - Deploying a script enables the crop.
+  - Deploying a script automatically enables the associated crop.
   - Hive no longer have info about uploaded data size.
 - Fixed bugs:
-  - Mobile applications name are limited to 40 characters.
-  - Read only API key is now selectable on firefox.
-  - Commented Stings in script will no longer appear on used stings.
-  - Stings won't be duplicated in used stings.
-  - Android (Wifi Sting): SSID won't be between escaped quotes anymore.
+  - Mobile apps name are limited to 40 characters.
+  - Read only API key is now selectable on Firefox.
+  - Commented stings in script will no longer appear on used stings.
+  - Stings will not be duplicated in used stings.
+  - Android (Wifi Sting): SSID will not be between escaped quotes anymore.
   - Android (CropManager): synchronise method will subscribe to crops GCM channel.
-  - Android: Crop update will not multiply records anymore
+  - Android: Crop update will not multiply records anymore.
 
 Have fun!

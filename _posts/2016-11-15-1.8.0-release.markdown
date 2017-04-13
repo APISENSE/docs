@@ -1,22 +1,22 @@
 ---
 layout: post
-title:  "Version 1.8.0 is out !"
+title:  "Version 1.8.0 is available!"
 date:   2016-11-15 10:00:00
 categories: annonce
 ---
 
 
 - Features:
-  - _Android:Bee_: Create a bee from your facebook or google account.
-  - _Android:Sdk_: New methods to stop all crops.
+  - _Android:Bee_: Create a bee account from your Facebook or Google account.
+  - _Android:SDK_: New methods to stop all the crops.
 - Enhancements:
-  - _Dashboard_: New script management, you can now snapshot scripts to reuse.
+  - _Dashboard_: New script management, you can now backup scripts for reuse.
   - _Dashboard_: User creation does not require invitations anymore.
-  - _Honeycomb_: Docker image is lighter, using [openjdk:1.8-jre](https://hub.docker.com/r/library/openjdk/).
-  - _Android:Sdk_: APISENSE is now on maven central!
-  - _Android:Sdk_: User creation now require an email validation (if not from social network).
+  - _Honeycomb_: Docker image is lighter, using [openjdk:1.8-jre](https://hub.docker.com/r/library/openjdk).
+  - _Android:Sdk_: APISENSE® SDK is now available from [Maven central](https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22apisense-android-sdk%22).
+  - _Android:Sdk_: User creation now requires an email validation (if not created via a social login).
   - _Android:Sdk_: Every Bee can change its password.
-  - _Android:Sdk_: Capture period can be changed on location Sting.
-  - _Android:Sdk_: Stings are now completely generated.
+  - _Android:Sdk_: Capture period can be changed on `location` sting.
+  - _Android:Sdk_: Stings skeletons are now fully generated.
 
 Have fun!

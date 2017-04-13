@@ -26,7 +26,7 @@ Then you have to create a collect and set its name, description and optionally y
     <div class="alert alert-info" role="alert">INFO: An unique identifier is created for your collect, it should look like PzeDd1r0nNtN8JdNNrlY and can be found at the end of the URL on the dashboard of your collect.</div>
 
 3. __Code it__:
-Last crucial step, you have to write your collect using our documentation. It should be quite easy and user friendly but if you're in trouble, you can contact us at [contact@apisense.com](contact@apisense.com)
+Last crucial step, you have to write your collect using our documentation. It should be quite easy and user friendly but if you're in trouble, you can contact us at [contact@apisense.io](contact@apisense.io)
 
 4. __Publish it__:
 First of all you have to create an account. Some personal information like your username will be linked to your collects and shown in our store. Choose it wisely!
