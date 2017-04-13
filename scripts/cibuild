@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -v
 # See https://docs.travis-ci.com/user/pull-requests/#Security-Restrictions-when-testing-Pull-Requests
 if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
     gem install jekyll;
