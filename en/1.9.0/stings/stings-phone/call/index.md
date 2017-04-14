@@ -125,7 +125,7 @@ Parameters
 Return
 ------
 
-- __neighbouringCells__ : List, Return the mobile cells available around the device.
+- __neighbouringCells__ : List<[Cell](/jsdoc/1.9.0/stings-phone/Cell.html)>, Return the mobile cells available around the device.
 
 timestamp
 =========
