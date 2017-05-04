@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Version 1.10.0 is available!"
+date:   2017-05-04 10:00:00
+categories: annonce
+---
+
+
+- Features:
+  - _Honeycomb_: Add a manageable per user quota to avoid a scientist pushing too much data.
+  - _Dashboard_: See your quotas status and manage your backends quota settings.
+  - _Android:Sdk_: New stings available:
+    - [Cpu](/en/1.10.0/stings/stings-phone/cpu),
+    - [Memory](/en/1.10.0/stings/stings-phone/memory),
+    - [Rotation](/en/1.10.0/stings/stings-motion/rotation),
+    - [Gravity](/en/1.10.0/stings/stings-motion/gravity),
+    - [Gyroscope](/en/1.10.0/stings/stings-motion/gyroscope),
+    - [Accelerometer](/en/1.10.0/stings/stings-motion/accelerometer),
+    - [Proximity](/en/1.10.0/stings/stings-environment/proximity),
+    - [Pressure](/en/1.10.0/stings/stings-environment/pressure),
+    - [Light](/en/1.10.0/stings/stings-environment/light),
+    - [Visualization](/en/1.10.0/stings/stings-visualization/visualization).
+- Enhancements:
+  - _Android:SDK_: [Wifi Sting](/en/1.10.0/stings/sdk/wifi) now returns the right value for _authentication()_ method.
+  - _Dashboard_: Fix some errors when a backend server is not available.
+  - _Android:SDK_: Check Sting availability on initialization to avoid using not-working ones.
+
+
+Have fun!
