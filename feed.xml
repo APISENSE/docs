@@ -6,9 +6,52 @@
 </description>
     <link>http://docs.apisense.io//</link>
     <atom:link href="http://docs.apisense.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 14 Apr 2017 14:08:32 +0000</pubDate>
-    <lastBuildDate>Fri, 14 Apr 2017 14:08:32 +0000</lastBuildDate>
+    <pubDate>Fri, 05 May 2017 16:14:18 +0000</pubDate>
+    <lastBuildDate>Fri, 05 May 2017 16:14:18 +0000</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Version 1.10.0 is available!</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;Features:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Honeycomb&lt;/em&gt;: Add a manageable per user quota to avoid a scientist pushing too much data.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Dashboard&lt;/em&gt;: See your quotas status and manage your backends quota settings.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: New stings available:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-phone/cpu&quot;&gt;Cpu&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-phone/memory&quot;&gt;Memory&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-motion/rotation&quot;&gt;Rotation&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-motion/gravity&quot;&gt;Gravity&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-motion/gyroscope&quot;&gt;Gyroscope&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-motion/accelerometer&quot;&gt;Accelerometer&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-environment/proximity&quot;&gt;Proximity&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-environment/pressure&quot;&gt;Pressure&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-environment/light&quot;&gt;Light&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-visualization/visualization&quot;&gt;Visualization&lt;/a&gt;.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Enhancements:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Android:SDK&lt;/em&gt;: &lt;a href=&quot;/en/1.10.0/stings/sdk/wifi&quot;&gt;Wifi Sting&lt;/a&gt; now returns the right value for &lt;em&gt;authentication()&lt;/em&gt; method.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Dashboard&lt;/em&gt;: Fix some errors when a backend server is not available.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:SDK&lt;/em&gt;: Check Sting availability on initialization to avoid using not-working ones.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Have fun!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 04 May 2017 10:00:00 +0000</pubDate>
+        <link>http://docs.apisense.io//annonce/2017/05/04/1.10.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.io//annonce/2017/05/04/1.10.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
     
       <item>
         <title>Version 1.9.0 is available!</title>
@@ -276,24 +319,6 @@ If you want to be sure that only your community is contributing, create your app
         <pubDate>Tue, 28 Jul 2015 15:00:00 +0000</pubDate>
         <link>http://docs.apisense.io//annonce/2015/07/28/1.1.0-release.html</link>
         <guid isPermaLink="true">http://docs.apisense.io//annonce/2015/07/28/1.1.0-release.html</guid>
-        
-        
-        <category>annonce</category>
-        
-      </item>
-    
-      <item>
-        <title>Let's start ! 1.0.0 is available !!</title>
-        <description>&lt;p&gt;We are glad to annonce the first release of our APISENSE® SDK.
-With it you can collect data from most common smartphone sensors on Android and iOS and retrieve data later! This is the very first step to our project but we think there is a lot of things you can already do.&lt;/p&gt;
-
-&lt;p&gt;Be sure to share with us your impressions so we can make it better :D&lt;/p&gt;
-
-&lt;p&gt;Hope you like it!&lt;/p&gt;
-</description>
-        <pubDate>Fri, 01 May 2015 10:29:44 +0000</pubDate>
-        <link>http://docs.apisense.io//annonce/2015/05/01/1.0.0-release.html</link>
-        <guid isPermaLink="true">http://docs.apisense.io//annonce/2015/05/01/1.0.0-release.html</guid>
         
         
         <category>annonce</category>
