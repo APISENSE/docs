@@ -8,7 +8,7 @@ description: >
 
 baseurl: ""
 
-defaultVersion: 1.9.0
+defaultVersion: 1.10.0
 
 url: http://docs.apisense.io/
 #url: http://127.0.0.1:4000/ # url: "http://apisense.github.io/docs/"
