@@ -173,7 +173,7 @@ Parameters
 Return
 ------
 
-- __services__ : List, Services running on the device.
+- __services__ : List<[Service](/jsdoc/1.10.0/stings-phone/Service.html)>, Services running on the device.
 
 timestamp
 =========
