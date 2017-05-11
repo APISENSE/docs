@@ -75,11 +75,11 @@ Parameters
 ----------
 
 - title (String): Title of chart
-- initCallback (Object): Function called during chart widget initialization, receives two parameters (chart, data), a Chart instance to set the data and a list of the stored data
+- initCallback (Object): Function called during [ChartWidget](/jsdoc/1.10.0/stings-visualization/ChartWidget.html) initialization, receives two parameters (chart, data), a Chart instance to set the data and a list of the stored data
  
 Returns
 -------
-- IVisualization
+- [IVisualization](/jsdoc/1.10.0/stings-visualization/IVisualization.html)
 
 addLineChart
 ============
@@ -92,11 +92,11 @@ Parameters
 ----------
 
 - title (String): Title of chart
-- initCallback (Object): Function called during chart widget initialization, receives two parameters (chart, data), a Chart instance to set the data and a list of the stored data
+- initCallback (Object): Function called during [ChartWidget](/jsdoc/1.10.0/stings-visualization/ChartWidget.html) initialization, receives two parameters (chart, data), a Chart instance to set the data and a list of the stored data
  
 Returns
 -------
-- IVisualization
+- [IVisualization](/jsdoc/1.10.0/stings-visualization/IVisualization.html)
 
 addMap
 ======
@@ -109,11 +109,11 @@ Parameters
 ----------
 
 - title (String): Title of map
-- initCallback (Object): Function called during map widget initialization, receives two parameters (map, data), a Map instance to set the data and a list of the stored data
+- initCallback (Object): Function called during [ChartWidget](/jsdoc/1.10.0/stings-visualization/ChartWidget.html) initialization, receives two parameters (map, data), a Map instance to set the data and a list of the stored data
  
 Returns
 -------
-- IVisualization
+- [IVisualization](/jsdoc/1.10.0/stings-visualization/IVisualization.html)
 
 addPieChart
 ===========
@@ -126,11 +126,11 @@ Parameters
 ----------
 
 - title (String): Title of chart
-- initCallback (Object): Function called during chart widget initialization, receives two parameters (chart, data), a Chart instance to set the data and a list of the stored data
+- initCallback (Object): Function called during [ChartWidget](/jsdoc/1.10.0/stings-visualization/ChartWidget.html) initialization, receives two parameters (chart, data), a Chart instance to set the data and a list of the stored data
  
 Returns
 -------
-- IVisualization
+- [IVisualization](/jsdoc/1.10.0/stings-visualization/IVisualization.html)
 
 data
 ====

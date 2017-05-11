@@ -184,7 +184,7 @@ Parameters
 Return
 ------
 
-- __traceroute__ : List, Last traceroute data
+- __traceroute__ : List<[Hop](/jsdoc/1.10.0/stings-network/Hop.html)>, Last traceroute data
 
 ttl
 ===
