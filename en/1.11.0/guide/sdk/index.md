@@ -23,13 +23,15 @@ Since version 1.8, you can use maven central repository to retrieve the dependen
 - Add the dependency on your project's _build.gradle_:
 
         dependencies {
-            compile 'io.apisense.sdk:apisense-android-sdk:1.9.1'
+            compile 'io.apisense.sdk:apisense-android-sdk:1.11.0'
 
             # If you want to be able import more stings in APISENSE
-            compile 'io.apisense.sdk:stings-network:1.9.1'
-            compile 'io.apisense.sdk:stings-phone:1.9.1'
+            compile 'io.apisense.sdk:stings-network:1.11.0'
+            compile 'io.apisense.sdk:stings-phone:1.11.0'
+            compile 'io.apisense.sdk:stings-environment:1.11.0'
+            compile 'io.apisense.sdk:stings-motion:1.11.0'
+            compile 'io.apisense.sdk:stings-visualization:1.11.0'
         }
-
 
 ## Add Manifest permissions
 
@@ -207,6 +209,59 @@ So, before starting a crop, you may want to check for permissions:
 The permissions needed at runtime are checked before usage on the official Stings,
 so if you don't check for permissions, your application will not crash because of a `SecurityException` 
 but you crop will not have the expected behavior.
+
+## Use a service to gather data
+
+You can use an [Android Service](https://developer.android.com/reference/android/app/Service.html) to avoid collect interruption when your application is shut down.
+
+### Configure the service
+
+To use this feature, you will have to activate if in the SDK configuration:
+
+    apisense.useScriptExecutionService(true)
+
+Then your Application class should extend our _io.apisense.sdk.APSApplication_ class __or__ implement the dagger interface [HasDispatchingServiceInjector](https://google.github.io/dagger/api/2.10-rc4/dagger/android/HasDispatchingServiceInjector.html) as follow:
+
+    package io.apisense.sdk;
+
+    import android.app.Application;
+    import android.app.Service;
+    import dagger.android.HasDispatchingServiceInjector;
+    import io.apisense.sdk.APISENSE;
+
+    public class MyApplication extends Application implements HasDispatchingServiceInjector {
+        private APISENSE.Sdk sdk;
+
+        public APISENSE.Sdk getSdk() {
+            return sdk;
+        }
+
+        @Override
+        public void onCreate() {
+            super.onCreate();
+            sdk = new APISENSE(this)
+                .useSdkKey("mySdkKey")
+                .useScriptExecutionService(true)
+                .getSdk();
+        }
+
+        @Override
+        public dagger.android.DispatchingAndroidInjector<Service> serviceInjector() {
+            return sdk.serviceInjector();
+        }
+    }
+
+### Customize your service notification
+
+The service being run in foreground in order to not being [killed by Android O](https://developer.android.com/preview/features/background.html),
+we will display a notification for your application.
+
+You can customize the content of this notification by overriding the following resources:
+  - In _res/values/strings.xml_:
+     - **aps_execution_service_name**: Notification title
+     - **aps_execution_service_description**: Notification content
+  - In _res/drawable-{hdpi,mdpi,xhdpi,xxhdpi}{,-v9,-v11}_:
+    - **aps_service_notification.png**: Notification icon.
 
 </div>
 
