@@ -110,12 +110,12 @@ module Jekyll
 
     def generateVersionsList()
       versions = "["
-      folders = Dir.glob('en/*').each
-      folders.each do |f|
-        if File.directory?(f)
-          folderName = f.split('/').last
-          versions += '"' + folderName + '",'
-        end
+      folders = Dir.glob('en/*')
+                  .select { |f| File.directory?(f) }
+                  .map { |x| x.split("/").last }
+                  .sort {|x,y| Gem::Version.new(x) <=> Gem::Version.new(y) }
+      folders.each do |version|
+        versions += '"' + version + '",'
       end
       versions = versions[0..-2] + "]"
       versions
