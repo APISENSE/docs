@@ -1707,8 +1707,8 @@
 
     <script type="text/javascript">
       $(function() {
-        var availableVersions = ["1.0.0","1.10.0","1.2.0","1.3.0","1.4.0","1.5.0","1.6.0","1.7.0","1.8.0","1.9.0"]
-        availableVersions.sort().forEach(function (version){
+        var availableVersions = ["1.0.0","1.2.0","1.3.0","1.4.0","1.5.0","1.6.0","1.7.0","1.8.0","1.9.0","1.10.0"]
+        availableVersions.forEach(function (version){
           $("#sdkVersion").append($('<option>', { value : version, text : version }));
         });
         $("#sdkVersion option[value='1.5.0']").attr("selected","selected");
