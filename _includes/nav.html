@@ -35,7 +35,7 @@
     <script type="text/javascript">
       $(function() {
         var availableVersions = {% available_versions  %}
-        availableVersions.sort().forEach(function (version){
+        availableVersions.forEach(function (version){
           $("#sdkVersion").append($('<option>', { value : version, text : version }));
         });
         $("#sdkVersion option[value='{{selectedVersion}}']").attr("selected","selected");
