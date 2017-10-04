@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: MultiPageForm</title>
+    <title>JSDoc: Class: Notification</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: MultiPageForm</h1>
+    <h1 class="page-title">Class: Notification</h1>
 
     
 
@@ -29,7 +29,7 @@
 <header>
     
         <h2>
-        MultiPageForm
+        Notification
         </h2>
         
     
@@ -42,14 +42,14 @@
 
     
 
-    <h4 class="name" id="MultiPageForm"><span class="type-signature"></span>new MultiPageForm<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Notification"><span class="type-signature"></span>new Notification<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    This form manually defines pages and link them together.
+    Defines actions of the notifications.
 </div>
 
 
@@ -93,7 +93,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="javascriptDoc9205059996106197715.js.html">javascriptDoc9205059996106197715.js</a>, <a href="javascriptDoc9205059996106197715.js.html#line138">line 138</a>
+        <a href="javascriptDoc9205059996106197715.js.html">javascriptDoc9205059996106197715.js</a>, <a href="javascriptDoc9205059996106197715.js.html#line173">line 173</a>
     </li></ul></dd>
     
 
@@ -142,14 +142,14 @@
 
     
 
-    <h4 class="name" id="page"><span class="type-signature"></span>page<span class="signature">(title)</span><span class="type-signature"> &rarr; {<a href="FormPage.html">FormPage</a>}</span></h4>
+    <h4 class="name" id="addAction"><span class="type-signature"></span>addAction<span class="signature">(callback)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Create a new page for the current form.
+    Add a callback that will be call when the user click on the notification.
 </div>
 
 
@@ -185,13 +185,13 @@
 
         <tr>
             
-                <td class="name"><code>title</code></td>
+                <td class="name"><code>callback</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">object</span>
 
 
             
@@ -201,7 +201,7 @@
 
             
 
-            <td class="description last">The page title.</td>
+            <td class="description last">The callback that will be executed when the user will interact with the notification.</td>
         </tr>
 
     
@@ -242,7 +242,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="javascriptDoc9205059996106197715.js.html">javascriptDoc9205059996106197715.js</a>, <a href="javascriptDoc9205059996106197715.js.html#line145">line 145</a>
+        <a href="javascriptDoc9205059996106197715.js.html">javascriptDoc9205059996106197715.js</a>, <a href="javascriptDoc9205059996106197715.js.html#line178">line 178</a>
     </li></ul></dd>
     
 
@@ -265,28 +265,6 @@
 
 
 
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    The created page.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="FormPage.html">FormPage</a></span>
-
-
-    </dd>
-</dl>
-
-    
 
 
 
@@ -295,14 +273,16 @@
 
     
 
-    <h4 class="name" id="set"><span class="type-signature"></span>set<span class="signature">(orderedPages)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="addActionButton"><span class="type-signature"></span>addActionButton<span class="signature">(label, callback)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Set the pages in the given order in the form.
+    Add a button to the notification.
+It is possible to add an emoji in the label. The surrogates unicode must be passed because of the javascript engine version used. (https://mathiasbynens.be/notes/javascript-unicode)
+The unicode format must be in the form used by Java ("\\uXXXX"). For example the usual unicode "\\u1F44D" must be "\\uD83D\\uDC4D"
 </div>
 
 
@@ -338,13 +318,13 @@
 
         <tr>
             
-                <td class="name"><code>orderedPages</code></td>
+                <td class="name"><code>label</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Array.&lt;<a href="FormPage.html">FormPage</a>></span>
+<span class="param-type">string</span>
 
 
             
@@ -354,7 +334,30 @@
 
             
 
-            <td class="description last">The pages to add in the form.</td>
+            <td class="description last">The label that will be printed in the button.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The callback that will be executed when the user will interact with the notification.</td>
         </tr>
 
     
@@ -395,7 +398,89 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="javascriptDoc9205059996106197715.js.html">javascriptDoc9205059996106197715.js</a>, <a href="javascriptDoc9205059996106197715.js.html#line151">line 151</a>
+        <a href="javascriptDoc9205059996106197715.js.html">javascriptDoc9205059996106197715.js</a>, <a href="javascriptDoc9205059996106197715.js.html#line186">line 186</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="show"><span class="type-signature"></span>show<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Show the notification to the user.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="javascriptDoc9205059996106197715.js.html">javascriptDoc9205059996106197715.js</a>, <a href="javascriptDoc9205059996106197715.js.html#line190">line 190</a>
     </li></ul></dd>
     
 
