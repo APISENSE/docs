@@ -43,6 +43,22 @@ The Honeycomb configuration can be changed thanks to environment variables:
   - __HONEYCOMB_SSL_KEYSTORE_PASSWORD__: Password for the java keyStore.
   - __HONEYCOMB_SSL_KEYSTORE_ALGORITHM__: Algorithm used by the keyStore.
 
+### Use more storage
+
+You can set complementary storage service for your crops with the following configurations:
+
+- Use InfluxDB:
+  - __HONEYCOMB_INFLUXDB_ENABLE__: Enable usage of InfluxDB service. (default: `false`)
+  - __INFLUXDB_PORT_8086_TCP_ADDR__:  InfluxDB server host (automatically filled if using a linked docker container).
+  - __INFLUXDB_PORT_8086_TCP_PORT__: InfluxDB server port (automatically filled if using a linked docker container).
+  - __HONEYCOMB_INFLUXDB_USERNAME__: InfluxBB username.
+  - __HONEYCOMB_INFLUXDB_PASSWORD__: InfluxDB password.
+- Use Neo4j (This service is actually embedded in Honeycomb and does not need external database):
+  - __HONEYCOMB_NEO4J_ENABLE__: Enable usage of Neo4j service. (default: `false`)
+  - __HONEYCOMB_NEO4J_PATH__: Data storage location (default: `.neo4j/dbs`).
+  - __HONEYCOMB_NEO4J_PAGE_CACHE_MEMORY__: Cache memory settings (default: `256Ko`), see the [perfomance documentation](https://neo4j.com/docs/operations-manual/current/performance/)
+  - __HONEYCOMB_NEO4J_LOGS__: Logs storage location (default: `.neo4j/logs`).
+
 ### Docker compose example
 
 The following sample will deploy a Honeycomb server listening on port 80 with a linked _mongodb_ database:
@@ -56,16 +72,25 @@ The following sample will deploy a Honeycomb server listening on port 80 with a 
         - "/data/honeycomb/logs:/opt/docker/logs"
       links:
         - database:mongodb
+        # - influx:influx # Uncomment to add an influx database
       environment:
         - HONEYCOMB_API_KEY=myKey
+        # - HONEYCOMB_INFLUXDB_ENABLE = true # Uncomment to activate
       restart: unless-stopped
 
     database:
       image: mongo
-      command: "mongod --auth" # This line will activate authentication on Mongodb
+      # command: "mongod --auth" # Uncomment this line to activate authentication
       volumes:
         - "/data/honeycomb/mongo:/data/db"
       restart: unless-stopped
+
+    # You can add an influxDB if you need it.
+    #influx:
+    #  image: image: influxdb:1.3-alpine
+    #  volumes:
+    #    - "/data/honeycomb/influx:/var/lib/influxdb"
+
 
 You can try it out by saving this content to a `docker-compose.yml` file and executing the command [docker-compose up](https://docs.docker.com/compose/reference/up/)
 
