@@ -96,7 +96,7 @@ Parameters
  
 Returns
 -------
-- [GeoJsonRecord](/jsdoc/sdk/1.11.0/GeoJsonRecord.html)
+- [GeoJsonRecord](/jsdoc/1.11.0/sdk/GeoJsonRecord.html)
 
 influx
 ======
@@ -112,7 +112,7 @@ Parameters
  
 Returns
 -------
-- [InfluxRecord](/jsdoc/sdk/1.11.0/InfluxRecord.html)
+- [InfluxRecord](/jsdoc/1.11.0/sdk/InfluxRecord.html)
 
 neo4j
 =====
@@ -128,7 +128,7 @@ Parameters
  
 Returns
 -------
-- [Neo4jRecord](/jsdoc/sdk/1.11.0/Neo4jRecord.html)
+- [Neo4jRecord](/jsdoc/1.11.0/sdk/Neo4jRecord.html)
 
 save
 ====

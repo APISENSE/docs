@@ -124,7 +124,7 @@ Parameters
  
 Returns
 -------
-- [MultiPageForm](/jsdoc/sdk/1.11.0/MultiPageForm.html)
+- [MultiPageForm](/jsdoc/1.11.0/sdk/MultiPageForm.html)
 
 singlePage
 ==========
@@ -140,7 +140,7 @@ Parameters
  
 Returns
 -------
-- [SinglePageForm](/jsdoc/sdk/1.11.0/SinglePageForm.html)
+- [SinglePageForm](/jsdoc/1.11.0/sdk/SinglePageForm.html)
  
 onResult
 ========

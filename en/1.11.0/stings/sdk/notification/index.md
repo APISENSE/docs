@@ -74,7 +74,7 @@ Parameters
  
 Returns
 -------
-- [Notification](/jsdoc/sdk/1.11.0/Notification.html)
+- [Notification](/jsdoc/1.11.0/sdk/Notification.html)
 
 data
 ====

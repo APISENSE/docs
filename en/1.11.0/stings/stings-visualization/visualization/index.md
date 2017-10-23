@@ -79,7 +79,7 @@ Parameters
  
 Returns
 -------
-- [IVisualization](/jsdoc/stings-visualization/1.11.0/IVisualization.html)
+- [IVisualization](/jsdoc/1.11.0/stings-visualization/IVisualization.html)
 
 addLineChart
 ============
@@ -96,7 +96,7 @@ Parameters
  
 Returns
 -------
-- [IVisualization](/jsdoc/stings-visualization/1.11.0/IVisualization.html)
+- [IVisualization](/jsdoc/1.11.0/stings-visualization/IVisualization.html)
 
 addMap
 ======
@@ -113,7 +113,7 @@ Parameters
  
 Returns
 -------
-- [IVisualization](/jsdoc/stings-visualization/1.11.0/IVisualization.html)
+- [IVisualization](/jsdoc/1.11.0/stings-visualization/IVisualization.html)
 
 addPieChart
 ===========
@@ -130,7 +130,7 @@ Parameters
  
 Returns
 -------
-- [IVisualization](/jsdoc/stings-visualization/1.11.0/IVisualization.html)
+- [IVisualization](/jsdoc/1.11.0/stings-visualization/IVisualization.html)
 
 data
 ====
