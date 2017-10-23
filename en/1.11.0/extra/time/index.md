@@ -9,6 +9,7 @@ Regex used: `^\s*(\d+)\s*(\w+)\s*$`
 
 | Keywords  	| 
 | ------------- |
+| ms, millisecond, milliseconds   |
 | s, sec, second, seconds   |
 | m, min, minute, minutes   |
 | h, hour, hours  			|
@@ -29,5 +30,5 @@ Examples
 --------
 
 	4:00 am
-	13:37  pM
+	03:37  pM
 	1 : 02 Am
