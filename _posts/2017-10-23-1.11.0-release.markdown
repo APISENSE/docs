@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "Version 1.11.0 is available!"
+date:   2017-10-23 10:00:00
+categories: annonce
+---
+
+
+- Features:
+  - _Honeycomb_: Add an home page with current Honeycomb version.
+  - _Honeycomb_: Add modular backends support (see [here](/en/1.11.0/guide/honeycomb/#use-more-storage) how to configure them). You can choose between:
+    - [MongoDB](https://www.mongodb.com/)
+    - [InfluxDB](https://docs.influxdata.com/influxdb/v1.3)
+    - [Neo4J](https://neo4j.com/docs/)
+
+  - _Android:Sdk_: New stings available:
+    - [Crypto](/en/1.11.0/stings/sdk/crypto),
+    - [DBHelper](/en/1.11.0/stings/sdk/dbhelper),
+    - [Notification](/en/1.11.0/stings/sdk/notification),
+  - _Android:Sdk_: Add the possibility to run APISENSE as a foreground service. 
+- Enhancements:
+  - _Dashboard_: You can't delete a Honeycomb used by crops anymore. You will have to remove every crops using it before.
+  - _Android:Sdk_: The [time converter](/en/1.11.0/extra/time/) now handle milliseconds
+Have fun!
