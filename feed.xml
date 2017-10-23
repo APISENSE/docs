@@ -6,9 +6,50 @@
 </description>
     <link>http://docs.apisense.io//</link>
     <atom:link href="http://docs.apisense.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 04 Oct 2017 13:31:28 +0000</pubDate>
-    <lastBuildDate>Wed, 04 Oct 2017 13:31:28 +0000</lastBuildDate>
-    <generator>Jekyll v3.6.0</generator>
+    <pubDate>Mon, 23 Oct 2017 14:51:42 +0000</pubDate>
+    <lastBuildDate>Mon, 23 Oct 2017 14:51:42 +0000</lastBuildDate>
+    <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>Version 1.11.0 is available!</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;Features:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Honeycomb&lt;/em&gt;: Add an home page with current Honeycomb version.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Honeycomb&lt;/em&gt;: Add modular backends support (see &lt;a href=&quot;/en/1.11.0/guide/honeycomb/#use-more-storage&quot;&gt;here&lt;/a&gt; how to configure them). You can choose between:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://www.mongodb.com/&quot;&gt;MongoDB&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;https://docs.influxdata.com/influxdb/v1.3&quot;&gt;InfluxDB&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;https://neo4j.com/docs/&quot;&gt;Neo4J&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: New stings available:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.11.0/stings/sdk/crypto&quot;&gt;Crypto&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.11.0/stings/sdk/dbhelper&quot;&gt;DBHelper&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.11.0/stings/sdk/notification&quot;&gt;Notification&lt;/a&gt;,&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: Add the possibility to run APISENSE as a foreground service.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Enhancements:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Dashboard&lt;/em&gt;: You can’t delete a Honeycomb used by crops anymore. You will have to remove every crops using it before.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: The &lt;a href=&quot;/en/1.11.0/extra/time/&quot;&gt;time converter&lt;/a&gt; now handle milliseconds
+Have fun!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 23 Oct 2017 10:00:00 +0000</pubDate>
+        <link>http://docs.apisense.io//annonce/2017/10/23/1.11.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.io//annonce/2017/10/23/1.11.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
     
       <item>
         <title>Version 1.10.0 is available!</title>
@@ -301,24 +342,6 @@ With it comes a lot of new features, check-it out:&lt;/p&gt;
         <pubDate>Wed, 16 Sep 2015 17:00:00 +0000</pubDate>
         <link>http://docs.apisense.io//annonce/2015/09/16/1.2.0-release.html</link>
         <guid isPermaLink="true">http://docs.apisense.io//annonce/2015/09/16/1.2.0-release.html</guid>
-        
-        
-        <category>annonce</category>
-        
-      </item>
-    
-      <item>
-        <title>Keep it up ! 1.1.0 released</title>
-        <description>&lt;p&gt;This is a minor update but a nice one ! You can now create private collect for yourself or your company.
-If you want to be sure that only your community is contributing, create your application, set-up your access key and you’re good to go!&lt;/p&gt;
-
-&lt;p&gt;Note that we also temporarily set up subscriptionUrl in base64 because of problems with collect names using spaces.&lt;/p&gt;
-
-&lt;p&gt;Hope you like it!&lt;/p&gt;
-</description>
-        <pubDate>Tue, 28 Jul 2015 15:00:00 +0000</pubDate>
-        <link>http://docs.apisense.io//annonce/2015/07/28/1.1.0-release.html</link>
-        <guid isPermaLink="true">http://docs.apisense.io//annonce/2015/07/28/1.1.0-release.html</guid>
         
         
         <category>annonce</category>
