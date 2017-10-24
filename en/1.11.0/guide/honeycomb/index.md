@@ -94,6 +94,16 @@ The following sample will deploy a Honeycomb server listening on port 80 with a 
 
 You can try it out by saving this content to a `docker-compose.yml` file and executing the command [docker-compose up](https://docs.docker.com/compose/reference/up/)
 
+### Update your Honeycomb database
+
+You will need to update the MongoDB collections between some versions of your Honeycomb.
+
+To do so, download the script [mongo_update.sh](/honeycombUpdate/mongo_update.sh), then choose the right version to download from [here](/honeycombUpdate/). If no script matches your version, you will not need any update.
+
+You will only have to start the script as follow: `./mongo_update.sh --honeycomb $honeycombMongoIP --file $updateFile.js`
+
+If you want to update from __1.9__ to __1.10__ please contact us since we will have to give you some data regarding your honeycomb in addition to the script.
+
 ## Retrieve your data
 
 ### Access private data
