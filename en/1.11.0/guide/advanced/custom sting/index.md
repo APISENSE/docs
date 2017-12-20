@@ -43,6 +43,27 @@ This enables you to get every version of a same API in various languages and a d
             }
         ],
         /**
+         * Methods are some freely defined behavior on the given Sting
+         *
+         * If your method has to register some asynchronous actions you can use a
+         * 'io.apisense.dart.future.JSPromise' object.
+         */
+        "methods":[
+            {
+                "name":"someOneShotMethod",
+                "description":"a specific behavior for the Sting",
+                "parameters":[
+                    {
+                        "name":"oneParameter",
+                        "type":"string",
+                        "description": "Some parameter for the method"
+                    }
+            ],
+                "type":"io.apisense.dart.future.JSPromise",
+                "returned": "Description of the returned element"
+            }
+        ],
+        /**
          * Sprouts are the event definitions,
          * They will define a new method asking a callback to the user,
          * and waiting to be triggered.
@@ -92,8 +113,8 @@ This enables you to get every version of a same API in various languages and a d
 ### One shot
 
 You will have to use the _dart-generator_
-[tarball](http://repo1.maven.org/maven2/io/apisense/dart-generator/1.2.0/dart-generator-1.2.0.tar)
-or [zip file](http://repo1.maven.org/maven2/io/apisense/dart-generator/1.2.0/dart-generator-1.2.0.zip)
+[tarball](http://repo1.maven.org/maven2/io/apisense/dart-generator/1.4.3/dart-generator-1.4.3.tar)
+or [zip file](http://repo1.maven.org/maven2/io/apisense/dart-generator/1.4.3/dart-generator-1.4.3.zip)
 in order to create your _Dart_ from the description file.
 
 Decompress the file, then start the binary as follow:
@@ -109,8 +130,8 @@ You should find a `generated` folder containing:
 
 If you want to generate the API documentation for the _Dashboard_ editor,
 you will have to download _java-api-generator_
-[tarball](http://repo1.maven.org/maven2/io/apisense/java-api-generator/1.2.0/java-api-generator-1.2.0.tar)
-or [zip file](http://repo1.maven.org/maven2/io/apisense/java-api-generator/1.2.0/java-api-generator-1.2.0.zip).
+[tarball](http://repo1.maven.org/maven2/io/apisense/java-api-generator/1.4.3/java-api-generator-1.4.3.tar)
+or [zip file](http://repo1.maven.org/maven2/io/apisense/java-api-generator/1.4.3/java-api-generator-1.4.3.zip).
 
 Decompress the file, then start the binary as follow:
 
@@ -129,7 +150,7 @@ To do so, make sure you have the following lines in your `build.gradle`:
             mavenCentral()
         }
         dependencies {
-            classpath 'io.apisense:dart-gradle-plugin:1.2.0'
+            classpath 'io.apisense:dart-gradle-plugin:1.4.3'
         }
     }
     apply plugin: 'dart-android'
@@ -148,7 +169,11 @@ You should find those folders:
     - __api__: contains json file containing API documentation to import in the Dashboard settings.
     - __html__: contains html documentation about the _Dart_.
 
+Please note that if you want to use `JSPromise` in your Sting, you will need the dependency:
 
+    dependencies {
+        implementation 'io.apisense:java-darts:1.4.3'
+    }
 
 ## Implement your features
 
@@ -156,6 +181,7 @@ You will have to create a class extending the _dart_ skeleton.
 
     public class MySting extends MyCustomStingDartSkel {
         private MyCustomStingData currentData = new MyCustomStingData(seeds(), "Hello world!", 42L);
+        private final APISENSEPromiseFactory<MyCustomStingData> promiseFactory;
     
         // Collected by the SDK to provide sensor list
         public static final Sensor SENSOR_DESCRIPTION = new Sensor(
@@ -166,8 +192,9 @@ You will have to create a class extending the _dart_ skeleton.
         );
     
         @Inject
-        protected MySting(EventBus bus) {
+        protected MySting(EventBus bus, APISENSEPromiseFactory promiseFactory) {
             super(bus, EnumSet.allOf(MyCustomStingSeed.class));
+            this.promiseFactory = promiseFactory;
         }
     
         @Override
@@ -179,7 +206,22 @@ You will have to create a class extending the _dart_ skeleton.
         public Long anotherData() {
             return currentData.anotherData;
         }
-    
+
+        @Override
+        public JSPromise someOneShotMethod(String oneParameter) {
+            APISENSEPromise promise = promiseFactory.get();
+            /* Promise usage:
+             * On operation update: promise.notify(currentData); // Calls JSPromise.progress(callback)
+             * On operation success: promise.resolve(currentData); // Calls JSPromise.onSuccess(callback)
+             * On operation failure: promise.reject(currentData); // Calls JSPromise.onFailure(callback)
+             *
+             * Json users can also specify a JSPromise.then(callback) to be executed on both success and failure
+             * on top of the specific treatments.
+             */
+            promise.resolve(currentData)
+            return promise;
+        }
+   
         @Override
         protected Tokens.TokensListener<String> initARequestCompletedListener() {
             return new Tokens.TokensListener<String>() {
@@ -272,7 +314,7 @@ This method will give a `StingComponent` as argument, containing all the availab
         @Override
         public List<Sting> getInstances(StingComponent component) {
             return Arrays.<Sting>asList(
-                new MySting(component.bus()),
+                new MySting(component.bus(), component.promiseFactory()),
                 new OtherStingWithContext(component.bus(), component.context())
             );
         }
