@@ -258,17 +258,25 @@ You will have to create a class extending the _dart_ skeleton.
 
 ## Integrate it to the SDK
 
-Create a Dagger module that is added to `StingModule` and put all your Stings as injected values.
+Create a class that extends `InjectedStingPackage` and initialize all your Stings in the method `getInstances`.
+This method will give a `StingComponent` as argument, containing all the available injected values.
 
-    import dagger.Module;
-    
-    @Module(
-        complete = false,
-        injects = {
-            MySting.class,
+    import java.util.Arrays;
+    import java.util.List;
+
+    import io.apisense.sdk.core.sting.InjectedStingPackage;
+    import io.apisense.sdk.core.sting.StingComponent;
+    import io.apisense.sting.lib.Sting;
+
+    public class EnvironmentStingModule extends InjectedStingPackage {
+        @Override
+        public List<Sting> getInstances(StingComponent component) {
+            return Arrays.<Sting>asList(
+                new MySting(component.bus()),
+                new OtherStingWithContext(component.bus(), component.context())
+            );
         }
-    )
-    public class MyModule { }
+    }
     
 You will then only have to [provide your module to the SDK initialization](../../sdk/#configure-your-sdk).
 
