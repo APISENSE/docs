@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: javascriptDoc9205059996106197715.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: javascriptDoc9205059996106197715.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Single page of a form.
+ * @class
+ * @implements {Parcelable}
+ * @implements {FormPageContent}
+ */
+function FormPage() {}
+FormPage.prototype.checkbox = function(label, id, mandatory, values){};
+FormPage.prototype.datepicker = function(label, id, mandatory){};
+FormPage.prototype.label = function(label){};
+FormPage.prototype.numberfield = function(label, id, mandatory){};
+FormPage.prototype.picture = function(label, id, mandatory){};
+FormPage.prototype.radiobutton = function(label, id, mandatory, values){};
+FormPage.prototype.section = function(sectionTitle){};
+FormPage.prototype.sound = function(label, id, mandatory, duration){};
+FormPage.prototype.textarea = function(label, id, mandatory){};
+FormPage.prototype.textfield = function(label, id, mandatory){};
+FormPage.prototype.video = function(label, id, mandatory, duration){};
+/**
+ * Defines the actions available on a form.
+ * @interface
+ */
+function FormBehavior() {}
+/**
+ * Create a new Activity containing form,
+ * Set the values on save pressed.
+ */
+FormBehavior.prototype.show = function(){};
+/**
+ * Defines every available entries for a form.
+ * @interface
+ */
+function FormPageContent() {}
+/**
+ * Create a multiple choice checkbox entry with the given values.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @param {String[]} values An array of values to set.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.checkbox = function(label, id, mandatory, values){};
+/**
+ * Create a selector for date.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.datepicker = function(label, id, mandatory){};
+/**
+ * Create a new unlinked label on the form.
+ *
+ * @param {string} label The label linked to this entry.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.label = function(label){};
+/**
+ * Create a new textfield specifically asking for a digits.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.numberfield = function(label, id, mandatory){};
+/**
+ * Ask to capture a picture.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.picture = function(label, id, mandatory){};
+/**
+ * Create a single choice checkbox entry with the given values.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @param {String[]} values An array of values to set.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.radiobutton = function(label, id, mandatory, values){};
+/**
+ * Create a new section for the form,
+ * with the given name.
+ *
+ * @param {string} sectionTitle Name of the section.
+ * @return {FormPageContent} The current page.
+ */
+FormPageContent.prototype.section = function(sectionTitle){};
+/**
+ * Ask to record a sound.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @param {string} duration Time period to capture.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.sound = function(label, id, mandatory, duration){};
+/**
+ * Create a new textfield with answer on multiple lines.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.textarea = function(label, id, mandatory){};
+/**
+ * Create a new textfield with answer on a unique line.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.textfield = function(label, id, mandatory){};
+/**
+ * Ask to capture a video.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @param {string} duration Time period to capture.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.video = function(label, id, mandatory, duration){};
+/**
+ * This form manually defines pages and link them together.
+ * @class
+ */
+function MultiPageForm() {}
+/**
+ * Create a new page for the current form.
+ *
+ * @param {string} title The page title.
+ * @return {FormPage} The created page.
+ */
+MultiPageForm.prototype.page = function(title){};
+/**
+ * Set the pages in the given order in the form.
+ *
+ * @param {FormPage[]} orderedPages The pages to add in the form.
+ */
+MultiPageForm.prototype.set = function(orderedPages){};
+/**
+ * Enables the user to build linear form, on one page.
+ * @class
+ * @implements {FormPageContent}
+ */
+function SinglePageForm() {}
+SinglePageForm.prototype.checkbox = function(label, id, mandatory, values){};
+SinglePageForm.prototype.datepicker = function(label, id, mandatory){};
+SinglePageForm.prototype.label = function(label){};
+SinglePageForm.prototype.numberfield = function(label, id, mandatory){};
+SinglePageForm.prototype.picture = function(label, id, mandatory){};
+SinglePageForm.prototype.radiobutton = function(label, id, mandatory, values){};
+SinglePageForm.prototype.section = function(sectionTitle){};
+SinglePageForm.prototype.sound = function(label, id, mandatory, duration){};
+SinglePageForm.prototype.textarea = function(label, id, mandatory){};
+SinglePageForm.prototype.textfield = function(label, id, mandatory){};
+SinglePageForm.prototype.video = function(label, id, mandatory, duration){};
+/**
+ * Defines actions of the notifications.
+ * @class
+ */
+function Notification() {}
+/**
+ * Add a callback that will be call when the user click on the notification.
+ * @param {object} callback The callback that will be executed when the user will interact with the notification.
+ */
+Notification.prototype.addAction = function(callback){};
+/**
+ * Add a button to the notification.
+ * It is possible to add an emoji in the label. The surrogates unicode must be passed because of the javascript engine version used. (https://mathiasbynens.be/notes/javascript-unicode)
+ * The unicode format must be in the form used by Java ("\\uXXXX"). For example the usual unicode "\\u1F44D" must be "\\uD83D\\uDC4D"
+ * @param {string} label The label that will be printed in the button.
+ * @param {object} callback The callback that will be executed when the user will interact with the notification.
+ */
+Notification.prototype.addActionButton = function(label, callback){};
+/**
+ * Show the notification to the user.
+ */
+Notification.prototype.show = function(){};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="FormPage.html">FormPage</a></li><li><a href="MultiPageForm.html">MultiPageForm</a></li><li><a href="Notification.html">Notification</a></li><li><a href="SinglePageForm.html">SinglePageForm</a></li></ul><h3>Interfaces</h3><ul><li><a href="FormBehavior.html">FormBehavior</a></li><li><a href="FormPageContent.html">FormPageContent</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.2</a> on Wed Oct 04 2017 13:53:55 GMT+0200 (CEST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
