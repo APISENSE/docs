@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: sdk-javascriptDoc5133519108344841378.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: sdk-javascriptDoc5133519108344841378.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @class
+ * @implements {DBRecord}
+ */
+function FeatureCollectionRecord() {}
+FeatureCollectionRecord.prototype.toJson = function(){};
+/**
+ * @class
+ * @implements {DBRecord}
+ */
+function FeatureRecord() {}
+FeatureRecord.prototype.toJson = function(){};
+/**
+ * Format a GeoJson object easily.
+ * 
+ * @see &lt;a href="https://tools.ietf.org/html/rfc7946">RFC 7946&lt;/a>
+ * @see &lt;a href="https://github.com/cocoahero/android-geojson">Underlying library repository&lt;/a>
+ * @interface
+ * @implements {DBRecord}
+ */
+function GeoJsonRecord() {}
+/**
+ * Create a {@link Ring}.
+ * &lt;p/>
+ * Can be used in a {@link Polygon}.
+ *
+ * @param {double[][]} positions The list of positions in either
+ * [lat, lnt] or [lat, lnt, alt] format.
+ * @return {Ring} The created {@link Ring}
+ */
+GeoJsonRecord.prototype.ring = function(positions){};
+/**
+ * Create a {@link FeatureCollectionRecord} containing the initial list of {@link Feature}.
+ * &lt;p/>
+ * Can be set to {@link GeoJsonRecord#addElement(GeoJSONObject)} method
+ * or directly into {@link io.apisense.sdk.core.sting.DBHelperSting#save(DBRecord)}.
+ *
+ * @param {Feature[]} collection The initial {@link Feature} collection.
+ * @return {FeatureCollectionRecord} The created {@link FeatureCollectionRecord}.
+ */
+GeoJsonRecord.prototype.featureCollection = function(collection){};
+/**
+ * Create a new {@link FeatureRecord} {@link GeoJSONObject}.
+ * &lt;p/>
+ * Can be set to {@link GeoJsonRecord#addElement(GeoJSONObject)} method
+ * or directly into {@link io.apisense.sdk.core.sting.DBHelperSting#save(DBRecord)}.
+ *
+ * @param {Geometry} geometry The {@link Geometry} to set in the feature.
+ * @return {FeatureRecord} The created {@link FeatureRecord}.
+ */
+GeoJsonRecord.prototype.feature = function(geometry){};
+/**
+ * Create a {@link GeometryCollectionRecord} containing the initial list of {@link Geometry}.
+ * &lt;p/>
+ * Can be used in a {@link Feature} and {@link GeometryCollection}.
+ *
+ * &lt;p/>
+ * Can be set to {@link GeoJsonRecord#addElement(GeoJSONObject)} method
+ * or directly into {@link io.apisense.sdk.core.sting.DBHelperSting#save(DBRecord)}.
+ *
+ * @param {Geometry[]} collection The initial {@link Geometry} collection.
+ * @return {GeometryCollectionRecord} The created {@link GeometryCollectionRecord}.
+ */
+GeoJsonRecord.prototype.geometryCollection = function(collection){};
+/**
+ * Create a {@link MultiPointRecord} containing the initial positions.
+ * &lt;p/>
+ * Can be used in a {@link Feature} and {@link GeometryCollection}.
+ *
+ * &lt;p/>
+ * Can be set to {@link GeoJsonRecord#addElement(GeoJSONObject)} method
+ * or directly into {@link io.apisense.sdk.core.sting.DBHelperSting#save(DBRecord)}.
+ *
+ * @param {double[][]} positions The list of positions in either
+ * [lat, lnt] or [lat, lnt, alt] format.
+ * @return {MultiPointRecord} The created {@link MultiPointRecord}
+ */
+GeoJsonRecord.prototype.multiPoint = function(positions){};
+/**
+ * Create a {@link MultiPolygonRecord} containing the initial list of {@link Polygon}.
+ * &lt;p/>
+ * Can be used in a {@link Feature} and {@link GeometryCollection}.
+ *
+ * &lt;p/>
+ * Can be set to {@link GeoJsonRecord#addElement(GeoJSONObject)} method
+ * or directly into {@link io.apisense.sdk.core.sting.DBHelperSting#save(DBRecord)}.
+ *
+ * @param {Polygon[]} collection The initial {@link Polygon} collection.
+ * @return {MultiPolygonRecord} The created {@link MultiPolygonRecord}.
+ */
+GeoJsonRecord.prototype.multiPolygon = function(collection){};
+/**
+ * Creates a {@link PointRecord} {@link GeoJSONObject} without altitude.
+ * &lt;p/>
+ * Can be used in a {@link Feature} and {@link GeometryCollection}.
+ *
+ * &lt;p/>
+ * Can be set to {@link GeoJsonRecord#addElement(GeoJSONObject)} method
+ * or directly into {@link io.apisense.sdk.core.sting.DBHelperSting#save(DBRecord)}.
+ *
+ * @param {double} lat Latitude.
+ * @param {double} lng Longitude.
+ * @return {PointRecord} The created {@link PointRecord}.
+ */
+GeoJsonRecord.prototype.point = function(lat, lng){};
+/**
+ * Creates a {@link PointRecord} {@link GeoJSONObject}.
+ * &lt;p/>
+ * Can be used in a {@link Feature} and {@link GeometryCollection}.
+ *
+ * &lt;p/>
+ * Can be set to {@link GeoJsonRecord#addElement(GeoJSONObject)} method
+ * or directly into {@link io.apisense.sdk.core.sting.DBHelperSting#save(DBRecord)}.
+ *
+ * @param {double} lat Latitude.
+ * @param {double} lng Longitude.
+ * @param {double} alt Altitude.
+ * @return {PointRecord} The created {@link PointRecord}.
+ */
+GeoJsonRecord.prototype.point = function(lat, lng, alt){};
+/**
+ * Create a {@link PolygonRecord}.
+ * &lt;p/>
+ * Can be used in a {@link Feature} and {@link GeometryCollection}.
+ *
+ * &lt;p/>
+ * Can be set to {@link GeoJsonRecord#addElement(GeoJSONObject)} method
+ * or directly into {@link io.apisense.sdk.core.sting.DBHelperSting#save(DBRecord)}.
+ *
+ * @param {Ring} ring The first ring to add.
+ * @return {PolygonRecord} The created {@link PolygonRecord}.
+ */
+GeoJsonRecord.prototype.polygon = function(ring){};
+/**
+ * Transform the {@link DBRecord} to a compatible Json representation.
+ *
+ * @return {string} The representation as {@link String}.
+ */
+GeoJsonRecord.prototype.toJson = function(){};
+/**
+ * Add th given {@link GeoJSONObject} to the output Json object.
+ *
+ * @param {GeoJSONObject} object The {@link GeoJSONObject} to add to the output.
+ */
+GeoJsonRecord.prototype.addElement = function(object){};
+/**
+ * @class
+ * @implements {DBRecord}
+ */
+function GeometryCollectionRecord() {}
+GeometryCollectionRecord.prototype.toJson = function(){};
+/**
+ * @class
+ * @implements {DBRecord}
+ */
+function MultiPointRecord() {}
+MultiPointRecord.prototype.toJson = function(){};
+/**
+ * @class
+ * @implements {DBRecord}
+ */
+function MultiPolygonRecord() {}
+MultiPolygonRecord.prototype.toJson = function(){};
+/**
+ * @class
+ * @implements {DBRecord}
+ */
+function PointRecord() {}
+PointRecord.prototype.toJson = function(){};
+/**
+ * @class
+ * @implements {DBRecord}
+ */
+function PolygonRecord() {}
+PolygonRecord.prototype.toJson = function(){};
+/**
+ * Operations on an InfluxDB record.
+ * &lt;p/>
+ * The data will be formatted as follow:
+ * 
+ * &lt;pre>
+ * &lt;code>
+ * { measurement: "topic", tags: {tagKey: "tagValueForThisRecord"}, fields: {fieldKey: "fieldValue"} }
+ * &lt;/code>
+ * &lt;/pre>
+ * @interface
+ * @implements {DBRecord}
+ */
+function InfluxRecord() {}
+/**
+ * Transform the {@link DBRecord} to a compatible Json representation.
+ *
+ * @return {string} The representation as {@link String}.
+ */
+InfluxRecord.prototype.toJson = function(){};
+/**
+ * Add the json object's elements as a field on the {@link InfluxRecord}.
+ *
+ * @param {object} json The json to add fields from.
+ */
+InfluxRecord.prototype.addFields = function(json){};
+/**
+ * Add the json object's elements as a tag on the {@link InfluxRecord}.
+ *
+ * @param {object} json The json to add tags from.
+ */
+InfluxRecord.prototype.addTags = function(json){};
+/**
+ * Set a measurement to the {@link InfluxRecord}.
+ *
+ * @param {string} measurement The measurement to set.
+ */
+InfluxRecord.prototype.setMeasurement = function(measurement){};
+/**
+ * The data will be formatted as follow:
+ * &lt;p/>
+ * &lt;pre>
+ * &lt;code>
+ * {
+ * nodes: [
+ * {
+ * id: *int*,
+ * labels: [ *string* ],
+ * properties: { key: *string* }
+ * }, {...}
+ * ],
+ * relationships: [
+ * {
+ * id: *int*,
+ * start_node: *node.id*,
+ * end_node: *node.id*,
+ * type: *string*,
+ * properties: { key: *string* }
+ * }, {...}
+ * ]
+ * }
+ * &lt;/code>
+ * &lt;/pre>
+ * @interface
+ * @implements {DBRecord}
+ */
+function Neo4jRecord() {}
+/**
+ * Create a new node.
+ *
+ * @param {number} id Node identifier.
+ * @param {String[]} labels Labels to set on the node.
+ * @param {object} properties Properties to set on the node.
+ * @return {Neo4jNode} The created {@link Neo4jNode}.
+ */
+Neo4jRecord.prototype.addNode = function(id, labels, properties){};
+/**
+ * Create a new node with an automatically generated identifier.
+ *
+ * @param {String[]} labels Labels to set on the node.
+ * @param {object} properties Properties to set on the node.
+ * @return {Neo4jNode} The created {@link Neo4jNode}.
+ */
+Neo4jRecord.prototype.addNode = function(labels, properties){};
+/**
+ * Transform the {@link DBRecord} to a compatible Json representation.
+ *
+ * @return {string} The representation as {@link String}.
+ */
+Neo4jRecord.prototype.toJson = function(){};
+/**
+ * Create a new relationship between two nodes with an automatically generated identifier.
+ *
+ * @param {Neo4jNode} start The first node.
+ * @param {Neo4jNode} end The end node.
+ * @param {string} type Type of the relationship .
+ * @param {object} properties Properties to apply on the relationship.
+ */
+Neo4jRecord.prototype.addRelationship = function(start, end, type, properties){};
+/**
+ * Create a new relationship between two nodes.
+ *
+ * @param {number} id Relationship identifier.
+ * @param {Neo4jNode} start The first node.
+ * @param {Neo4jNode} end The end node.
+ * @param {string} type Type of the relationship .
+ * @param {object} properties Properties to apply on the relationship.
+ */
+Neo4jRecord.prototype.addRelationship = function(id, start, end, type, properties){};
+/**
+ * Defines the operations on a record to save them on an APISENSE database.
+ * @interface
+ */
+function DBRecord() {}
+/**
+ * Transform the {@link DBRecord} to a compatible Json representation.
+ *
+ * @return {string} The representation as {@link String}.
+ */
+DBRecord.prototype.toJson = function(){};
+/**
+ * Single page of a form.
+ * @class
+ * @implements {Parcelable}
+ * @implements {FormPageContent}
+ */
+function FormPage() {}
+FormPage.prototype.checkbox = function(label, id, mandatory, values){};
+FormPage.prototype.datepicker = function(label, id, mandatory){};
+FormPage.prototype.label = function(label){};
+FormPage.prototype.numberfield = function(label, id, mandatory){};
+FormPage.prototype.picture = function(label, id, mandatory){};
+FormPage.prototype.radiobutton = function(label, id, mandatory, values){};
+FormPage.prototype.section = function(sectionTitle){};
+FormPage.prototype.sound = function(label, id, mandatory, duration){};
+FormPage.prototype.textarea = function(label, id, mandatory){};
+FormPage.prototype.textfield = function(label, id, mandatory){};
+FormPage.prototype.video = function(label, id, mandatory, duration){};
+/**
+ * Defines the actions available on a form.
+ * @interface
+ */
+function FormBehavior() {}
+/**
+ * Create a new Activity containing form,
+ * Set the values on save pressed.
+ */
+FormBehavior.prototype.show = function(){};
+/**
+ * Defines every available entries for a form.
+ * @interface
+ */
+function FormPageContent() {}
+/**
+ * Create a multiple choice checkbox entry with the given values.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @param {String[]} values An array of values to set.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.checkbox = function(label, id, mandatory, values){};
+/**
+ * Create a selector for date.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.datepicker = function(label, id, mandatory){};
+/**
+ * Create a new unlinked label on the form.
+ *
+ * @param {string} label The label linked to this entry.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.label = function(label){};
+/**
+ * Create a new textfield specifically asking for a digits.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.numberfield = function(label, id, mandatory){};
+/**
+ * Ask to capture a picture.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.picture = function(label, id, mandatory){};
+/**
+ * Create a single choice checkbox entry with the given values.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @param {String[]} values An array of values to set.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.radiobutton = function(label, id, mandatory, values){};
+/**
+ * Create a new section for the form,
+ * with the given name.
+ *
+ * @param {string} sectionTitle Name of the section.
+ * @return {FormPageContent} The current page.
+ */
+FormPageContent.prototype.section = function(sectionTitle){};
+/**
+ * Ask to record a sound.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @param {string} duration Time period to capture.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.sound = function(label, id, mandatory, duration){};
+/**
+ * Create a new textfield with answer on multiple lines.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.textarea = function(label, id, mandatory){};
+/**
+ * Create a new textfield with answer on a unique line.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.textfield = function(label, id, mandatory){};
+/**
+ * Ask to capture a video.
+ *
+ * @param {string} label The label linked to this entry.
+ * @param {string} id The identifier to link with the value in results.
+ * @param {boolean} mandatory true if an answer is required.
+ * @param {string} duration Time period to capture.
+ * @return {FormPageContent} The current form page.
+ */
+FormPageContent.prototype.video = function(label, id, mandatory, duration){};
+/**
+ * This form manually defines pages and link them together.
+ * @class
+ */
+function MultiPageForm() {}
+/**
+ * Create a new page for the current form.
+ *
+ * @param {string} title The page title.
+ * @return {FormPage} The created page.
+ */
+MultiPageForm.prototype.page = function(title){};
+/**
+ * Set the pages in the given order in the form.
+ *
+ * @param {FormPage[]} orderedPages The pages to add in the form.
+ */
+MultiPageForm.prototype.set = function(orderedPages){};
+/**
+ * Enables the user to build linear form, on one page.
+ * @class
+ * @implements {FormPageContent}
+ */
+function SinglePageForm() {}
+SinglePageForm.prototype.checkbox = function(label, id, mandatory, values){};
+SinglePageForm.prototype.datepicker = function(label, id, mandatory){};
+SinglePageForm.prototype.label = function(label){};
+SinglePageForm.prototype.numberfield = function(label, id, mandatory){};
+SinglePageForm.prototype.picture = function(label, id, mandatory){};
+SinglePageForm.prototype.radiobutton = function(label, id, mandatory, values){};
+SinglePageForm.prototype.section = function(sectionTitle){};
+SinglePageForm.prototype.sound = function(label, id, mandatory, duration){};
+SinglePageForm.prototype.textarea = function(label, id, mandatory){};
+SinglePageForm.prototype.textfield = function(label, id, mandatory){};
+SinglePageForm.prototype.video = function(label, id, mandatory, duration){};
+/**
+ * Defines actions of the notifications.
+ * @class
+ */
+function Notification() {}
+/**
+ * Add a callback that will be call when the user click on the notification.
+ *
+ * @param {object} callback The callback that will be executed when the user will interact with the notification.
+ */
+Notification.prototype.addAction = function(callback){};
+/**
+ * Add a button to the notification.
+ * It is possible to add an emoji in the label. The surrogates unicode must be passed because of the javascript engine version used. (https://mathiasbynens.be/notes/javascript-unicode)
+ * The unicode format must be in the form used by Java ("\\uXXXX"). For example the usual unicode "\\u1F44D" must be "\\uD83D\\uDC4D"
+ *
+ * @param {string} label The label that will be printed in the button.
+ * @param {object} callback The callback that will be executed when the user will interact with the notification.
+ */
+Notification.prototype.addActionButton = function(label, callback){};
+/**
+ * Discard the notification.
+ */
+Notification.prototype.discard = function(){};
+/**
+ * Show the notification to the user.
+ */
+Notification.prototype.show = function(){};
+/**
+ * Wrap DNS configuration.
+ * @class
+ */
+function DNSData() {}
+DNSData.prototype.getPrimary = function(){};
+DNSData.prototype.getSecondary = function(){};
+DNSData.prototype.setPrimary = function(primary){};
+DNSData.prototype.setSecondary = function(secondary){};
+/**
+ * Wrap IP information.
+ * @class
+ */
+function IpData() {}
+IpData.prototype.getMtu = function(){};
+IpData.prototype.getIpv4 = function(){};
+IpData.prototype.getIpv4Broadcast = function(){};
+IpData.prototype.getIpv4Mask = function(){};
+IpData.prototype.getIpv4Scope = function(){};
+IpData.prototype.getIpv6 = function(){};
+IpData.prototype.getIpv6Mask = function(){};
+IpData.prototype.getIpv6Scope = function(){};
+IpData.prototype.getQdisc = function(){};
+IpData.prototype.setIpv4 = function(ipv4){};
+IpData.prototype.setIpv4Broadcast = function(ipv4Broadcast){};
+IpData.prototype.setIpv4Mask = function(ipv4Mask){};
+IpData.prototype.setIpv4Scope = function(ipv4Scope){};
+IpData.prototype.setIpv6 = function(ipv6){};
+IpData.prototype.setIpv6Mask = function(ipv6Mask){};
+IpData.prototype.setIpv6Scope = function(ipv6Scope){};
+IpData.prototype.setMtu = function(mtu){};
+IpData.prototype.setQdisc = function(qdisc){};
+/**
+ * Wrap RxTx network information.
+ * @class
+ */
+function RxTxData() {}
+/**
+ * @type {number}
+ * @const
+ */
+RxTxData.prototype.timestamp;
+/**
+ * Bytes received by the interface
+ * @type {number}
+ * @const
+ */
+RxTxData.prototype.rxBytes;
+/**
+ * Packets received by the interface
+ * @type {number}
+ * @const
+ */
+RxTxData.prototype.rxPackets;
+/**
+ * Errors received by the interface
+ * @type {number}
+ * @const
+ */
+RxTxData.prototype.rxErrors;
+/**
+ * Drop received by the interface
+ * @type {number}
+ * @const
+ */
+RxTxData.prototype.rxDrop;
+/**
+ * Bytes transmit by the interface
+ * @type {number}
+ * @const
+ */
+RxTxData.prototype.txBytes;
+/**
+ * Packets transmit by the interface
+ * @type {number}
+ * @const
+ */
+RxTxData.prototype.txPackets;
+/**
+ * Errors transmit by the interface
+ * @type {number}
+ * @const
+ */
+RxTxData.prototype.txErrors;
+/**
+ * Drop transmit by the interface
+ * @type {number}
+ * @const
+ */
+RxTxData.prototype.txDrop;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DNSData.html">DNSData</a></li><li><a href="FeatureCollectionRecord.html">FeatureCollectionRecord</a></li><li><a href="FeatureRecord.html">FeatureRecord</a></li><li><a href="FormPage.html">FormPage</a></li><li><a href="GeometryCollectionRecord.html">GeometryCollectionRecord</a></li><li><a href="IpData.html">IpData</a></li><li><a href="MultiPageForm.html">MultiPageForm</a></li><li><a href="MultiPointRecord.html">MultiPointRecord</a></li><li><a href="MultiPolygonRecord.html">MultiPolygonRecord</a></li><li><a href="Notification.html">Notification</a></li><li><a href="PointRecord.html">PointRecord</a></li><li><a href="PolygonRecord.html">PolygonRecord</a></li><li><a href="RxTxData.html">RxTxData</a></li><li><a href="SinglePageForm.html">SinglePageForm</a></li></ul><h3>Interfaces</h3><ul><li><a href="DBRecord.html">DBRecord</a></li><li><a href="FormBehavior.html">FormBehavior</a></li><li><a href="FormPageContent.html">FormPageContent</a></li><li><a href="GeoJsonRecord.html">GeoJsonRecord</a></li><li><a href="InfluxRecord.html">InfluxRecord</a></li><li><a href="Neo4jRecord.html">Neo4jRecord</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.2</a> on Mon Oct 23 2017 15:45:34 GMT+0200 (CEST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

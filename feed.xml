@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>APISENSE® Documentation</title>
+    <description>APISENSE® leverages data collected from a crowd of mobile devices. Observe and innovate using users' feedback, in real time!
+</description>
+    <link>http://docs.apisense.io//</link>
+    <atom:link href="http://docs.apisense.io//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 12 Jan 2018 15:34:04 +0000</pubDate>
+    <lastBuildDate>Fri, 12 Jan 2018 15:34:04 +0000</lastBuildDate>
+    <generator>Jekyll v3.7.0</generator>
+    
+      <item>
+        <title>Version 1.11.0 is available!</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;Features:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Honeycomb&lt;/em&gt;: Add an home page with current Honeycomb version.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Honeycomb&lt;/em&gt;: Add modular backends support (see &lt;a href=&quot;/en/1.11.0/guide/honeycomb/#use-more-storage&quot;&gt;here&lt;/a&gt; how to configure them). You can choose between:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://www.mongodb.com/&quot;&gt;MongoDB&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;https://docs.influxdata.com/influxdb/v1.3&quot;&gt;InfluxDB&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;https://neo4j.com/docs/&quot;&gt;Neo4J&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: New stings available:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.11.0/stings/sdk/crypto&quot;&gt;Crypto&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.11.0/stings/sdk/dbhelper&quot;&gt;DBHelper&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.11.0/stings/sdk/notification&quot;&gt;Notification&lt;/a&gt;,&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: Add the possibility to run APISENSE as a foreground service.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Enhancements:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Dashboard&lt;/em&gt;: You can’t delete a Honeycomb used by crops anymore. You will have to remove every crops using it before.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: The &lt;a href=&quot;/en/1.11.0/extra/time/&quot;&gt;time converter&lt;/a&gt; now handle milliseconds
+Have fun!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 23 Oct 2017 10:00:00 +0000</pubDate>
+        <link>http://docs.apisense.io//annonce/2017/10/23/1.11.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.io//annonce/2017/10/23/1.11.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
+    
+      <item>
+        <title>Version 1.10.0 is available!</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;Features:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Honeycomb&lt;/em&gt;: Add a manageable per user quota to avoid a scientist pushing too much data.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Dashboard&lt;/em&gt;: See your quotas status and manage your backends quota settings.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: New stings available:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-phone/cpu&quot;&gt;Cpu&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-phone/memory&quot;&gt;Memory&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-motion/rotation&quot;&gt;Rotation&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-motion/gravity&quot;&gt;Gravity&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-motion/gyroscope&quot;&gt;Gyroscope&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-motion/accelerometer&quot;&gt;Accelerometer&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-environment/proximity&quot;&gt;Proximity&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-environment/pressure&quot;&gt;Pressure&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-environment/light&quot;&gt;Light&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.10.0/stings/stings-visualization/visualization&quot;&gt;Visualization&lt;/a&gt;.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Enhancements:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Android:SDK&lt;/em&gt;: &lt;a href=&quot;/en/1.10.0/stings/sdk/wifi&quot;&gt;Wifi Sting&lt;/a&gt; now returns the right value for &lt;em&gt;authentication()&lt;/em&gt; method.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Dashboard&lt;/em&gt;: Fix some errors when a backend server is not available.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:SDK&lt;/em&gt;: Check Sting availability on initialization to avoid using not-working ones.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Have fun!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 04 May 2017 10:00:00 +0000</pubDate>
+        <link>http://docs.apisense.io//annonce/2017/05/04/1.10.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.io//annonce/2017/05/04/1.10.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
+    
+      <item>
+        <title>Version 1.9.0 is available!</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;Features:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: You do not need to create a Bee with a custom app anymore. &lt;a href=&quot;/en/1.9.0/guide/sdk/#install-and-start-a-specific-crop&quot;&gt;See the SDK Documentation&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: New stings available:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-phone/call&quot;&gt;Call&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-phone/device&quot;&gt;Device&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-phone/localstorage&quot;&gt;Local Storage&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-network/networkanalysis&quot;&gt;Network Analysis&lt;/a&gt;,&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/en/1.9.0/stings/stings-phone/system&quot;&gt;System&lt;/a&gt;,&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Enhancements:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Android:SDK&lt;/em&gt;: Improvement in the reported exceptions details.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:SDK&lt;/em&gt;: The SDK is now modular, you will have to &lt;a href=&quot;/en/1.9.0/guide/sdk/#installation&quot;&gt;import sting packages&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please note that the core package of the Android SDK changed from &lt;code&gt;com.apisense&lt;/code&gt; to &lt;code&gt;io.apisense&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Have fun!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 26 Jan 2017 10:00:00 +0000</pubDate>
+        <link>http://docs.apisense.io//annonce/2017/01/26/1.9.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.io//annonce/2017/01/26/1.9.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
+    
+      <item>
+        <title>Version 1.8.0 is available!</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;Features:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Android:Bee&lt;/em&gt;: Create a bee account from your Facebook or Google account.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:SDK&lt;/em&gt;: New methods to stop all the crops.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Enhancements:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Dashboard&lt;/em&gt;: New script management, you can now backup scripts for reuse.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Dashboard&lt;/em&gt;: User creation does not require invitations anymore.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Honeycomb&lt;/em&gt;: Docker image is lighter, using &lt;a href=&quot;https://hub.docker.com/r/library/openjdk&quot;&gt;openjdk:1.8-jre&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: APISENSE® SDK is now available from &lt;a href=&quot;https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22apisense-android-sdk%22&quot;&gt;Maven central&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: User creation now requires an email validation (if not created via a social login).&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: Every Bee can change its password.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: Capture period can be changed on &lt;code&gt;location&lt;/code&gt; sting.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Sdk&lt;/em&gt;: Stings skeletons are now fully generated.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Have fun!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 15 Nov 2016 10:00:00 +0000</pubDate>
+        <link>http://docs.apisense.io//annonce/2016/11/15/1.8.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.io//annonce/2016/11/15/1.8.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
+    
+      <item>
+        <title>Version 1.7.0 is available!</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;Features:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Dashboard&lt;/em&gt;: Separation between the &lt;a href=&quot;/en/1.7.0/guide/dashboard&quot;&gt;Dashboard&lt;/a&gt; (available from &lt;a href=&quot;https://apisense.io&quot;&gt;https://apisense.io&lt;/a&gt;) and the &lt;a href=&quot;/en/1.7.0/guide/honeycomb&quot;&gt;Honeycomb&lt;/a&gt; (data endpoint).
+You can now manage your own Honeycomb server and use it as backend for any of your crops. Or, you can adopt to the official Honeycomb server.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Dashboard&lt;/em&gt;: Add the possibility to see reported exceptions about your deployed crops. Exceptions will be reported from Android SDK 1.7.1&lt;/li&gt;
+      &lt;li&gt;[1.7.1] &lt;em&gt;Dashboard&lt;/em&gt;: You can now clear data from a crop&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Enhancements:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Android:Bee&lt;/em&gt;: Graphic enhancement of the whole Android app.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:Bee&lt;/em&gt;: Application is available for Android N.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:SDK&lt;/em&gt;: &lt;code&gt;location&lt;/code&gt; sting now retrieve current position in Android system for each call on data accessors.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Fixed bugs:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Android:SDK&lt;/em&gt;: APISENSE® does not define its &lt;a href=&quot;/en/1.7.0/guide/sdk/#add-manifest-permissions&quot;&gt;own file provider anymore&lt;/a&gt; for the Form sting,&lt;/li&gt;
+      &lt;li&gt;[1.7.1] &lt;em&gt;Dashboard&lt;/em&gt;: The “Download all” zip is now correctly generated.
+which was mixing authorities for multiple applications using the SDK.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:SDK&lt;/em&gt;: Resolved crash with GCM and any application using android N.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Android:SDK&lt;/em&gt;: Runtime exception on script will not crash the applications anymore.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Have fun!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 Jul 2016 10:00:00 +0000</pubDate>
+        <link>http://docs.apisense.io//annonce/2016/07/07/1.7.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.io//annonce/2016/07/07/1.7.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
+    
+      <item>
+        <title>Version 1.6.0 is available!</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;Features:
+    &lt;ul&gt;
+      &lt;li&gt;Hive service API is internationalized, and now provides error codes.&lt;/li&gt;
+      &lt;li&gt;You can now start and disable your crop remotely for mobile apps linked to GCM.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Enhancements:
+    &lt;ul&gt;
+      &lt;li&gt;Graphic enhancement of the whole server interface.&lt;/li&gt;
+      &lt;li&gt;Deploying a script automatically enables the associated crop.&lt;/li&gt;
+      &lt;li&gt;Hive no longer have info about uploaded data size.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Fixed bugs:
+    &lt;ul&gt;
+      &lt;li&gt;Mobile apps name are limited to 40 characters.&lt;/li&gt;
+      &lt;li&gt;Read only API key is now selectable on Firefox.&lt;/li&gt;
+      &lt;li&gt;Commented stings in script will no longer appear on used stings.&lt;/li&gt;
+      &lt;li&gt;Stings will not be duplicated in used stings.&lt;/li&gt;
+      &lt;li&gt;Android (Wifi Sting): SSID will not be between escaped quotes anymore.&lt;/li&gt;
+      &lt;li&gt;Android (CropManager): synchronise method will subscribe to crops GCM channel.&lt;/li&gt;
+      &lt;li&gt;Android: Crop update will not multiply records anymore.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Have fun!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 25 May 2016 10:00:00 +0000</pubDate>
+        <link>http://docs.apisense.io//annonce/2016/05/25/1.6.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.io//annonce/2016/05/25/1.6.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
+    
+      <item>
+        <title>Here comes 1.5.0 !</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;Features:
+    &lt;ul&gt;
+      &lt;li&gt;The SDK now needs an initialization key to contact the Hive, &lt;a href=&quot;/en/1.5.0/guide/dashboard/#handle-private-crop&quot;&gt;See there&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;You can now upload media (&lt;a href=&quot;/en/1.5.0/stings/form/formPage.html#video&quot;&gt;video&lt;/a&gt;, &lt;a href=&quot;/en/1.5.0/stings/form/formPage.html#sound&quot;&gt;audio&lt;/a&gt;, and &lt;a href=&quot;/en/1.5.0/stings/form/formPage.html#picture&quot;&gt;pictures&lt;/a&gt;) from &lt;em&gt;form&lt;/em&gt;.&lt;/li&gt;
+      &lt;li&gt;Needed runtime permissions for &lt;em&gt;Android M&lt;/em&gt; are now declared per Sting, you can see required and missing runtime permissions for each crop.&lt;/li&gt;
+      &lt;li&gt;You can write scripts to process each uploaded data block before insertion in database. &lt;a href=&quot;/en/1.5.0/guide/dashboard/#filter-uploaded-data&quot;&gt;More info over here&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Enhancements:
+    &lt;ul&gt;
+      &lt;li&gt;The SDK will now automatically log out users whose session has become invalid.&lt;/li&gt;
+      &lt;li&gt;The Honeycomb UI has been refactored, hope you like it better.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;alert alert-danger&quot; role=&quot;alert&quot;&gt;IMPORTANT: If you created your own application using APISENSE, you must authorize your SDK or it will not work anymore.&lt;/div&gt;
+
+&lt;p&gt;Enjoy!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 23 Mar 2016 10:00:00 +0000</pubDate>
+        <link>http://docs.apisense.io//annonce/2016/03/23/1.5.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.io//annonce/2016/03/23/1.5.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
+    
+      <item>
+        <title>1.4.0 available !</title>
+        <description>&lt;p&gt;More more more !&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You can now install a crop using its QRCode&lt;/li&gt;
+  &lt;li&gt;More control on your crop, public, private and now… Unlisted ! Everybody can use the crop, but only with the right QRCode (or ID)!&lt;/li&gt;
+  &lt;li&gt;The script editor has also been enhanced, now giving autocompletion and automatically binding you to the documentation of the stings you use.&lt;/li&gt;
+  &lt;li&gt;You can add your custom stings to the editor autocompletion.&lt;/li&gt;
+  &lt;li&gt;Last but not least, the servers now uses HTTPS to communicate!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Have fun!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 17 Jan 2016 11:00:00 +0000</pubDate>
+        <link>http://docs.apisense.io//annonce/2016/01/17/1.4.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.io//annonce/2016/01/17/1.4.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
+    
+      <item>
+        <title>Wait, there is more! 1.3.0 available !</title>
+        <description>&lt;p&gt;We bring you this new version with some nice new features!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;G&lt;/strong&gt;oogle &lt;strong&gt;C&lt;/strong&gt;loud &lt;strong&gt;M&lt;/strong&gt;essaging:
+  Link your application to the Google notification service to automatically update your collect on deployement. &lt;a href=&quot;/en/1.3.0/guide/advanced/gcm/&quot;&gt;Over here to see how to do it!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;New Sting: the &lt;em&gt;form&lt;/em&gt;:
+  Create your &lt;a href=&quot;/en/1.3.0/stings/form/&quot;&gt;form&lt;/a&gt; to ask questions to the user.&lt;/li&gt;
+  &lt;li&gt;Filter your collected data before using them:
+  You want to save some bandwidth or lower your treatment on custom views?
+  Create a &lt;a href=&quot;http://docs.apisense.io/en/1.3.0/guide/dashboard/#filter-the-output&quot;&gt;filter&lt;/a&gt; to make your data what you want them to be.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Have fun!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 17 Nov 2015 11:00:00 +0000</pubDate>
+        <link>http://docs.apisense.io//annonce/2015/11/17/1.3.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.io//annonce/2015/11/17/1.3.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
+    
+      <item>
+        <title>Big update ! 1.2.0 available !</title>
+        <description>&lt;p&gt;After a little bit more than two months of work we are glad to share with you our new SDK version !
+With it comes a lot of new features, check-it out:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Privacy managment: You can setup your privacy settings to only run collects that use things you want to share and automatically stop the others.&lt;/li&gt;
+  &lt;li&gt;Google play games: Let’s have some fun, unlock some nice achievements and see your progression!&lt;/li&gt;
+  &lt;li&gt;Collect statistics: See how many people are contributing to every collect, always good to know you’re not alone! (but you can be the first :D)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hope you like it!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 16 Sep 2015 17:00:00 +0000</pubDate>
+        <link>http://docs.apisense.io//annonce/2015/09/16/1.2.0-release.html</link>
+        <guid isPermaLink="true">http://docs.apisense.io//annonce/2015/09/16/1.2.0-release.html</guid>
+        
+        
+        <category>annonce</category>
+        
+      </item>
+    
+  </channel>
+</rss>
