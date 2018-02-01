@@ -147,6 +147,8 @@ The Json you will retrieve is built as follow:
 If you want to insert some specifics, calculated values,
 you can add a pre-upload filter, applied on each uploaded data (see the section above for the syntax).
 
+For instance, this filter will add a `count` entry in the `metadata` section, counting the number of entries in the `body` section:
+
     // This filter will process every uploaded data
     rest.setPreUploadTreatment(function(data) { // data will be the uploaded JSON
        var myUploadedDataArray = data.body;
